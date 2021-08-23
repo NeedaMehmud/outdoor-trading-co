@@ -14,43 +14,20 @@
     <title>Document</title>
 </head>
 <body>
-
 <!-- Navbar. -->
 <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"> <img src="/logo.png" alt="Logo" height="50"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li>
-        </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-      </div>
-    </div>
+    <div class="container">
+                <a class="navbar-brand" href="#"> <img src="/logo.png" alt="Logo" height="50"></a>
+            <form class="d-flex">
+                <input class="form-control me-3" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+                <ul class="navbar-nav">
+                <li class="nav-item">
+                <a href="#">Sign In</a>
+                </li>
+                </ul>
+         </div>
   </nav>
 
 <!-- Hero image/jumbotron.  -->
@@ -64,64 +41,71 @@
 
 <!-- Site content. -->
 
-<section class="container-fluid">
+<section class="container">
  <!-- Row 1. -->
         <div class="row">
           <div class="col">
-            Camping.
+            <img src="category.png" width="100%" height="250" class="py-3">
           </div>
           <div class="col">
-            Hiking.
+             <img src="category.png" width="100%" height="250" class="py-3">
           </div>
           <div class="col">
-            Water.
+            <img src="category.png" width="100%" height="250" class="py-3">
           </div>
         </div>
 <!-- Row 2. -->
         <div class="row">
             <div class="col">
-              Snow.
+                <img src="category.png" width="100%" height="250" class="py-3">
             </div>
             <div class="col">
-              Climbing.
+                <img src="category.png" width="100%" height="250" class="py-3">
             </div>
             <div class="col">
-              Misc.
+                <img src="category.png" width="100%" height="250" class="py-3">
             </div>
           </div>
 </section>
 
 <!-- CTA form. -->
-<div class="container-fluid">
+<div class="container">
     <div class="row">
-      <div class="col-sm">
+      <div class="col">
         One of 2 columns
       </div>
-      <div class="col-sm form">
+      <div class="col form">
         This is where the email signup form will go.
       </div>
     </div>
   </div>
 
 <!-- Contact. -->
-<div class="container-fluid">
+<section id="contact">
+<div class="container">
     <div class="row">
-      <div class="col-sm">
+      <div class="col-3">
         One of three columns
       </div>
-      <div class="col-sm">
+      <div class="col-3">
         One of three columns
       </div>
-      <div class="col-sm">
+      <div class="col-6">
         One of three columns
       </div>
     </div>
-  </div>
+</section>
 
   <!-- Footer. -->
-  <footer class="text-center">
-sdadsadsa
+  <footer class="text-center p-3">
+<p>Copyright 2021 Outdoor Trading Co.</p>
   </div>
+
+
+
+
+
+</div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

@@ -4,13 +4,16 @@
     --secondary: #FDA430;
     --tertiary: #3A7355;
     --quartenary: #809A63;
-    --links: #fff;
+    --links: #FFFFFF;
 }
 a {
     color: var(--links);
+    text-decoration: none;
 }
-p {
+p, a {
+    font-size: larger;
     font-family: 'Hind Vadodara', sans-serif;
+    margin: 0;
 }
 h1, h2, h3 {
     font-family: 'Mukta', sans-serif;
@@ -18,15 +21,20 @@ h1, h2, h3 {
 }
 nav, footer {
     background-color: var(--primary);
-    color:var(--links)
+    color: var(--links)
 }
-
+#contact {
+    background-color: var(--quartenary);
+}
 .jumbotron {
     background-image: url(/hero.jpg);
+    background-position: center;
     background-size: cover;
-    height:500px;
+    height: 400px;
 }
-
 .form {
     background-color: var(--secondary);
+}
+.form-control {
+    max-width: 100%;
 }
