@@ -1,0 +1,32 @@
+/* Declaring global variables. */
+:root {
+    --primary: #1D2E2F;
+    --secondary: #FDA430;
+    --tertiary: #3A7355;
+    --quartenary: #809A63;
+    --links: #fff;
+}
+a {
+    color: var(--links);
+}
+p {
+    font-family: 'Hind Vadodara', sans-serif;
+}
+h1, h2, h3 {
+    font-family: 'Mukta', sans-serif;
+    font-weight: 700;
+}
+nav, footer {
+    background-color: var(--primary);
+    color:var(--links)
+}
+
+.jumbotron {
+    background-image: url(/hero.jpg);
+    background-size: cover;
+    height:500px;
+}
+
+.form {
+    background-color: var(--secondary);
+}
