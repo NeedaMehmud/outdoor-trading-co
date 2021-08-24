@@ -13,14 +13,17 @@ a {
     color: var(--links);
     text-decoration: none;
 }
-p, a, .btn-primary {
+p, a, .btn-primary, .btn-secondary, .btn-tertiary {
     font-size: larger;
     font-family: 'Hind Vadodara', sans-serif;
     margin: 0;
 }
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-family: 'Mukta', sans-serif;
-    font-weight: 700;
+    font-weight: 800;
+}
+h3 {
+    color: #000;
 }
 nav, footer {
     background-color: var(--primary);
@@ -29,14 +32,14 @@ nav, footer {
 main {
     margin: 3em 0em;
 }
-#contact {
+footer {
     background-color: var(--quartenary);
 }
 .jumbotron {
     background-image: url(/hero.jpg);
     background-position: center;
     background-size: cover;
-    height: 400px;
+    height: 450px;
 }
 .form-img {
     background-image: url(/form-img.jpg);
@@ -50,18 +53,24 @@ main {
     max-width: 100%;
 }
 .hero-text {
-    padding-top: 5%;
+    padding-top: 5%; 
+}
+.btn-primary, .btn-secondary, .btn-tertiary {
+    border-radius: 10px;
+    border: none;
 }
 .btn-primary, .btn-secondary {
-background-color: var(--tertiary);
-border-radius: 10px;
-border: none;
+    background-color: var(--tertiary);
 }
-.btn-primary{
+.btn-primary, .btn-tertiary{
     width: 100%;
     text-transform: uppercase;
     margin-top: 10px;
     padding: 10px;
+}
+.btn-tertiary {
+    background-color:var(--primary);
+    color: var(--links);
 }
 .nav-icon {
     background-color: var(--secondary);
@@ -69,4 +78,8 @@ border: none;
 }
 .nav-item {
     margin:1em;
+}
+.copyright {
+    background-color: var(--primary);
+    color: var(--links);
 }
