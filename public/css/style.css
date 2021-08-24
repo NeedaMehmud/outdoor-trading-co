@@ -30,19 +30,20 @@ nav, footer {
     color: var(--links)
 }
 main {
-    margin: 3em 0em;
+    padding: 3em 0em;
+    background-image: url("../images/topography-bg.png");
 }
 footer {
     background-color: var(--quartenary);
 }
 .jumbotron {
-    background-image: url(/hero.jpg);
+    background-image: url("../images/hero.jpg");
     background-position: center;
     background-size: cover;
     height: 450px;
 }
 .form-img {
-    background-image: url(/form-img.jpg);
+    background-image: url(../images/form-img.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -82,4 +83,30 @@ footer {
 .copyright {
     background-color: var(--primary);
     color: var(--links);
+}
+/* The (sticky) login box and its settings. */
+.login {
+    width: 300px;
+    margin: 3em 0em;
+    position: fixed;
+    right: 200px;
+    top: 0px;
+}
+/* The triangle form is achieved by a CSS hack */
+.login-triangle {
+  width: 0;
+  margin-right: auto;
+  margin-left: auto;
+  border: 12px solid transparent;
+  border-bottom-color: var(--links);
+}
+.login-container {
+  background: var(--links);
+  padding: 1rem;
+}
+/* Hides the login box on mobile. */
+@media screen and (max-width: 600px) {
+    .login {
+        display:none;
+    }
 }

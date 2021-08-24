@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Outdoor Trading Co">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/style.css" rel="stylesheet">
+    <link href="/public/css/style.css" rel="stylesheet">
     <link rel="favicon" href="favicon.ico"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,15 +16,34 @@
 <body>
 
 
+
 <!-- Primary (sticky) navbar. -->
 <nav class="navbar sticky-top">
     <div class="container">
-        <a class="navbar-brand" href="#"> <img src="/logo.png" alt="Logo" height="50"></a>
+        <a class="navbar-brand" href="#"> <img src="/public/images/logo.png" alt="Logo" height="50"></a>
         <form class="d-flex">
             <input class="form-control me-3" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-secondary" type="submit">Search</button>
         </form>
         <a href="#">Sign In</a>
+<!-- Login box. -->
+          <div class="login">
+            <div class="login-triangle"></div>
+            <form class="login-container">
+              <div class="m-1">
+                <label for="exampleFormControlInput1" class="form-label"><b class="text-black">Username</b></label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+              </div>
+              <div class="m-1">
+                <label for="exampleFormControlInput2" class="form-label"><b class="text-black">Password</b></label>
+                <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="Password">
+              </div>
+              <div class="m-1">
+                <button type="submit" class="btn btn-primary">Sign In</button>
+              </div>
+            </form>
+          </div>
+<!-- End login box. -->
     </div>
  </nav>
 <!-- End primary (sticky) navbar. -->
@@ -36,7 +55,7 @@
         <div class="card col-lg-4">
             <div class="card-body m-2">
                 <h2>Outside. Together.</h2>
-                <p>This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+                <p>Here is some placeholder text. I didn't know what to write. I've been living off energy drinks.</p>
                 <button type="button" class="btn btn-primary">Sign up</button>
             </div>
           </div>
@@ -50,22 +69,22 @@
     <div class="container">
         <ul class="nav nav-icon">
             <li class="nav-item">
-              <a href="#"><img src="category.png" width="80" height="80"></a>
+              <a href="#"><img src="/public/images/category.png" width="80" height="80"></a>
             </li>
             <li class="nav-item">
-                <a href="#"><img src="category.png" width="80" height="80"></a>
+                <a href="#"><img src="/public/images/category.png" width="80" height="80"></a>
               </li>
               <li class="nav-item">
-                <a href="#"><img src="category.png" width="80" height="80"></a>
+                <a href="#"><img src="/public/images/category.png" width="80" height="80"></a>
               </li>
               <li class="nav-item">
-                <a href="#"><img src="category.png" width="80" height="80"></a>
+                <a href="#"><img src="/public/images/category.png" width="80" height="80"></a>
               </li>
               <li class="nav-item">
-                <a href="#"><img src="category.png" width="80" height="80"></a>
+                <a href="#"><img src="/public/images/category.png" width="80" height="80"></a>
               </li>
               <li class="nav-item">
-                <a href="#"><img src="category.png" width="80" height="80"></a>
+                <a href="#"><img src="/public/images/category.png" width="80" height="80"></a>
               </li>
           </ul>
          </div>
@@ -79,25 +98,25 @@
     <!-- Row 1. -->
     <div class="row">
       <div class="col-lg-4 p-3">
-        <img src="category.png" width="100%" height="350">
+        <img src="/public/images/category.png" width="100%" height="350">
       </div>
       <div class="col-lg-4 p-3">
-        <img src="category.png" width="100%" height="350">
+        <img src="/public/images/category.png" width="100%" height="350">
       </div>
       <div class="col-lg-4 p-3">
-        <img src="category.png" width="100%" height="350">
+        <img src="/public/images/category.png" width="100%" height="350">
       </div>
     </div>
     <!-- Row 2. -->
     <div class="row">
       <div class="col-lg-4 p-3">
-        <img src="category.png" width="100%" height="350">
+        <img src="/public/images/category.png" width="100%" height="350">
       </div>
       <div class="col-lg-4 p-3">
-        <img src="category.png" width="100%" height="350">
+        <img src="/public/images/category.png" width="100%" height="350">
       </div>
       <div class="col-lg-4 p-3">
-        <img src="category.png" width="100%" height="350">
+        <img src="/public/images/category.png" width="100%" height="350">
       </div>
     </div>
   </section>
@@ -114,7 +133,7 @@
       <p class="text-center">Get the latest updates from our team and the latest products from our partners.</p>
       <div class="m-1">
         <label for="exampleFormControlInput1" class="form-label"><b>Name</b></label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Bear Grylls">
       </div>
       <div class="m-1">
         <label for="exampleFormControlInput2" class="form-label"><b>Email address</b></label>
@@ -147,7 +166,7 @@
         </ul>
       </div>
       <div class="col-6 lg-1">
-        Social media icons.
+        Social media icons. I straight up didn't bother adding these.
       </div>
     </div>
   </footer>
