@@ -6,6 +6,9 @@
     --quartenary: #809A63;
     --links: #FFFFFF;
 }
+ul {
+    list-style: none;
+}
 a {
     color: var(--links);
     text-decoration: none;
@@ -35,6 +38,11 @@ main {
     background-size: cover;
     height: 400px;
 }
+.form-img {
+    background-image: url(/form-img.jpg);
+    background-position: center;
+    background-size: cover;
+}
 .form {
     background-color: var(--secondary);
 }
@@ -44,11 +52,13 @@ main {
 .hero-text {
     padding-top: 5%;
 }
-.btn-primary {
-    background-color: var(--tertiary);
+.btn-primary, .btn-secondary {
+background-color: var(--tertiary);
+border-radius: 10px;
+border: none;
+}
+.btn-primary{
     width: 100%;
-    border-radius: 10px;
-    border: none;
     text-transform: uppercase;
     margin-top: 10px;
     padding: 10px;
