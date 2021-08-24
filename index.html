@@ -14,59 +14,87 @@
     <title>Document</title>
 </head>
 <body>
-<!-- Navbar. -->
-<nav class="navbar navbar-expand-lg">
+
+<!-- Primary (sticky) navbar. -->
+<nav class="navbar sticky-top">
     <div class="container">
                 <a class="navbar-brand" href="#"> <img src="/logo.png" alt="Logo" height="50"></a>
             <form class="d-flex">
                 <input class="form-control me-3" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
-                <ul class="navbar-nav">
-                <li class="nav-item">
                 <a href="#">Sign In</a>
-                </li>
-                </ul>
          </div>
   </nav>
 
 <!-- Hero image/jumbotron.  -->
-
 <div class="jumbotron jumbotron-fluid">
-    <div class="container">
-      <h1 class="display-4">Fluid jumbotron</h1>
-      <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+    <div class="container hero-text">
+        <div class="card col-lg-4">
+            <div class="card-body m-2">
+                <h1>Fluid jumbotron</h1>
+                <p>This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+                <button type="button" class="btn btn-primary">Primary</button>
+            </div>
+          </div>
     </div>
   </div>
 
-<!-- Site content. -->
+  <!-- Icon navbar, to appear only when a user has selected a category. -->
+  <nav class="nav-icon">
+    <div class="container">
+        <ul class="nav nav-icon">
+            <li class="nav-item">
+              <a href="#"><img src="category.png" width="80" height="80"></a>
+            </li>
+            <li class="nav-item">
+                <a href="#"><img src="category.png" width="80" height="80"></a>
+              </li>
+              <li class="nav-item">
+                <a href="#"><img src="category.png" width="80" height="80"></a>
+              </li>
+              <li class="nav-item">
+                <a href="#"><img src="category.png" width="80" height="80"></a>
+              </li>
+              <li class="nav-item">
+                <a href="#"><img src="category.png" width="80" height="80"></a>
+              </li>
+              <li class="nav-item">
+                <a href="#"><img src="category.png" width="80" height="80"></a>
+              </li>
+          </ul>
+         </div>
+  </nav>
 
+<!-- Site content. -->
+<main>
 <section class="container">
  <!-- Row 1. -->
         <div class="row">
-          <div class="col">
-            <img src="category.png" width="100%" height="250" class="py-3">
+          <div class="col-lg-4 p-3">
+            <img src="category.png" width="100%" height="250">
           </div>
-          <div class="col">
-             <img src="category.png" width="100%" height="250" class="py-3">
+          <div class="col-lg-4 p-3">
+             <img src="category.png" width="100%" height="250">
           </div>
-          <div class="col">
-            <img src="category.png" width="100%" height="250" class="py-3">
+          <div class="col-lg-4 p-3">
+            <img src="category.png" width="100%" height="250">
           </div>
         </div>
 <!-- Row 2. -->
         <div class="row">
-            <div class="col">
-                <img src="category.png" width="100%" height="250" class="py-3">
+            <div class="col-lg-4 p-3">
+                <img src="category.png" width="100%" height="250">
             </div>
-            <div class="col">
-                <img src="category.png" width="100%" height="250" class="py-3">
+            <div class="col-lg-4 p-3">
+                <img src="category.png" width="100%" height="250">
             </div>
-            <div class="col">
-                <img src="category.png" width="100%" height="250" class="py-3">
+            <div class="col-lg-4 p-3">
+                <img src="category.png" width="100%" height="250">
             </div>
           </div>
 </section>
+</main>
 
 <!-- CTA form. -->
 <div class="container">
@@ -85,10 +113,18 @@
 <div class="container">
     <div class="row">
       <div class="col-3">
-        One of three columns
+        <h3>Contact Us</h3>
+        <p>Phone Number</p>
+        <p>Street Name</p>
+        <p>Rest of Address</p>
       </div>
       <div class="col-3">
-        One of three columns
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+        </ul>
       </div>
       <div class="col-6">
         One of three columns

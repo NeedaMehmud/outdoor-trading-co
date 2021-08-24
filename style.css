@@ -10,7 +10,7 @@ a {
     color: var(--links);
     text-decoration: none;
 }
-p, a {
+p, a, .btn-primary {
     font-size: larger;
     font-family: 'Hind Vadodara', sans-serif;
     margin: 0;
@@ -22,6 +22,9 @@ h1, h2, h3 {
 nav, footer {
     background-color: var(--primary);
     color: var(--links)
+}
+main {
+    margin: 3em 0em;
 }
 #contact {
     background-color: var(--quartenary);
@@ -37,4 +40,23 @@ nav, footer {
 }
 .form-control {
     max-width: 100%;
+}
+.hero-text {
+    padding-top: 5%;
+}
+.btn-primary {
+    background-color: var(--tertiary);
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    text-transform: uppercase;
+    margin-top: 10px;
+    padding: 10px;
+}
+.nav-icon {
+    background-color: var(--secondary);
+    justify-content: space-evenly;
+}
+.nav-item {
+    margin:1em;
 }
