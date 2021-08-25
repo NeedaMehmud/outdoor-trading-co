@@ -18,7 +18,11 @@ const userSchema = new Schema({
     type: String,
     required: true,
     minlength: 5,
-  }
+  },
+  items: [{
+    type: Schema.Type.ObjectId,
+    ref: 'Climbing'
+  }]
 });
 
 // userSchema.pre('save', async function (next) {
