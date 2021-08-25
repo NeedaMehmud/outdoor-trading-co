@@ -1,7 +1,7 @@
-import React from 'react';
+// import React from 'react';
 
-export default function Preferences() {
-  return(
-    <h2>Preferences</h2>
-  );
-}
+// export default function Preferences() {
+//   return(
+//     <h2>Preferences</h2>
+//   );
+// }

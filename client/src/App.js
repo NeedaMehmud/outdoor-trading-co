@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Dashboard from '../src/components/Dashboard/Dashboard';
+// import { BrowserRouter, Route, Switch } from 'react-router-dom';
+// import Dashboard from '../src/components/Dashboard/Dashboard';
 import Login from '../src/components/Login/Login';
-import Preferences from '../src/components/Prefrences/Prefrences';
-import './App.css';
+// import Preferences from '../src/components/Prefrences/Prefrences';
+import '../src/';
 import Home from './pages/Home';
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import "./style/Reset.css";
@@ -34,7 +34,7 @@ function App() {
       <div>
         <Home />
       </div>
-      <div className="wrapper">
+      {/* <div className="wrapper">
         <h1>Application</h1>
         <BrowserRouter>
           <Switch>
@@ -45,14 +45,14 @@ function App() {
               <Preferences />
             </Route>
           </Switch>
-        </BrowserRouter>
+        </BrowserRouter> */}
         <Nav />
         <Hero />
         <Iconbar />
         <Main />
         <Newsletter />
         <Footer />
-      </div>
+      {/* </div> */}
     </ApolloProvider>
   );
 }

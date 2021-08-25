@@ -4,7 +4,7 @@ import logo from "../assets/images/logo.png";
 
 function Nav() {
   return (
-    <nav class="navbar sticky-top">
+    <Navbar class="navbar sticky-top">
       <div class="container">
         <a class="navbar-brand" href="#">
           {" "}
@@ -40,7 +40,7 @@ function Nav() {
             </form>
         </div> */}
       </div>
-    </nav>
+    </Navbar>
   );
 }
 
