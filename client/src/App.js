@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import Dashboard from '../Dashboard/Dashboard';
+import Preferences from '../Preferences/Preferences';
 
 function App() {
   return (
