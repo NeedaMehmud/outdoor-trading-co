@@ -1,0 +1,25 @@
+p,
+a,
+.btn-primary,
+.btn-secondary,
+.btn-tertiary {
+  font-size: larger;
+  font-family: "Hind Vadodara", sans-serif;
+  margin: 0;
+}
+
+.form-img {
+  background-image: url(../assets/images/form-img.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.form {
+  background-color: var(--secondary);
+}
+.form-control {
+  max-width: 100%;
+}
+.copyright {
+  background-color: var(--primary);
+  color: var(--links);
+}
