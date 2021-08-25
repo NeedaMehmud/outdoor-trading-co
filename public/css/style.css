@@ -36,12 +36,50 @@ main {
 footer {
     background-color: var(--quartenary);
 }
+.navbar-brand img {
+    max-height: 60px;
+}
 .jumbotron {
     background-image: url("../images/hero.jpg");
     background-position: center;
     background-size: cover;
     height: 450px;
 }
+/* Controls the content inside the card over the hero/jumbotron image. */
+.hero-text {
+    padding-top: 5%; 
+}
+.btn-primary, .btn-secondary, .btn-tertiary {
+    border-radius: 10px;
+    border: none;
+    color: var(--links);
+}
+.btn-primary, .btn-secondary {
+    background-color: var(--tertiary);
+}
+.btn-tertiary, .btn-primary:hover  {
+    background-color:var(--primary);
+}
+.btn-primary, .btn-tertiary {
+    width: 100%;
+    margin-top: 10px;
+    padding: .5em;
+    text-transform: uppercase;
+}
+.btn-secondary:hover, .btn-tertiary:hover {
+    background-color: var(--quartenary);
+}
+.nav-item {
+    margin:.5em;
+}
+.nav-icon {
+    background-color: var(--secondary);
+    justify-content: space-evenly;
+}
+.icon {
+    width: 90px;
+}
+/* This is the image opposite the newsletter sign up form. */
 .form-img {
     background-image: url(../images/form-img.jpg);
     background-position: center;
@@ -52,33 +90,6 @@ footer {
 }
 .form-control {
     max-width: 100%;
-}
-.hero-text {
-    padding-top: 5%; 
-}
-.btn-primary, .btn-secondary, .btn-tertiary {
-    border-radius: 10px;
-    border: none;
-}
-.btn-primary, .btn-secondary {
-    background-color: var(--tertiary);
-}
-.btn-primary, .btn-tertiary{
-    width: 100%;
-    text-transform: uppercase;
-    margin-top: 10px;
-    padding: 10px;
-}
-.btn-tertiary {
-    background-color:var(--primary);
-    color: var(--links);
-}
-.nav-icon {
-    background-color: var(--secondary);
-    justify-content: space-evenly;
-}
-.nav-item {
-    margin:1em;
 }
 .copyright {
     background-color: var(--primary);
