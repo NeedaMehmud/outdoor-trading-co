@@ -19,10 +19,27 @@ const userSchema = new Schema({
     required: true,
     minlength: 5,
   },
-  items: [{
-    type: Schema.Type.ObjectId,
-    ref: 'Climbing'
-  }]
+  items: [
+    {
+      type: Schema.Type.ObjectId,
+      ref: 'Camping',
+    },{
+      type: Schema.Type.ObjectId,
+      ref: 'Climbing',
+    },{
+      type: Schema.Type.ObjectId,
+      ref: 'Hiking',
+    },{
+      type: Schema.Type.ObjectId,
+      ref: 'Misc',
+    },{
+      type: Schema.Type.ObjectId,
+      ref: 'Snow',
+    },{
+      type: Schema.Type.ObjectId,
+      ref: 'Water',
+    },
+  ]
 });
 
 // userSchema.pre('save', async function (next) {
