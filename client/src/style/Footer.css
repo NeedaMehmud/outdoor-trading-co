@@ -1,0 +1,9 @@
+nav,
+footer {
+  background-color: var(--primary);
+  color: var(--links);
+}
+
+footer {
+  background-color: var(--quartenary);
+}

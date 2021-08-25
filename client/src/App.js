@@ -3,12 +3,21 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Dashboard from '../src/components/Dashboard/Dashboard';
 import Login from '../src/components/Login/Login';
 import Preferences from '../src/components/Prefrences/Prefrences';
-import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import './App.css';
 import Home from './pages/Home';
+import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
+import "./style/Reset.css";
+import "./style/Index.css";
+import Nav from "./components/Nav";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Hero from "./components/Hero";
+import Iconbar from "./components/Iconbar";
+import Main from "./components/Main";
+import Newsletter from "./components/Newsletter";
+import Footer from "./components/Footer";
 
 const client = new ApolloClient({
-  uri: '/graphql',
+  uri: "/graphql",
   cache: new InMemoryCache(),
 });
 
@@ -37,6 +46,12 @@ function App() {
             </Route>
           </Switch>
         </BrowserRouter>
+        <Nav />
+        <Hero />
+        <Iconbar />
+        <Main />
+        <Newsletter />
+        <Footer />
       </div>
     </ApolloProvider>
   );

@@ -1,0 +1,10 @@
+.nav-item {
+    margin:.5em;
+}
+.nav-icon {
+    background-color: var(--secondary);
+    justify-content: space-evenly;
+}
+.icon {
+    width: 90px;
+}
