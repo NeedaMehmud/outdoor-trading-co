@@ -5,6 +5,15 @@ import './App.css';
 import Dashboard from '../Dashboard/Dashboard';
 import Login from '../Login/Login';
 import Preferences from '../Preferences/Preferences';
+// import React from 'react';
+// import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+// import './App.css';
+// import Home from './pages/Home';
+
+// const client = new ApolloClient({
+//   uri: '/graphql',
+//   cache: new InMemoryCache(),
+// });
 
 function App() {
   const [token, setToken] = useState();
@@ -27,6 +36,11 @@ function App() {
         </Switch>
       </BrowserRouter>
     </div>
+    // <ApolloProvider client={client}>
+    //   <div>
+    //       <Home />
+    //     </div>
+    // </ApolloProvider>
   );
 }
 
