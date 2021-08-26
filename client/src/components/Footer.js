@@ -1,4 +1,8 @@
+import React from "react";
 import "../style/Footer.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 function Footer() {
   return (
@@ -7,9 +11,9 @@ function Footer() {
         <div class="row p-3">
           <h3>Contact Us</h3>
           <div class="col-3 sm-2">
-            <p>Phone Number</p>
-            <p>Street Name</p>
-            <p>Rest of Address</p>
+            <p>1-800-OUT-DOOR</p>
+            <p>1234 Pine Rd</p>
+            <p>Outdoor, GA</p>
           </div>
           <div class="col-3 sm-2">
             <ul>
@@ -26,7 +30,20 @@ function Footer() {
           </div>
           <div class="col-6 lg-1">
             {" "}
-            <p>Insert SM Icons Here</p>
+            <a
+              href="https://www.facebook.com/Outdoor-Trading-Co-100466249039342"
+              target="_blank"
+              alt="Facebook Logo"
+            >
+              <FontAwesomeIcon icon={faFacebook} />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/79902606/admin/"
+              target="blank"
+              alt="LinkedIn Logo"
+            >
+              <FontAwesomeIcon icon={faLinkedinIn} />
+            </a>
           </div>
         </div>
       </div>
