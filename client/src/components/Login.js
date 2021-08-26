@@ -15,8 +15,8 @@ function Login() {
                     </label>
                     <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="Password" />
                 </div>
-                <div class="m-1">
-                    <button type="submit" class="btn btn-primary">Sign In</button>
+                <div>
+                    <button type="submit" class="btn btn-secondary">Sign In</button>
                 </div>
             </form>
         </div>
