@@ -41,7 +41,7 @@ class Nav extends React.Component {
           </button>
         </form>
         
-        {this.state.clicked ? <Login /> : <button onClick={this.handleClick} type="submit" class="btn btn-warning">Sign In</button>}
+        {this.state.clicked ? <Login /> : <button onClick={this.handleClick} type="submit" class="rounded signin-button">Sign In</button>}
       </div>
     </Navbar>
     );

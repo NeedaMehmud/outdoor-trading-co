@@ -21,7 +21,7 @@ function Login() {
                     <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="Password" />
                 </div>
                 <div>
-                    <button type="submit" class="signin-button">Sign In</button>
+                    <button type="submit" class="rounded signin-button">Sign In</button>
                 </div>
             </form>
         </div>
