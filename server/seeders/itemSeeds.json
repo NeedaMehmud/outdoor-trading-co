@@ -1,0 +1,20 @@
+[
+    {
+        "genre": "Hiking",
+        "name": "Boots",
+        "location": "Atlanta, GA",
+        "condition": "Good",
+        "description": "Lightly worn hiking boots",
+        "image_id": "123",
+        "user": "BrianRox"
+    },
+    {
+        "genre": "Water",
+        "name": "Skis",
+        "location": "Athens, GA",
+        "condition": "Ok",
+        "description": "A little scuffed but still works",
+        "image_id": "456",
+        "user": "Maximum"
+    }
+]

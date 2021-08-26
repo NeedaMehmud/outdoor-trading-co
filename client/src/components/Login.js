@@ -4,7 +4,7 @@ import React from "react";
 
 
 
-function Login() {
+const Login = () => {
     const [isOpen, setIsOpen] = React.useState(false);
     const showModal = () => {
 

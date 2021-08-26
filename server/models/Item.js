@@ -5,7 +5,7 @@ const itemSchema = new Schema({
     genre: {
         type: String,
         required: true,
-        time: true,
+        trim: true,
     },
     name: {
         type: String,
@@ -25,10 +25,6 @@ const itemSchema = new Schema({
         type: String,
         trim: true,
     },
-    image: {
-        type: String,
-        required: true,
-    },
     image_id: {
         type: String,
         required: true,
@@ -37,8 +33,9 @@ const itemSchema = new Schema({
         type: Date,
     },
     user: {
-        type: Schema.Types.ObjectId,
-        ref: 'User',
+        type: String,
+        required: true,
+        trim: true,
     },
 });
 

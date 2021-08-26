@@ -10,6 +10,9 @@ import Iconbar from "./components/Iconbar";
 import Main from "./components/Main";
 import Newsletter from "./components/Newsletter";
 import Footer from "./components/Footer";
+require('react-dom');
+window.React2 = require('react');
+console.log(window.React1 === window.React2);
 
 const client = new ApolloClient({
   uri: "/graphql",
