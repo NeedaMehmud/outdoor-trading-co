@@ -1,10 +1,29 @@
+import React from "react";
 import "../style/Nav.css";
 import Navbar from "react-bootstrap/Navbar";
 import logo from "../assets/images/logo.png";
+import Login from "../components/Login";
 
-function Nav() {
-  return (
-    <nav class="navbar sticky-top">
+class Nav extends React.Component {
+  constructor() {
+    super();
+    
+    this.state = {
+      clicked: false
+    };
+    
+    this.handleClick = this.handleClick.bind(this);
+  }
+  
+  handleClick() {
+    this.setState({
+      clicked: true
+    });
+  }
+  
+  render() {
+    return (
+      <Navbar class="navbar sticky-top">
       <div class="container">
         <a class="navbar-brand" href="#">
           {" "}
@@ -21,27 +40,12 @@ function Nav() {
             Search
           </button>
         </form>
-        <a href="#">Sign In</a>
-        {/* Login box. 
- <div class="login">
-            <div class="login-triangle"></div>
-            <form class="login-container">
-              <div class="m-1">
-                <label for="exampleFormControlInput1" class="form-label"><b class="text-black">Username</b></label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-              </div>
-              <div class="m-1">
-                <label for="exampleFormControlInput2" class="form-label"><b class="text-black">Password</b></label>
-                <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="Password"/>
-              </div>
-              <div class="m-1">
-                <button type="submit" class="btn btn-primary">Sign In</button>
-              </div>
-            </form>
-        </div> */}
+        
+        {this.state.clicked ? <Login /> : <button onClick={this.handleClick} type="submit" class="rounded signin-button">Sign In</button>}
       </div>
-    </nav>
-  );
-}
+    </Navbar>
+    );
+  }
+};
 
 export default Nav;
