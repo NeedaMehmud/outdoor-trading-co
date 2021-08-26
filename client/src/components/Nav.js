@@ -40,8 +40,8 @@ class Nav extends React.Component {
             Search
           </button>
         </form>
-        <button onClick={this.handleClick}>Sign In</button>
-        {this.state.clicked ? <Login /> : null}
+        
+        {this.state.clicked ? <Login /> : <button onClick={this.handleClick}>Sign In</button>}
       </div>
     </Navbar>
     );
