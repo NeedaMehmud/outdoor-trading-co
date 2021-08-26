@@ -9,8 +9,7 @@ function Hero() {
           <div class="card-body m-3">
             <h2>Outside. Together.</h2>
             <p>
-              Here is some placeholder text. I didn't know what to write. I've
-              been living off energy drinks.
+              Grow your love of the outdoors by borrowing equipment for a variety of outdoor activities. No commitment. No lugging gear to your destination. Nothing collecting dirt in your garage.
             </p>
             <button type="button" class="btn btn-primary">
               Sign up
