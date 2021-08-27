@@ -1,5 +1,7 @@
 import "../style/Hero.css";
 import Jumbotron from "bootstrap";
+import SignUp from "../components/Signup";
+
 
 function Hero() {
   return (
@@ -11,6 +13,7 @@ function Hero() {
             <p>
               Grow your love of the outdoors by borrowing equipment for a variety of outdoor activities. No commitment. No lugging gear to your destination. Nothing collecting dirt in your garage.
             </p>
+            <br></br>
             <button type="button" class="btn btn-primary">
               Sign up
             </button>
