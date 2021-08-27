@@ -1,40 +1,41 @@
+import React from "react";
 import "../style/Newsletter.css";
 
 function Newsletter() {
   return (
-    <section class="container-fluid">
-      <div class="row">
-        <div class="col form-img"></div>
-        <div class="col-lg-4 p-5 form">
-          <h3 class="text-center">Sign up for our newsletter</h3>
-          <p class="text-center">
+    <section className="container-fluid">
+      <div className="row">
+        <div className="col form-img"></div>
+        <div className="col-lg-4 p-5 form">
+          <h3 className="text-center">Sign up for our newsletter</h3>
+          <p className="text-center">
             Get the latest updates from our team and the latest products from
             our partners.
           </p>
-          <div class="m-1">
-            <label for="exampleFormControlInput1" class="form-label">
+          <div className="m-1">
+            <label for="exampleFormControlInput1" className="form-label">
               <b>Name</b>
             </label>
             <input
               type="email"
-              class="form-control"
+              className="form-control"
               id="exampleFormControlInput1"
               placeholder="Bear Grylls"
             />
           </div>
-          <div class="m-1">
-            <label for="exampleFormControlInput2" class="form-label">
+          <div className="m-1">
+            <label for="exampleFormControlInput2" className="form-label">
               <b>Email address</b>
             </label>
             <input
               type="email"
-              class="form-control"
+              className="form-control"
               id="exampleFormControlInput2"
               placeholder="name@example.com"
             />
           </div>
-          <div class="m-1">
-            <button type="submit" class="btn btn-tertiary">
+          <div className="m-1">
+            <button type="submit" className="btn btn-tertiary">
               Sign Up
             </button>
           </div>

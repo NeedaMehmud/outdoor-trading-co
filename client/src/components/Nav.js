@@ -9,7 +9,7 @@ class Nav extends React.Component {
     super();
 
     this.state = {
-      clicked: false
+      clicked: false,
     };
 
     this.handleClick = this.handleClick.bind(this);
@@ -17,7 +17,7 @@ class Nav extends React.Component {
 
   handleClick() {
     this.setState({
-      clicked: true
+      clicked: true,
     });
   }
 
@@ -47,6 +47,6 @@ class Nav extends React.Component {
       </Navbar>
     );
   }
-};
+}
 
 export default Nav;
