@@ -32,7 +32,7 @@ class Hero extends React.Component {
                 Grow your love of the outdoors by borrowing equipment for a variety of outdoor activities. No commitment. No lugging gear to your destination. Nothing collecting dirt in your garage.
             </p>
               <br></br>
-              {this.state.clicked ? <SignUp /> : <button onClick={this.handleClick} type="submit" class="rounded signin-button">Sign Up</button>}
+              {this.state.clicked ? <SignUp /> : <button onClick={this.handleClick} type="submit" className="btn btn-primary btn-block">Sign Up</button>}
             </div>
           </div>
         </div>
