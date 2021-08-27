@@ -10,8 +10,6 @@ import Iconbar from "./components/Iconbar";
 import Main from "./components/Main";
 import Newsletter from "./components/Newsletter";
 import Footer from "./components/Footer";
-import Login from "./components/Login";
-import Signup from "./components/Signup";
 
 require('react-dom');
 window.React2 = require('react');
@@ -32,8 +30,6 @@ function App() {
         <Main />
         <Newsletter />
         <Footer />
-        <Login />
-        <Signup />
       </div>
     </ApolloProvider>
   );
