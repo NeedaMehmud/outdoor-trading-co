@@ -7,11 +7,11 @@ const resolvers = {
     users: async () => {
       return User.find();
     },
-    user: async (parent, { _id }) => {
-      return User.findOne({ _id }).populate('items');
+    user: async (parent, { userId }) => {
+      return User.findOne({ _id: userId }).populate('items');
     },
-    item: async(parent, { _id }) => {
-      return Item.findOne({ _id })
+    item: async(parent, { itemId }) => {
+      return Item.findOne({ _id: itemId })
     },
     items: async(parent, { username }) => {
       const params = username ? { username } : {};
