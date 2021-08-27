@@ -27,7 +27,7 @@ const Login = () => {
                 </div>
                 <div class="d-grid gap-2 col-6 mx-auto">
                     <br></br>
-                    <button type="submit" className="rounded signin-button btn-block">Submit</button>
+                    <button type="submit" className="btn btn-secondary">Submit</button>
                     <p className="forgot-password text-right">
                         Forgot <a href="#">password?</a>
                     </p>
