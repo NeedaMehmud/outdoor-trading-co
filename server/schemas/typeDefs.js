@@ -8,6 +8,7 @@ const typeDefs = gql`
     password: String!
     item: [Item]
   }
+
   type Item {
     _id: ID!
     genre: String!
@@ -20,6 +21,11 @@ const typeDefs = gql`
     user: String!
   }
 
+  type Auth {
+    token: ID!
+    user: User
+  }
+
   type Query {
     users: [User]
     user(userId: ID!): User
@@ -27,6 +33,11 @@ const typeDefs = gql`
     genreItems(genre: String!): [Item]
     item(itemId: ID!): Item
     me: User
+  }
+
+  type Mutation {
+    addUser(username: String!, email: String!, password: String!): Auth
+    login(email: String!, password: String!): Auth
   }
 `;
 
@@ -37,9 +48,4 @@ module.exports = typeDefs;
 //   removeItem (itemId: ID!): Item
 // addUser(username: String!, email: String!, password: String!): Auth
 // login(email: String!, password: String!): Auth
-// }
-
-// type Auth {
-//   token: ID!
-//   user: User
 // }
