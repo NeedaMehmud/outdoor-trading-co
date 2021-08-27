@@ -59,7 +59,7 @@ export const QUERY_SINGLE_ITEM = gql`
   }
 `;
 
-export const QUERY_GENRE_ITEMS = gql `
+export const QUERY_GENRE_ITEMS = gql`
   query getGenreItems($genre: String!) {
     genreItems(genre: $genre) {
       _id
@@ -72,7 +72,7 @@ export const QUERY_GENRE_ITEMS = gql `
       user
     }
   }
-`
+`;
 
 export const QUERY_ME = gql`
   query me {
