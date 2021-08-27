@@ -41,7 +41,7 @@ class Nav extends React.Component {
           </button>
           </form>
           <div class="d-grid gap-2 d-md-flex justify-content-sm-end">
-            {this.state.clicked ? <Login /> : <button onClick={this.handleClick} type="submit" className="btn btn-secondary">Sign In</button>}
+            {this.state.clicked ? <Login /> : <button onClick={this.handleClick} type="submit" className="btn btn-secondary" data-toggle="modal">Sign In</button>}
           </div>
         </div>
       </Navbar>
