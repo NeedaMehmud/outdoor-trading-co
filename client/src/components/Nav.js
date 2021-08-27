@@ -32,35 +32,10 @@ class Nav extends React.Component {
           <form className="d-flex">
             <input
               className="form-control me-3"
-      <Navbar className="navbar sticky-top">
-        <div className="container">
-          <a className="navbar-brand" href="#">
-            {" "}
-            <img src={logo} alt="Logo" />
-          </a>
-          <form className="d-flex">
-            <input
-              className="form-control me-3"
               type="search"
               placeholder="Search"
               aria-label="Search"
             />
-            <button className="btn btn-secondary" type="submit">
-              Search
-            </button>
-          </form>
-
-          {this.state.clicked ? (
-            <Login />
-          ) : (
-            <button
-              onClick={this.handleClick}
-              type="submit"
-              className="rounded signin-button"
-            >
-              Sign In
-            </button>
-          )}
             <button className="btn btn-secondary" type="submit">
               Search
           </button>
