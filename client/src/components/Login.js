@@ -1,5 +1,5 @@
 import Modal from "react-bootstrap/Modal";
-import "../style/SignIn.css";
+import "../style/Login.css";
 import React from "react";
 
 const Login = () => {
@@ -12,27 +12,27 @@ const Login = () => {
   };
   return (
     <Modal.Body>
-      <div class="login">
-        <div class="login-triangle"></div>
-        <form class="login-container">
-          <div class="m-1">
-            <label for="exampleFormControlInput1" class="form-label">
-              <b class="text-white">Username</b>
+      <div className="login">
+        <div className="login-triangle"></div>
+        <form className="login-container">
+          <div className="m-1">
+            <label for="exampleFormControlInput1" className="form-label">
+              <b className="text-white">Username</b>
             </label>
             <input
               type="email"
-              class="form-control"
+              className="form-control"
               id="exampleFormControlInput1"
               placeholder="name@example.com"
             />
           </div>
-          <div class="m-1">
-            <label for="exampleFormControlInput2" class="form-label">
-              <b class="text-white">Password</b>
+          <div className="m-1">
+            <label for="exampleFormControlInput2" className="form-label">
+              <b className="text-white">Password</b>
             </label>
             <input
               type="email"
-              class="form-control"
+              className="form-control"
               id="exampleFormControlInput2"
               placeholder="Password"
             />
@@ -41,13 +41,13 @@ const Login = () => {
             <button
               onClick={showModal}
               type="submit"
-              class="text-center rounded signin-button"
+              className="text-center rounded signin-button"
             >
               Sign In
             </button>
             <Modal show={isOpen} onHide={hideModal} />
             <button
-              class="text-center rounded signin-button"
+              className="text-center rounded signin-button"
               onClick={hideModal}
             >
               Cancel
