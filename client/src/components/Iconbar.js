@@ -1,3 +1,4 @@
+import React from "react";
 import "../style/Iconbar.css";
 import Nav from "react-bootstrap/Nav";
 import campIcon from "../assets/images/camp-icon.png";
@@ -9,37 +10,37 @@ import miscIcon from "../assets/images/misc-icon.png";
 
 function Iconbar() {
   return (
-    <nav class="nav-icon">
-      <div class="container">
-        <ul class="nav nav-icon">
-          <li class="nav-item">
+    <nav className="nav-icon">
+      <div className="container">
+        <ul className="nav nav-icon">
+          <li className="nav-item">
             <a href="#">
-              <img src={campIcon} class="icon" />
+              <img src={campIcon} className="icon" />
             </a>
           </li>
-          <li class="nav-item">
+          <li className="nav-item">
             <a href="#">
-              <img src={compassIcon} class="icon" />
+              <img src={compassIcon} className="icon" />
             </a>
           </li>
-          <li class="nav-item">
+          <li className="nav-item">
             <a href="#">
-              <img src={waterIcon} class="icon" />
+              <img src={waterIcon} className="icon" />
             </a>
           </li>
-          <li class="nav-item">
+          <li className="nav-item">
             <a href="#">
-              <img src={snowIcon} class="icon" />
+              <img src={snowIcon} className="icon" />
             </a>
           </li>
-          <li class="nav-item">
+          <li className="nav-item">
             <a href="#">
-              <img src={climbingIcon} class="icon" />
+              <img src={climbingIcon} className="icon" />
             </a>
           </li>
-          <li class="nav-item">
+          <li className="nav-item">
             <a href="#">
-              <img src={miscIcon} class="icon" />
+              <img src={miscIcon} className="icon" />
             </a>
           </li>
         </ul>

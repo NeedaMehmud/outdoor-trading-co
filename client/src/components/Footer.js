@@ -7,15 +7,15 @@ import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 function Footer() {
   return (
     <footer>
-      <div class="container p-5">
-        <div class="row p-3">
+      <div className="container p-5">
+        <div className="row p-3">
           <h3>Contact Us</h3>
-          <div class="col-3 sm-2">
+          <div className="col-3 sm-2">
             <p>1-800-OUT-DOOR</p>
             <p>1234 Pine Rd</p>
             <p>Outdoor, GA</p>
           </div>
-          <div class="col-3 sm-2">
+          <div className="col-3 sm-2">
             <ul>
               <li>
                 <a href="#">About</a>
@@ -28,7 +28,7 @@ function Footer() {
               </li>
             </ul>
           </div>
-          <div class="col-6 lg-1">
+          <div className="col-6 lg-1">
             {" "}
             <a
               href="https://www.facebook.com/Outdoor-Trading-Co-100466249039342"
@@ -47,7 +47,7 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div class="text-center p-3 copyright">
+      <div className="text-center p-3 copyright">
         <p>Copyright 2021 Outdoor Trading Co.</p>
       </div>
     </footer>
