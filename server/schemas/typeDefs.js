@@ -22,10 +22,10 @@ const typeDefs = gql`
 
   type Query {
     users: [User]
-    user(_id: ID!): User
+    user(userId: ID!): User
     items(username: String): [Item]
     genreItems(genre: String!): [Item]
-    item(_id: ID!): Item
+    item(itemId: ID!): Item
     me: User
   }
 `;
