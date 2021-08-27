@@ -23,16 +23,16 @@ class Hero extends React.Component {
 
   render() {
     return (
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container hero-text">
-          <div class="card col-lg-4">
-            <div class="card-body m-3">
+      <div className="jumbotron jumbotron-fluid">
+        <div className="container hero-text">
+          <div className="card col-lg-4">
+            <div className="card-body m-3">
               <h2>Outside. Together.</h2>
               <p>
                 Grow your love of the outdoors by borrowing equipment for a variety of outdoor activities. No commitment. No lugging gear to your destination. Nothing collecting dirt in your garage.
             </p>
               <br></br>
-              {this.state.clicked ? <SignUp /> : <button onClick={this.handleClick} type="submit" className="btn btn-primary btn-block">Sign Up</button>}
+              {this.state.clicked ? <SignUp /> : <button onClick={this.handleClick} type="submit" classNameName="btn btn-primary btn-block">Sign Up</button>}
             </div>
           </div>
         </div>
