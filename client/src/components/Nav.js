@@ -23,24 +23,24 @@ class Nav extends React.Component {
 
   render() {
     return (
-      <Navbar class="navbar sticky-top">
-        <div class="container">
-          <a class="navbar-brand" href="#">
+      <Navbar className="navbar sticky-top">
+        <div className="container">
+          <a className="navbar-brand" href="#">
             {" "}
             <img src={logo} alt="Logo" />
           </a>
-          <form class="d-flex">
+          <form className="d-flex">
             <input
-              class="form-control me-3"
+              className="form-control me-3"
               type="search"
               placeholder="Search"
               aria-label="Search"
             />
-            <button class="btn btn-secondary" type="submit">
+            <button className="btn btn-secondary" type="submit">
               Search
           </button>
           </form>
-          <div class="d-grid gap-2 d-md-flex justify-content-sm-end">
+          <div className="d-grid gap-2 d-md-flex justify-content-sm-end">
             {this.state.clicked ? <Login /> : <button onClick={this.handleClick} type="submit" className="btn btn-secondary">Sign In</button>}
           </div>
         </div>
