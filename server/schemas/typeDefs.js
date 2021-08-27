@@ -33,8 +33,8 @@ const typeDefs = gql`
 module.exports = typeDefs;
 
 // type Mutation {
-//   submitItem (name: String!, genre: String!, location: String!, condition: String!, description: String): Item
-//   removeItem (_id: ID!): Item
+//   addItem(name: String!, genre: String!, location: String!, condition: String!, description: String, image_id: String!): Item
+//   removeItem (itemId: ID!): Item
 // addUser(username: String!, email: String!, password: String!): Auth
 // login(email: String!, password: String!): Auth
 // }
