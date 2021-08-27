@@ -28,11 +28,12 @@ class Hero extends React.Component {
           <div className="card col-lg-4">
             <div className="card-body m-3">
               <h2>Outside. Together.</h2>
+              <br></br>
               <p>
                 Grow your love of the outdoors by borrowing equipment for a variety of outdoor activities. No commitment. No lugging gear to your destination. Nothing collecting dirt in your garage.
             </p>
-              <br></br>
-              {this.state.clicked ? <SignUp /> : <button onClick={this.handleClick} type="submit" classNameName="btn btn-primary btn-block">Sign Up</button>}
+            <br></br>
+              {this.state.clicked ? <SignUp /> : <button onClick={this.handleClick} type="submit" className="btn btn-primary btn-block" data-toggle="modal">Sign Up</button>}
             </div>
           </div>
         </div>

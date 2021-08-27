@@ -56,7 +56,7 @@ body, html, .App, #root, .auth-wrapper {
 }
 
 .auth-wrapper .form-control:focus {
-  border-color: #167bff;
+  border-color: #3a7355;
   box-shadow: none;
 }
 
@@ -81,5 +81,5 @@ body, html, .App, #root, .auth-wrapper {
 }
 
 .forgot-password a {
-  color: #167bff;
+  color:#3a7355;;
 }

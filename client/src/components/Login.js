@@ -5,8 +5,6 @@ import React from "react";
 const Login = () => {
     return (
         <form>
-            <h3>Sign In</h3>
-
             <div className="form-group">
                 <label>Email address</label>
                 <input type="email" className="form-control" placeholder="Enter email" />
@@ -23,11 +21,12 @@ const Login = () => {
                     <label className="custom-control-label" htmlFor="customCheck1">Remember me</label>
                 </div>
             </div>
-
-            <button type="submit" className="btn btn-primary btn-block">Submit</button>
-            <p className="forgot-password text-right">
-                Forgot <a href="#">password?</a>
-            </p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button className="btn btn-secondary" type="submit">Submit</button>
+                <p className="forgot-password text-right">
+                    Forgot <a href="#">password?</a>
+                </p>
+            </div>
         </form>
     );
 
