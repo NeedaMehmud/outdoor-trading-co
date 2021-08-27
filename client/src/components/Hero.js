@@ -1,17 +1,20 @@
+import React from "react";
 import "../style/Hero.css";
 import Jumbotron from "bootstrap";
 
 function Hero() {
   return (
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container hero-text">
-        <div class="card col-lg-4">
-          <div class="card-body m-3">
+    <div className="jumbotron jumbotron-fluid">
+      <div className="container hero-text">
+        <div className="card col-lg-4">
+          <div className="card-body m-3">
             <h2>Outside. Together.</h2>
             <p>
-              Grow your love of the outdoors by borrowing equipment for a variety of outdoor activities. No commitment. No lugging gear to your destination. Nothing collecting dirt in your garage.
+              Grow your love of the outdoors by borrowing equipment for a
+              variety of outdoor activities. No commitment. No lugging gear to
+              your destination. Nothing collecting dirt in your garage.
             </p>
-            <button type="button" class="btn btn-primary">
+            <button type="button" className="btn btn-primary">
               Sign up
             </button>
           </div>
