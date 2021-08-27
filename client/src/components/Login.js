@@ -31,7 +31,7 @@ const Login = () => {
                         <label for="exampleFormControlInput2" class="form-label">
                             <b class="text-white">Password</b>
                         </label>
-                        <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="Password" />
+                        <input type="password" class="form-control" id="exampleFormControlInput2" placeholder="Password" />
                     </div>
                     <Modal.Footer>
                         <button onClick={showModal} type="submit" class="text-center rounded signin-button">Sign In</button>
