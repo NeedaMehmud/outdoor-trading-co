@@ -5,7 +5,7 @@ import Dropdown from 'react-bootstrap/Dropdown'
 
 
 
-function App() {
+function DropdownMenu() {
     const [value, setValue] = useState('');
     const handleSelect = (e) => {
         console.log(e);
@@ -32,4 +32,4 @@ function App() {
 }
 
 
-export default App;
+export default DropdownMenu;

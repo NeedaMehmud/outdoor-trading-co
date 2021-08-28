@@ -3,6 +3,7 @@ import "../style/Nav.css";
 import Navbar from "react-bootstrap/Navbar";
 import logo from "../assets/images/logo.png";
 import Login from "../components/Login";
+import DropdownMenu from "../components/DropdownMenu"
 
 class Nav extends React.Component {
   constructor() {
@@ -30,15 +31,8 @@ class Nav extends React.Component {
             <img src={logo} alt="Logo" />
           </a>
           <form class="d-flex">
-            <input
-              className="form-control me-3"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button className="btn btn-secondary" type="submit">
-              Search
-          </button>
+            {<DropdownMenu />}
+
           </form>
           <div class="d-grid gap-2 d-md-flex justify-content-sm-end">
             {this.state.clicked ? <Login /> : <button onClick={this.handleClick} type="submit" className="btn btn-secondary" data-toggle="modal">Sign In</button>}
