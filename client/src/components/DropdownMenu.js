@@ -3,6 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown'
 import { gql, useQuery } from '@apollo/client';
+import "../style/DropdownMenu.css";
+
 
 // Create genre query
 const GET_GENRES = gql`
@@ -32,21 +34,23 @@ function DropdownMenu() {
     genres.forEach(g => console.log(g));
 
     return (
-        <div className="App container">
+        <div className="navbar">
             <DropdownButton
                 alignRight
-                title="Dropdown right"
-                id="dropdown-menu-align-right"
+                title="Make a Selection"
+                id="dropdown-menu-align-left"
                 onSelect={handleSelect}
             >
 
                 {/* {create dropdown item per genre} */}
-                {genres.map(function(genre, _){
+                {genres.map(function (genre, _) {
                     return <Dropdown.Item eventKey={genre}>{genre}</Dropdown.Item>;
-                  })}
+                })}
 
             </DropdownButton>
-            <h4>You selected {value}</h4>
+            {/* {keep this line of code to debug search results}}
+            {/* <br></br>
+            <h4>You selected {value}</h4> */}
         </div>
     );
 }
