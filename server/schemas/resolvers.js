@@ -50,10 +50,10 @@ const resolvers = {
 
       return { token, user };
     },
-    addItem: async (parent, { name, genre, location, condition, description, image_id }, context) => {
+    addItem: async (parent, { ItemInput }, context) => {
       if (context.user) {
         const item = await Item.create({
-          name, genre, location, condition, description, image_id,
+          ItemInput,
           user: context.user.username,
         });
 
