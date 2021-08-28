@@ -31,12 +31,12 @@ class Nav extends React.Component {
           </a>
           <form class="d-flex">
             <input
-              class="form-control me-3"
+              className="form-control me-3"
               type="search"
               placeholder="Search"
               aria-label="Search"
             />
-            <button class="btn btn-secondary" type="submit">
+            <button className="btn btn-secondary" type="submit">
               Search
           </button>
           </form>

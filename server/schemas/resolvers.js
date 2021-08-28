@@ -50,7 +50,39 @@ const resolvers = {
 
       return { token, user };
     },
-  },
+    addItem: async (parent, { name, genre, location, condition, description, image_id }, context) => {
+      if (context.user) {
+        const item = await Item.create({
+          name, genre, location, condition, description, image_id,
+          user: context.user.username,
+        });
+
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $addToSet: { item: item._id } }
+        );
+
+        return item;
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    },
+    removeItem: async (parent, { itemId }, context) => {
+      if (context.user) {
+        const item = await Item.findOneAndDelete({
+          _id: itemId,
+          user: context.user.username,
+        });
+
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $pull: { item: item._id } }
+        );
+
+        return item;
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    }
+  }
 };
 
 module.exports = resolvers;
