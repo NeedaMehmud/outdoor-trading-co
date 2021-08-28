@@ -54,5 +54,4 @@ export const REMOVE_ITEM = gql`
       user
       }
     }
-  }
 `;
