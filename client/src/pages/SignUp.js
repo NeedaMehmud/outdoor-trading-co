@@ -1,7 +1,7 @@
 import React from 'react';
 import Nav from "../components/Nav";
-import HeroCardless from "../components/HeroCardless";
-import SignUpForm from "../components/SignUpForm"
+import Hero from "../components/Hero";
+import Main from "../components/Main"
 import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
 
@@ -9,8 +9,8 @@ function SignUp() {
     return (
         <div>
          <Nav />
-         <HeroCardless />
-         <SignUpForm />
+         <Hero />
+         <Main />
          <Newsletter />
          <Footer />
         </div>
