@@ -8,11 +8,8 @@ import Footer from "../components/Footer";
 function Profile() {
     return (
         <div>
-         <Nav />
          <Hero />
          <Main />
-         <Newsletter />
-         <Footer />
         </div>
     );
 };

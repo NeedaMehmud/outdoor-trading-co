@@ -60,7 +60,7 @@ class Nav extends React.Component {
             ) : (
               <>
           <div className="d-grid gap-2 d-md-flex justify-content-sm-end">
-            {this.state.clicked ? <Login /> : <button onClick={this.handleClick} type="submit" className="btn btn-secondary">Sign In</button>}
+            {this.state.clicked ? <Login /> : <button onClick={this.handleClick} type="submit" className="btn btn-secondary">Login</button>}
           </div>
             </>
           )}
