@@ -1,14 +1,17 @@
 import React from "react";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import "./style/Reset.css";
 import "./style/Index.css";
 import Home from './pages/Home';
+import Nav from './components/Nav'
 import SignUp from './pages/SignUp';
 import Profile from './pages/Profile';
 import SingleItem from './pages/SingleItem';
 import ItemsInSingleGenre from './pages/ItemsInSingleGenre';
 import SubmitItem from './pages/SubmitItem';
+import Newsletter from "./components/Newsletter";
+import Footer from "./components/Footer";
 
 
 require('react-dom');
@@ -23,7 +26,9 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <Router>
+        <Router>
+          <Nav />
+          <Switch>
           <Route exact path="/">
             <Home />
           </Route>
@@ -54,13 +59,13 @@ function App() {
           <Route exact path="/Camping">
             <ItemsInSingleGenre />
           </Route>
-          <Route exact path="/profiles/:username">
-            <Profile />
-          </Route>
           <Route exact path="/:itemId">
             <SingleItem />
           </Route>
-      </Router>
+          </Switch>
+        </Router>
+      <Newsletter />
+      <Footer />
     </ApolloProvider>
   );
 }
