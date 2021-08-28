@@ -15,7 +15,7 @@ function Footer() {
             <p>1234 Pine Rd</p>
             <p>Outdoor, GA</p>
           </div>
-          <div className="col-3 sm-2">
+          {/*<div className="col-3 sm-2">
             <ul>
               <li>
                 <a href="#">About</a>
@@ -27,9 +27,8 @@ function Footer() {
                 <a href="#">Link</a>
               </li>
             </ul>
-          </div>
-          <div className="col-6 lg-1">
-            {" "}
+  </div>*/}
+          <div className="col-3 sm-2">
             <a
               href="https://www.facebook.com/Outdoor-Trading-Co-100466249039342"
               target="_blank"
