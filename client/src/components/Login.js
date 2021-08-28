@@ -1,73 +1,63 @@
+
 import Modal from "react-bootstrap/Modal";
 import "../style/Login.css";
 import React from "react";
 
 const Login = () => {
+    const [isOpen, setIsOpen] = React.useState(false);
+    const showModal = () => {
+        setIsOpen(true);
+    };
+    const hideModal = () => {
+        setIsOpen(false);
+    };
     return (
-        // <form>
-        //     <div className="form-group">
-        //         <label>Email address</label>
-        //         <input type="email" className="form-control" placeholder="Enter email" />
-        //     </div>
-
-        //     <div className="form-group">
-        //         <label>Password</label>
-        //         <input type="password" className="form-control" placeholder="Enter password" />
-        //     </div>
-
-        //     <div className="form-group">
-        //         <div className="custom-control custom-checkbox">
-        //             <input type="checkbox" className="custom-control-input" id="customCheck1" />
-        //             <label className="custom-control-label" htmlFor="customCheck1">Remember me</label>
-        //         </div>
-        //     </div>
-        //     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        //         <button className="btn btn-secondary" type="submit">Submit</button>
-        //         <p className="forgot-password text-right">
-        //             Forgot <a href="#">password?</a>
-        //         </p>
-        //     </div>
-        // </form>
-
-        <div className="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div className="modal-dialog" role="document">
-                <div className="modal-content">
-                    <div className="modal-header">
-                        <h5 className="modal-title" id="exampleModalLabel">Sign In</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+        <Modal.Body>
+            <div className="login">
+                <div className="login-triangle"></div>
+                <form className="login-container">
+                    <div className="m-1">
+                        <label for="exampleFormControlInput1" className="form-label">
+                            <b className="text-white">Username</b>
+                        </label>
+                        <input
+                            type="email"
+                            className="form-control"
+                            id="exampleFormControlInput1"
+                            placeholder="name@example.com"
+                        />
                     </div>
-                    <div className="modal-body">
-                        <div className="form-group">
-                            <label>Email address</label>
-                            <input type="email" className="form-control" placeholder="Enter email" />
-                        </div>
-
-                        <div className="form-group">
-                            <label>Password</label>
-                            <input type="password" className="form-control" placeholder="Enter password" />
-                        </div>
-
-                        <div className="form-group">
-                            <div className="custom-control custom-checkbox">
-                                <input type="checkbox" className="custom-control-input" id="customCheck1" />
-                                <label className="custom-control-label" htmlFor="customCheck1">Remember me</label>
-                            </div>
-                        </div>
-                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        </div>
-                        <div className="modal-footer">
-                            <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="submit" className="btn btn-secondary" >Submit</button>
-                        </div>
+                    <div className="m-1">
+                        <label for="exampleFormControlInput2" className="form-label">
+                            <b className="text-white">Password</b>
+                        </label>
+                        <input
+                            type="email"
+                            className="form-control"
+                            id="exampleFormControlInput2"
+                            placeholder="Password"
+                        />
                     </div>
-                </div>
+                    <Modal.Footer>
+                        <button
+                            onClick={showModal}
+                            type="submit"
+                            className="text-center rounded signin-button"
+                        >
+                            Sign In
+            </button>
+                        <Modal show={isOpen} onHide={hideModal} />
+                        <button
+                            className="text-center rounded signin-button"
+                            onClick={hideModal}
+                        >
+                            Cancel
+            </button>
+                    </Modal.Footer>
+                </form>
             </div>
-        </div>
-
+        </Modal.Body>
     );
-
-}
+};
 
 export default Login;
