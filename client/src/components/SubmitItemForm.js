@@ -60,19 +60,20 @@ const ItemForm = () => {
     return (
           <div className="container p-3">
             <form onSubmit={handleFormSubmit}>
+              <h1 className="text-center">Submit Your Item</h1>
               <div className="form-control">
                 <label>Item Name:</label>
-                <input className="form-control" name="name" type="text" onChange={handleChange}></input>
+                <input className="form-control my-2" name="name" type="text" onChange={handleChange}></input>
                 <label>Item Genre:</label>
-                <input className="form-control" name="genre" type="text" onChange={handleChange}></input>
+                <input className="form-control my-2" name="genre" type="text" onChange={handleChange}></input>
                 <label>Location:</label>
-                <input className="form-control" name="location" type="text" onChange={handleChange}></input>
+                <input className="form-control my-2" name="location" type="text" onChange={handleChange}></input>
                 <label>Condition:</label>
-                <input className="form-control" name="condition" type="text" onChange={handleChange}></input>
+                <input className="form-control my-2" name="condition" type="text" onChange={handleChange}></input>
                 <label>Enter description:</label>
-                <input className="form-control" name="description" type="text" onChange={handleChange}></input>
+                <input className="form-control my-2" name="description" type="text" onChange={handleChange}></input>
                 <label>Add Photo:</label>
-                <input className="form-control" name="file" type="file" accept="image/png, image/jpg, image/jpeg" onChange={handleFileChange}></input>
+                <input className="form-control my-2" name="file" type="file" accept="image/png, image/jpg, image/jpeg" onChange={handleFileChange}></input>
                 <br></br>
                 <button type="submit" className="signup-btn">Submit</button>
               </div>

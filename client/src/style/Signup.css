@@ -9,6 +9,9 @@
   padding: 10px 20px;
   width: 100%;
 }
+.signup-btn:hover {
+  background-color: var(--tertiary);
+}
 .auth-wrapper {
   display: flex;
   justify-content: center;
