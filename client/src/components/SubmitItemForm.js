@@ -3,6 +3,7 @@ import { useMutation } from '@apollo/client';
 import { ADD_ITEM } from '../utils/mutations';
 import axios from 'axios'
 import Auth from '../utils/auth';
+import "../style/Signup.css";
 
 const ItemForm = () => {
     const [fileState, setFileState] = useState([]);
@@ -57,15 +58,26 @@ const ItemForm = () => {
     };
 
     return (
-      <form onSubmit={handleFormSubmit}>
-        <input name="name" type="text" onChange={handleChange}></input>
-        <input name="genre" type="text" onChange={handleChange}></input>
-        <input name="location" type="text" onChange={handleChange}></input>
-        <input name="condition" type="text" onChange={handleChange}></input>
-        <input name="description" type="text" onChange={handleChange}></input>
-        <input name="file" type="file" accept="image/png, image/jpg, image/jpeg" onChange={handleFileChange}></input>
-        <button type="submit">Submit</button>
-      </form>
+          <div className="container p-3">
+            <form onSubmit={handleFormSubmit}>
+              <div className="form-control">
+                <label>Item Name:</label>
+                <input className="form-control" name="name" type="text" onChange={handleChange}></input>
+                <label>Item Genre:</label>
+                <input className="form-control" name="genre" type="text" onChange={handleChange}></input>
+                <label>Location:</label>
+                <input className="form-control" name="location" type="text" onChange={handleChange}></input>
+                <label>Condition:</label>
+                <input className="form-control" name="condition" type="text" onChange={handleChange}></input>
+                <label>Enter description:</label>
+                <input className="form-control" name="description" type="text" onChange={handleChange}></input>
+                <label>Add Photo:</label>
+                <input className="form-control" name="file" type="file" accept="image/png, image/jpg, image/jpeg" onChange={handleFileChange}></input>
+                <br></br>
+                <button type="submit" className="signup-btn">Submit</button>
+              </div>
+            </form>
+          </div>
     );
 };   
     
