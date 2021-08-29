@@ -3,9 +3,8 @@ p, a, {
   font-family: "Hind Vadodara", sans-serif;
   margin: 0;
 }
-
 .news-btn {
-  background-color: #3A7355;
+  background-color: var(--tertiary);
   border-radius: 10px;
   border: none;
   color: #fff;
@@ -14,7 +13,9 @@ p, a, {
   width: 100%;
   margin-top: 1em;
 }
-
+.news-btn:hover{
+    background-color: var(--primary);
+}
 .form-img {
   background-image: url(../assets/images/form-img.jpg);
   background-position: center;

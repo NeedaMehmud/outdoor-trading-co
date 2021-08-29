@@ -11,7 +11,7 @@
 .signup {
   border-radius: 10px;
   border: none;
-  background-color: #809A63;
+  background-color: var(--quartenary);
   color: #fff;
   width: 100%;
   margin-top: 10px;
@@ -20,4 +20,7 @@
   font-size: large;
   border: none;
   padding: 10px 20px;
+}
+.signup:hover {
+  background-color: var(--tertiary);
 }
