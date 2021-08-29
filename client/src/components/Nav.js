@@ -37,16 +37,8 @@ class Nav extends React.Component {
             {" "}
             <img src={logo} alt="Logo" />
           </a>
-          <form className="d-flex">
-            <input
-              className="form-control me-3"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button className="search-btn" type="submit">
-              Search
-          </button>
+          <form class="d-flex">
+            {<DropdownMenu />}
           </form>
           <div>
             {Auth.loggedIn() ? (
