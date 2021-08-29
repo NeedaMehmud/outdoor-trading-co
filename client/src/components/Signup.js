@@ -62,7 +62,7 @@ const SignUp = () => {
                 <input type="password" className="form-control" placeholder="Enter password" name="password" value={formState.password} onChange={handleChange}/>
             </div>
             <br></br>
-            <button type="submit" className="btn btn-primary btn-block">Sign Up</button>
+            <button type="submit" className="signup">Sign Up</button>
             <p className="forgot-password text-right">
                 Already registered <a href="#">log in?</a>
             </p>
