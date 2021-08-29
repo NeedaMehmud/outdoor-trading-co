@@ -50,10 +50,10 @@ const resolvers = {
 
       return { token, user };
     },
-    addItem: async (parent, { ItemInput }, context) => {
+    addItem: async (parent, { name, genre, location, condition, description, image_id }, context) => {
       if (context.user) {
         const item = await Item.create({
-          ItemInput,
+          name, genre, location, condition, description, image_id,
           user: context.user.username,
         });
 
@@ -64,6 +64,7 @@ const resolvers = {
 
         return item;
       }
+      console.log(context.user.username);
       throw new AuthenticationError('You need to be logged in!');
     },
     removeItem: async (parent, { itemId }, context) => {

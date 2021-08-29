@@ -21,15 +21,6 @@ const typeDefs = gql`
     user: String!
   }
 
-  input ItemInput {
-    genre: String
-    name: String
-    location: String
-    condition: String
-    description: String
-    image_id: String
-  }
-
   type Auth {
     token: ID!
     user: User
@@ -47,7 +38,7 @@ const typeDefs = gql`
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    addItem(itemInput: ItemInput!): Item
+    addItem(name: String!, genre: String!, location: String!, condition: String!, description: String, image_id: String!): Item
     removeItem (itemId: ID!): Item
   }
 `;
