@@ -6,6 +6,7 @@ import Main from "../components/Main"
 import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
 
+
 function SubmitItem() {
     return (
         <div>
