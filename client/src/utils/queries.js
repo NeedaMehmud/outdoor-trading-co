@@ -46,7 +46,7 @@ export const QUERY_ITEMS = gql`
 
 export const QUERY_SINGLE_ITEM = gql`
   query getSingleItem($itemId: ID!) {
-    item(itemId: $itemID) {
+    item(itemId: $itemId) {
       _id
       genre
       name
