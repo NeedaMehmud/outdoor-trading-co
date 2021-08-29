@@ -10,12 +10,12 @@ function Footer() {
       <div className="container p-5">
         <div className="row p-3">
           <h3>Contact Us</h3>
-          <div className="col-2 sm-2">
+          <div className="col-3">
             <p>1-800-OUT-DOOR</p>
             <p>1234 Pine Rd</p>
             <p>Outdoor, GA</p>
           </div>
-          <div className="col-2 sm-2">
+          <div className="col-3">
             <ul>
               <li>
                 <a href="#">About</a>
@@ -28,7 +28,7 @@ function Footer() {
               </li>
             </ul>
           </div>
-          <div className="col-8 lg-1">
+          <div className="col-6">
           <div className="footer-social-icons">
     <h4 className="_14">Follow us on</h4>
     <ul className="social-icons">
