@@ -34,7 +34,7 @@ function DropdownMenu() {
     genres.forEach(g => console.log(g));
 
     return (
-        <div className="navbar">
+        <form className="dropdownMenu">
             <DropdownButton
                 alignRight
                 title="Make a Selection"
@@ -51,7 +51,7 @@ function DropdownMenu() {
             {/* {keep this line of code to debug search results}}
             {/* <br></br>
             <h4>You selected {value}</h4> */}
-        </div>
+        </form>
     );
 }
 
