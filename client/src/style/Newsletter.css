@@ -1,13 +1,21 @@
-p,
-a,
-.btn-primary,
-.btn-secondary,
-.btn-tertiary {
+p, a, {
   font-size: larger;
   font-family: "Hind Vadodara", sans-serif;
   margin: 0;
 }
-
+.news-btn {
+  background-color: var(--tertiary);
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: large;
+  width: 100%;
+  margin-top: 1em;
+}
+.news-btn:hover{
+    background-color: var(--primary);
+}
 .form-img {
   background-image: url(../assets/images/form-img.jpg);
   background-position: center;
