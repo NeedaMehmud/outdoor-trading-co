@@ -63,22 +63,22 @@ function App() {
             <SubmitItem />
           </Route>
           <Route exact path="/Hiking">
-            <ItemsInSingleGenre />
+            <ItemsInSingleGenre genre={"Hiking"}/>
           </Route>
           <Route exact path="/Climbing">
-            <ItemsInSingleGenre />
+            <ItemsInSingleGenre genre={"Climbing"}/>
           </Route>
           <Route exact path="/Water">
-            <ItemsInSingleGenre />
+            <ItemsInSingleGenre genre={"Water"}/>
           </Route>
           <Route exact path="/Misc">
-            <ItemsInSingleGenre />
+            <ItemsInSingleGenre genre={"Misc"}/>
           </Route>
           <Route exact path="/Snow">
-            <ItemsInSingleGenre />
+            <ItemsInSingleGenre genre={"Snow"}/>
           </Route>
           <Route exact path="/Camping">
-            <ItemsInSingleGenre />
+            <ItemsInSingleGenre genre={"Camping"}/>
           </Route>
           <Route exact path="/:itemId">
             <SingleItem />
