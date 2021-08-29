@@ -1,15 +1,33 @@
 import React from 'react';
-import Nav from "../components/Nav";
+import { Redirect, useParams } from 'react-router-dom';
+import { useQuery } from '@apollo/client';
+import { QUERY_ME } from '../utils/queries'
+import { Image } from 'cloudinary-react';
 import Hero from "../components/Hero";
-import Main from "../components/Main"
-import Newsletter from "../components/Newsletter";
-import Footer from "../components/Footer";
+import Auth from '../utils/auth';
 
-function Profile() {
+const Profile = () => {
+    
+    const { loading, data } = useQuery(QUERY_ME);
+    
+    const user = data?.me || {};
+
+    console.log(user);
+    
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+
     return (
         <div>
          <Hero />
-         <Main />
+         {user.item.map(item => (
+             <div>
+             <div>{item.name}</div>
+             <p>{item.image_id}</p>
+             <Image cloudName="outdoor-trading-co" publicId={item.image_id}></Image>
+             </div>
+         ))}
         </div>
     );
 };
