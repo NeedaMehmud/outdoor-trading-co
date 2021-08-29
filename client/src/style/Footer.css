@@ -1,6 +1,8 @@
-@import url(https://fonts.googleapis.com/css?family=Lato);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 
+h3 {
+    font-weight: 700;
+}
 nav,footer {
   background-color: var(--primary);
   color: var(--links);
@@ -16,21 +18,8 @@ footer a:hover {
   color: var(--links);
 }
 /* Social media icon styling. */
-.footer-social-icons {
-    width: 350px;
-    display:block;
-    margin: 0 auto;
-}
-.social-icon {
-    color: #fff;
-}
-ul.social-icons {
-    margin-top: 10px;
-}
 .social-icons li {
-    vertical-align: top;
     display: inline;
-    height: 100px;
 }
 .social-icons a, .social-icons a:hover {
     color: #fff;
