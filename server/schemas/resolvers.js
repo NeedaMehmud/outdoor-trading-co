@@ -64,6 +64,7 @@ const resolvers = {
 
         return item;
       }
+      console.log(context.user.username);
       throw new AuthenticationError('You need to be logged in!');
     },
     removeItem: async (parent, { itemId }, context) => {

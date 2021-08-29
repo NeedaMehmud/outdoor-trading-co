@@ -4,6 +4,9 @@ import Navbar from "react-bootstrap/Navbar";
 import logo from "../assets/images/logo.png";
 import Login from "../components/Login";
 import DropdownMenu from "../components/DropdownMenu"
+import { Link } from 'react-router-dom';
+
+import Auth from '../utils/auth';
 
 class Nav extends React.Component {
   constructor() {
@@ -23,6 +26,10 @@ class Nav extends React.Component {
   }
 
   render() {
+    const logout = (event) => {
+      event.preventDefault();
+      Auth.logout();
+    };
     return (
       <Navbar class="navbar sticky-top">
         <div class="container">
@@ -44,3 +51,4 @@ class Nav extends React.Component {
 };
 
 export default Nav;
+
