@@ -32,7 +32,7 @@ const Login = () => {
                             <b className="text-white">Password</b>
                         </label>
                         <input
-                            type="email"
+                            type="password"
                             className="form-control"
                             id="exampleFormControlInput2"
                             placeholder="Password"
