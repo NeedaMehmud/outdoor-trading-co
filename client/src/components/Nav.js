@@ -37,12 +37,34 @@ class Nav extends React.Component {
             {" "}
             <img src={logo} alt="Logo" />
           </a>
-          <form class="d-flex">
-            {<DropdownMenu />}
-
+          <form className="d-flex">
+            <input
+              className="form-control me-3"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button className="search-btn" type="submit">
+              Search
+          </button>
           </form>
-          <div class="d-grid gap-2 d-md-flex justify-content-sm-end">
-            {this.state.clicked ? <Login /> : <button onClick={this.handleClick} type="submit" className="btn btn-secondary" data-toggle="modal">Sign In</button>}
+          <div>
+            {Auth.loggedIn() ? (
+              <>
+                <Link className="btn btn-lg btn-info m-2 d-grid gap-2 d-md-flex justify-content-sm-end" to="/me">
+                  {Auth.getProfile().data.username}'s profile
+              </Link>
+                <button className="login-btn" onClick={logout}>
+                  Logout
+              </button>
+              </>
+            ) : (
+              <>
+                <div className="d-grid gap-2 d-md-flex justify-content-sm-end">
+                  {this.state.clicked ? <Login /> : <button onClick={this.handleClick} type="submit" className="login-btn">Login</button>}
+                </div>
+              </>
+            )}
           </div>
         </div>
       </Navbar>

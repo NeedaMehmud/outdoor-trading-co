@@ -2,20 +2,39 @@ nav {
   background-color: var(--primary);
   color: var(--links);
 }
-
 .navbar-brand img {
   max-height: 60px;
 }
-
 .form {
   background-color: var(--secondary);
 }
-
 .form-control {
   max-width: 100%;
 }
-
 nav, footer {
   background-color: var(--primary);
   color: var(--links)
+}
+.login-btn:hover, .search-btn:hover {
+  background-color: var(--secondary);
+}
+.login-btn {
+    border-radius: 10px;
+    border: none;
+    background-color: var(--quartenary);
+    color: #fff;
+    width: 100%;
+    padding: 0.5em;
+    text-transform: uppercase;
+    font-size: large;
+    padding: 10px 20px;
+}
+.search-btn {
+  background-color: var(--tertiary);
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  padding: 0.5em;
+  font-size: large;
+  padding: 10px 20px;
 }
