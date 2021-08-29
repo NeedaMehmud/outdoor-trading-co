@@ -34,19 +34,27 @@ function DropdownMenu() {
     genres.forEach(g => console.log(g));
 
     return (
-            <DropdownButton
-                alignRight
-                title="Make a Selection"
-                id="dropdown-menu-align-left"
-                onSelect={handleSelect}
-                className="dropdown"
-            >
+        <DropdownButton
+            alignRight
+            title="Make a Selection"
+            id="dropdown-menu-align-left"
+            onSelect={handleSelect}
+            className="btn dropdown-toggle dropdown-menu-xl-left"
+            data-toggle="dropdown"
+            data-display="static"
+            aria-haspopup="true"
+            aria-expanded="false"
 
-                {/* {create dropdown item per genre} */}
-                {genres.map(function (genre, _) {
-                    return <Dropdown.Item eventKey={genre}>{genre}</Dropdown.Item>;
-                })}
-            </DropdownButton>
+        >
+
+            {/* {create dropdown item per genre} */}
+            {genres.map(function (genre, _) {
+                return <Dropdown.Item
+                    class="dropdown-menu dropdown-menu-lg-right dropdown-item"
+                    type="button"
+                    eventKey={genre}>{genre}</Dropdown.Item>;
+            })}
+        </DropdownButton>
     );
 }
 
