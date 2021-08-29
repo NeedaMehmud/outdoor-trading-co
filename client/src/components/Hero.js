@@ -1,9 +1,6 @@
 import React from "react";
 import "../style/Hero.css";
-import Jumbotron from "bootstrap";
 import SignUp from "../components/Signup";
-
-
 class Hero extends React.Component {
   constructor() {
     super();
@@ -25,14 +22,13 @@ class Hero extends React.Component {
     return (
       <div className="jumbotron jumbotron-fluid">
         <div className="container hero-text">
-          <div className="card col-lg-4">
+          <div className="card col-lg-5">
             <div className="card-body m-3">
               <h2>Outside. Together.</h2>
               <p>
                 Grow your love of the outdoors by borrowing equipment for a variety of outdoor activities. No commitment. No lugging gear to your destination. Nothing collecting dirt in your garage.
             </p>
-              <br></br>
-              {this.state.clicked ? <SignUp /> : <button onClick={this.handleClick} type="submit" classNameName="btn btn-primary btn-block">Sign Up</button>}
+              {this.state.clicked ? <SignUp /> : <button onClick={this.handleClick} type="submit" className="signup">Sign Up</button>}
             </div>
           </div>
         </div>
