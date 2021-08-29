@@ -19,3 +19,24 @@ nav, footer {
   background-color: var(--primary);
   color: var(--links)
 }
+
+.login-btn {
+    border-radius: 10px;
+    border: none;
+    background-color: #809A63;
+    color: #fff;
+    width: 100%;
+    padding: 0.5em;
+    text-transform: uppercase;
+    font-size: large;
+    padding: 10px 20px;
+}
+.search-btn {
+  background-color: #3A7355;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  padding: 0.5em;
+  font-size: large;
+  padding: 10px 20px;
+}

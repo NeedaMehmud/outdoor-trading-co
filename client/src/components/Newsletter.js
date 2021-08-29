@@ -35,7 +35,7 @@ function Newsletter() {
             />
           </div>
           <div className="m-1">
-            <button type="submit" className="btn btn-tertiary">
+            <button type="submit" className="news-btn">
               Sign Up
             </button>
           </div>

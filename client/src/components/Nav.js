@@ -43,7 +43,7 @@ class Nav extends React.Component {
               placeholder="Search"
               aria-label="Search"
             />
-            <button className="btn btn-secondary" type="submit">
+            <button className="search-btn" type="submit">
               Search
           </button>
           </form>
@@ -53,14 +53,14 @@ class Nav extends React.Component {
               <Link className="btn btn-lg btn-info m-2 d-grid gap-2 d-md-flex justify-content-sm-end" to="/me">
                 {Auth.getProfile().data.username}'s profile
               </Link>
-              <button className="btn btn-lg btn-light m-2" onClick={logout}>
+              <button className="login-btn" onClick={logout}>
                 Logout
               </button>
             </>
             ) : (
               <>
           <div className="d-grid gap-2 d-md-flex justify-content-sm-end">
-            {this.state.clicked ? <Login /> : <button onClick={this.handleClick} type="submit" className="btn btn-secondary">Login</button>}
+            {this.state.clicked ? <Login /> : <button onClick={this.handleClick} type="submit" className="login-btn">Login</button>}
           </div>
             </>
           )}
