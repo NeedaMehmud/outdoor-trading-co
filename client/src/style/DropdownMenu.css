@@ -1,3 +1,13 @@
-.dropdownMenu {
-    background-color: aquamarine !important;
-}
+.dropdown {
+    background-color: var(--secondary);
+    text-align: center;
+    color: white;
+    padding: 5px 5px 5px 8px;
+    font-family: "Hind Vadodara", sans-serif;
+    font-size: medium;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    font-size: large;
+  }
+  

@@ -34,24 +34,19 @@ function DropdownMenu() {
     genres.forEach(g => console.log(g));
 
     return (
-        <form className="dropdownMenu">
             <DropdownButton
                 alignRight
                 title="Make a Selection"
                 id="dropdown-menu-align-left"
                 onSelect={handleSelect}
+                className="dropdown"
             >
 
                 {/* {create dropdown item per genre} */}
                 {genres.map(function (genre, _) {
                     return <Dropdown.Item eventKey={genre}>{genre}</Dropdown.Item>;
                 })}
-
             </DropdownButton>
-            {/* {keep this line of code to debug search results}}
-            {/* <br></br>
-            <h4>You selected {value}</h4> */}
-        </form>
     );
 }
 
