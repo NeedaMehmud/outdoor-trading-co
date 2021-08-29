@@ -43,7 +43,7 @@ class Nav extends React.Component {
               placeholder="Search"
               aria-label="Search"
             />
-            <button className="search-btn" type="submit">
+            <button className="search-btn" type="submit" disabled="buttonDisabled">
               Search
           </button>
           </form>
