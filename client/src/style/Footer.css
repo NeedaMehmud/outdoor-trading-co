@@ -7,3 +7,8 @@ footer {
 footer {
   background-color: var(--quartenary);
 }
+
+footer a {
+  color: var(--links);
+  text-decoration: none;
+}
