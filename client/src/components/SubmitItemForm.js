@@ -123,6 +123,7 @@ const ItemForm = () => {
 
     return (
         <form onSubmit={handleFormSubmit}>
+            <input name="name" type="text" onChange={handleChange}></input>
             <input name="genre" type="text" onChange={handleChange}></input>
             <input name="location" type="text" onChange={handleChange}></input>
             <input name="condition" type="text" onChange={handleChange}></input>
