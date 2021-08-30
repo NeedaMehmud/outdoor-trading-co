@@ -41,31 +41,31 @@ function SingleItem() {
   
 
   return (
-    <main>
       <div>
         <Hero />
-        <div className="container p-3">
-          <div className="row">
-            <div className="col-lg-5 p-3" key={item._id}>
-              <Image variant="top" cloudName="outdoor-trading-co" className="img-fluid" alt="Product image." publicId={item.image_id}/>
-            </div>   
-              <div className="col-lg-7 p-3">
-                <div className="card">
-                  <div className="card-body">
-                    <h3 className="card-title text-center">{item.name}</h3>
-                    <p className="card-text">{item.description}</p>
+        <main>
+          <div className="container p-3">
+            <div className="row">
+              <div className="col-lg-5 p-3" key={item._id}>
+                <Image variant="top" cloudName="outdoor-trading-co" className="img-fluid" alt="Product image." publicId={item.image_id}/>
+              </div>   
+                <div className="col-lg-7 p-3">
+                  <div className="card">
+                    <div className="card-body">
+                      <h3 className="card-title text-center">{item.name}</h3>
+                      <p className="card-text">{item.description}</p>
+                    </div>
                   </div>
+                <ul className="list-group list-group-flush p-3">
+                    <li className="list-group-item"><h4>Condition:</h4> {item.condition}</li>
+                    <li className="list-group-item"><h4>Location: </h4> {item.location}</li>
+                </ul>
+                <button type="submit" className="request-btn">{user.email}</button>
                 </div>
-              <ul className="list-group list-group-flush p-3">
-                  <li className="list-group-item"><h4>Condition:</h4> {item.condition}</li>
-                  <li className="list-group-item"><h4>Location: </h4> {item.location}</li>
-              </ul>
-              <button type="submit" className="request-btn">{user.email}</button>
-              </div>
+            </div>
           </div>
-        </div>
+        </main>
       </div>
-    </main>
     );
 };
 

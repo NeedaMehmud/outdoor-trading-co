@@ -9,12 +9,12 @@ import Footer from "../components/Footer";
 
 function SubmitItem() {
     return (
-        <main>
             <div>
-            <Hero />
-            <SubmitItemForm />
+                <Hero />
+                <main>
+                    <SubmitItemForm />
+                </main>
             </div>
-        </main>
     );
 };
 

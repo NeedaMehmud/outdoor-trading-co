@@ -19,18 +19,18 @@ const Profile = () => {
     }
 
     return (
-        <main>
         <div>
          <Hero />
-         {user.item.map(item => (
-             <div>
-             <div>{item.name}</div>
-             <p>{item.image_id}</p>
-             <Image cloudName="outdoor-trading-co" publicId={item.image_id}></Image>
-             </div>
-         ))}
+            <main>
+                {user.item.map(item => (
+                    <div>
+                    <div>{item.name}</div>
+                    <p>{item.image_id}</p>
+                    <Image cloudName="outdoor-trading-co" publicId={item.image_id}></Image>
+                    </div>
+                ))}
+            </main>
         </div>
-        </main>
     );
 };
 
