@@ -1,6 +1,7 @@
 import React from "react";
 import {Redirect} from 'react-router-dom';
 import HeroCardless from "../components/HeroCardless";
+import Iconbar from "../components/Iconbar";
 import { useQuery } from "@apollo/client";
 import { QUERY_GENRE_ITEMS } from "../utils/queries";
 import { Image } from "cloudinary-react";
@@ -37,6 +38,7 @@ function ItemsInSingleGenre(props) {
   return (
     <div>
       <HeroCardless />
+      <Iconbar />
       <br></br>
       <div className="container">
         {items.map((item) => (

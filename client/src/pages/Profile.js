@@ -4,6 +4,7 @@ import { useQuery } from '@apollo/client';
 import { QUERY_ME } from '../utils/queries'
 import { Image } from 'cloudinary-react';
 import HeroCardless from "../components/HeroCardless";
+import Iconbar from "../components/Iconbar";
 import Auth from '../utils/auth';
 
 const Profile = () => {
@@ -25,6 +26,7 @@ const Profile = () => {
     return (
         <div>
          <HeroCardless />
+         <Iconbar />
          {user.item.map(item => (
              <div>
              <div>{item.name}</div>
