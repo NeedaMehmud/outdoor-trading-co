@@ -1,5 +1,6 @@
 import React from "react";
-import {Redirect} from 'react-router-dom';
+import { Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import HeroCardless from "../components/HeroCardless";
 import Iconbar from "../components/Iconbar";
 import { useQuery } from "@apollo/client";
@@ -9,7 +10,7 @@ import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import ListGroupItem from "react-bootstrap/ListGroupItem";
 import "../style/SingleGenre.css";
-import Auth from '../utils/auth';
+import Auth from "../utils/auth";
 
 function ItemsInSingleGenre(props) {
   console.log(props.genre);
@@ -25,15 +26,15 @@ function ItemsInSingleGenre(props) {
 
   if (loading) {
     return <div>Loading...</div>;
-  };
+  }
 
-  if(!Auth.loggedIn()){
+  if (!Auth.loggedIn()) {
     return <Redirect to="/SignUp" />;
-  };
+  }
 
   if (error) {
     console.log(error);
-  };
+  }
 
   return (
     <div>
@@ -65,9 +66,11 @@ function ItemsInSingleGenre(props) {
               <ListGroupItem>Condition: {item.condition}</ListGroupItem>
             </ListGroup>
             <Card.Body>
-              <button type="submit" className="request-btn" href="#">
-                More Information
-              </button>
+              <Link to={`/${item._id}`}>
+                <button type="submit" className="request-btn">
+                  More Information
+                </button>
+              </Link>
             </Card.Body>
           </Card>
         ))}

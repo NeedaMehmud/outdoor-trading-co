@@ -19,7 +19,7 @@
 
 ## Credits
 - [Pure CSS Social Media Icons](https://codepen.io/laurenclark/pen/hGiqo) by Lauren Clark
-- Stock Images from [Unsplash](https://unsplash.com/)
+- Stock Images from [Unsplash](https://unsplash.com/), [Stock Unlimited](https://stockunlimited.com), and [Pexels](https://pexels.com)
 
 ## Tests
 --
