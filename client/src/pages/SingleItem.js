@@ -55,7 +55,7 @@ function SingleItem() {
                 <li className="list-group-item"><h4>Condition:</h4> {item.condition}</li>
                 <li className="list-group-item"><h4>Location: </h4> {item.location}</li>
             </ul>
-            <button type="submit" className="request-btn">{user.email}</button>
+            <button type="submit" className="request-btn">{item.email}</button>
             </div>
         </div>
       </div>

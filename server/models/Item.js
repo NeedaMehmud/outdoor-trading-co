@@ -37,6 +37,11 @@ const itemSchema = new Schema({
         required: true,
         trim: true,
     },
+    email: {
+        type: String,
+        required: true,
+        trim: true,
+    },
 });
 
 const Item = model('Item', itemSchema);
