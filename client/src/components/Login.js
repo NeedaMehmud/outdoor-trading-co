@@ -1,5 +1,6 @@
 import Modal from "react-bootstrap/Modal";
 import React, { useState } from "react";
+import { Form } from "react-bootstrap";
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
