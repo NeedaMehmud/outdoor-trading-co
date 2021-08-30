@@ -8,6 +8,8 @@ import "../style/Signup.css";
 import bearImg from "../assets/images/Walter.png";
 
 const ItemForm = () => {
+
+  // uses state to take in the file that the user is uploading 
   const [fileState, setFileState] = useState([]);
 
   const [formState, setFormState] = useState({
@@ -18,17 +20,18 @@ const ItemForm = () => {
     condition: '',
   });
 
+  // takes in add item query
   const [addItem, { error }] = useMutation(ADD_ITEM);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
-
+    // creates an form document and adds the necessary things for cloudinary upload 
     const formData = new FormData();
     formData.append('file', fileState);
     formData.append('upload_preset', 'ml_default');
 
-    console.log(formData);
+    // posts the form(item)(photo) to cloudinary
     const response = await axios.post(
       `https://api.cloudinary.com/v1_1/outdoor-trading-co/image/upload`,
       formData
