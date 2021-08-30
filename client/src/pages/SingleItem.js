@@ -15,6 +15,7 @@ import Auth from '../utils/auth';
 import categoryImg from "../assets/images/category.png";
 import "../style/Item.css";
 
+{/*Pulling in a single item based on the itemId to display on the single item page */}
 function SingleItem() {
   const { itemId } = useParams();
   const { loading, data } = useQuery(QUERY_SINGLE_ITEM, {
@@ -32,7 +33,7 @@ function SingleItem() {
   };
 
   
-
+{/*Displaying the item */}
   return (
     <div>
       <HeroCardless />
