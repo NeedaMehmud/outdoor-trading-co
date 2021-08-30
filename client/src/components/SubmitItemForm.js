@@ -30,7 +30,7 @@ const ItemForm = () => {
 
     console.log(formData);
     const response = await axios.post(
-      `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUD_NAME}/image/upload`,
+      `https://api.cloudinary.com/v1_1/outdoor-trading-co/image/upload`,
       formData
     )
     try {
