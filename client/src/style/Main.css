@@ -1,5 +1,6 @@
 main {
   background-image: url("../assets/images/topography-bg.png");
+  padding: 2em 0em;
 }
 
 /* Make the image to responsive */

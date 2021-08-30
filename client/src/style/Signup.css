@@ -31,7 +31,7 @@ main {
   transition: all .3s;
 }
 .auth-wrapper .form-control:focus {
-  border-color:  var(--secondary);
+  border-color: var(--secondary);
   box-shadow: none;
 }
 .auth-wrapper h3 {
@@ -46,11 +46,27 @@ main {
 .forgot-password,
 .forgot-password a {
   text-align: right;
-  font-size: 1em;
-  padding-top: 10px;
+  font-size: large;
+  padding-top: 1em;
   color: #7f7d7d;
   margin: 0;
 }
 .forgot-password a {
   color: var(--tertiary);
+}
+.walter {
+  margin: .5em 0em 1em 0em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.walter-says {
+  font-size: large;
+  text-align: center;
+  background-color: var(--tertiary);
+  color: var(--links);
+  padding: 2em;
+  border-radius: 10px;
+  max-width: 80%;
+  margin: 1em auto 0em auto;
 }
