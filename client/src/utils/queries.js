@@ -21,6 +21,7 @@ export const QUERY_USER = gql`
         genre
         name
         location
+        condition
         description
         image_id
         created_at
@@ -36,6 +37,7 @@ export const QUERY_ITEMS = gql`
       genre
       name
       location
+      condition
       description
       image_id
       created_at
@@ -51,6 +53,7 @@ export const QUERY_SINGLE_ITEM = gql`
       genre
       name
       location
+      condition
       description
       image_id
       created_at
@@ -66,6 +69,7 @@ export const QUERY_GENRE_ITEMS = gql`
       genre
       name
       location
+      condition
       description
       image_id
       created_at
@@ -85,6 +89,7 @@ export const QUERY_ME = gql`
         genre
         name
         location
+        condition
         description
         image_id
         created_at
