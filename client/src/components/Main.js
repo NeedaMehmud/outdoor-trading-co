@@ -4,6 +4,7 @@ import hikeImg from "../assets/images/hiking.png";
 import snowImg from "../assets/images/snow.png";
 import waterImg from "../assets/images/water.png";
 import miscImg from "../assets/images/tent-and-equipment.png";
+import "../style/Main.css";
 
 function Main() {
   return (
@@ -13,17 +14,17 @@ function Main() {
         <div className="row">
           <div className="col-lg-4 p-3">
             <a href="#">
-              <img src={campImg} width="100%" height="350" />
+              <img src={campImg} className="cat-image" />
             </a>
           </div>
           <div className="col-lg-4 p-3">
             <a href="#">
-              <img src={climbImg} width="100%" height="350" />
+              <img src={climbImg} className="cat-image" />
             </a>
           </div>
           <div className="col-lg-4 p-3">
             <a href="#">
-              <img src={hikeImg} width="100%" height="350" />
+              <img src={hikeImg} className="cat-image" />
             </a>
           </div>
         </div>
@@ -31,17 +32,17 @@ function Main() {
         <div className="row">
           <div className="col-lg-4 p-3">
             <a href="#">
-              <img src={snowImg} width="100%" height="350" />
+              <img src={snowImg} className="cat-image" />
             </a>
           </div>
           <div className="col-lg-4 p-3">
             <a href="#">
-              <img src={waterImg} width="100%" height="350" />
+              <img src={waterImg} className="cat-image" />
             </a>
           </div>
           <div className="col-lg-4 p-3">
             <a href="#">
-              <img src={miscImg} width="100%" height="350" />
+              <img src={miscImg} className="cat-image" />
             </a>
           </div>
         </div>

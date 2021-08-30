@@ -1,3 +1,14 @@
-.p-3 {
-  background-color: var (--secondary);
+/* Make the image to responsive */
+.cat-image {
+  width: 100%;
+  height: auto;
+}
+
+/* When you mouse over the container, fade in the overlay icon*/
+.cat-image:hover {
+  transition: .2s ease;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
 }
