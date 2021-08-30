@@ -36,7 +36,7 @@ class Hero extends React.Component {
             <div className="card-body m-3">
               <h2>Outside. Together.</h2>
               <p>
-                Grow your love of the outdoors by borrowing equipment for a variety of outdoor activities. No commitment. No lugging gear to your destination. Nothing collecting dirt in your garage.
+                Grow your love of the outdoors by borrowing and lending equipment for a variety of outdoor activities. No commitment. No lugging gear to your destination. Nothing collecting dust in your garage.
             </p>
               {this.state.clicked ? <SignUp /> : <button onClick={this.handleClick} type="submit" className="signup">Sign Up</button>}
             </div>
