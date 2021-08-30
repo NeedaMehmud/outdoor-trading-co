@@ -3,9 +3,17 @@ import React, { useState } from "react";
 import { Form } from "react-bootstrap";
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
-import Auth from '../utils/auth';
+import Auth from '../utils/auth'
+import "../style/Login.css";
 
 const Login = () => {
+  const [isOpen, setIsOpen] = React.useState(false);
+  const showModal = () => {
+    setIsOpen(true);
+  };
+  const hideModal = () => {
+    setIsOpen(false);
+  }; 
   const [formState, setFormState] = useState({
     email: '',
     password: '',
@@ -41,7 +49,6 @@ const Login = () => {
     })
   };
 
-
   return (
     <form>
       <div className="login">
@@ -75,18 +82,27 @@ const Login = () => {
                 type="password"
                 className="form-control"
                 id="exampleFormControlInput2"
-                placeholder="Enter Password"
+                placeholder="Password"
                 value={formState.password}
+                onChange={handleChange}
               />
+            </div>
+            <div className="form-group">
+              <div className="custom-control custom-checkbox">
+                <input type="checkbox" className="custom-control-input" id="customCheck1" />
+                <label className="custom-control-label" htmlFor="customCheck1">Remember me</label>
+              </div>
             </div>
             <button
               type="submit"
               className="text-center rounded signin-button search-btn"
+              id="btnSignIn"
             >
               Sign In
             </button>
             <button
               className="text-center rounded signin-button search-btn"
+              id="btnCancel"
             >
               Cancel
             </button>
