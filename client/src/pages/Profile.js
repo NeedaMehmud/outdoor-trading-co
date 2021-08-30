@@ -34,6 +34,7 @@ const Profile = () => {
     <div>
       <Hero />
       <Iconbar />
+      <main>
       <div className="btnContainer">
         <Link to="/SubmitItem">
           <button className="submit-btn">POST AN ITEM</button>
@@ -72,6 +73,7 @@ const Profile = () => {
           ))}
         </div>
       </div>
+      </main>
     </div>
   );
 };
