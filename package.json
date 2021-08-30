@@ -21,6 +21,8 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-regular-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
-    "@fortawesome/react-fontawesome": "^0.1.15"
+    "@fortawesome/react-fontawesome": "^0.1.15",
+    "bootstrap": "^5.1.0",
+    "react-bootstrap": "^2.0.0-beta.6"
   }
 }
