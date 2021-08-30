@@ -8,6 +8,7 @@ import { Image } from "cloudinary-react";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import ListGroupItem from "react-bootstrap/ListGroupItem";
+import "../style/SingleGenre.css";
 
 function ItemsInSingleGenre(props) {
   console.log(props.genre);
@@ -30,16 +31,23 @@ function ItemsInSingleGenre(props) {
   return (
     <div>
       <Hero />
-      <div style={{ display: "flex" }}>
+      <br></br>
+      <div className="container">
         {items.map((item) => (
-          <Card style={{ width: "18rem", height: "40rem" }} key={item._id}>
+          <Card
+            className="card"
+            style={{ width: "18rem", height: "40rem" }}
+            key={item._id}
+          >
             <Image
               variant="top"
+              className="img-fluid"
+              alt="Product image."
               cloudName="outdoor-trading-co"
               publicId={item.image_id}
             />
             <Card.Body>
-              <Card.Title>{item.name}</Card.Title>
+              <Card.Title class="card-title">{item.name}</Card.Title>
             </Card.Body>
             <ListGroup className="list-group-flush">
               <ListGroupItem>{item.location}</ListGroupItem>
@@ -51,6 +59,7 @@ function ItemsInSingleGenre(props) {
           </Card>
         ))}
       </div>
+      <br></br>
     </div>
   );
 }
