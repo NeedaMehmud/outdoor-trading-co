@@ -8,24 +8,30 @@ nav {
 .form {
   background-color: var(--secondary);
 }
-.form-control {
-  max-width: 100%;
+
+.d-flex {
+  width: 30%;
 }
-nav,
-footer {
-  background-color: var(--primary);
-  color: var(--links);
-}
+
 .login-btn:hover,
 .search-btn:hover {
   background-color: var(--secondary);
 }
+
+.profile-btn {
+  border-radius: 10px;
+  border: none;
+  background-color: var(--quartenary);
+  color: #fff;
+  padding: 0.5em;
+  padding: 5px 10px;
+}
+
 .login-btn {
   border-radius: 10px;
   border: none;
   background-color: var(--quartenary);
   color: #fff;
-  width: 100%;
   padding: 0.5em;
   text-transform: uppercase;
   font-size: large;
@@ -40,4 +46,3 @@ footer {
   font-size: large;
   padding: 10px 20px;
 }
-
