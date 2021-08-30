@@ -1,9 +1,9 @@
 import React from 'react';
-import { Redirect, useParams } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { QUERY_ME } from '../utils/queries'
 import { Image } from 'cloudinary-react';
-import Hero from "../components/Hero";
+import HeroCardless from "../components/HeroCardless";
 import Auth from '../utils/auth';
 
 const Profile = () => {
@@ -16,11 +16,15 @@ const Profile = () => {
     
     if (loading) {
         return <div>Loading...</div>;
-    }
+    };
+
+    if(!Auth.loggedIn()){
+        return <Redirect to="/SignUp" />;
+    };
 
     return (
         <div>
-         <Hero />
+         <HeroCardless />
          {user.item.map(item => (
              <div>
              <div>{item.name}</div>

@@ -1,14 +1,14 @@
 import React from "react";
-import Nav from "../components/Nav";
-import Hero from "../components/Hero";
-import Main from "../components/Main";
-import { useMutation, useQuery } from "@apollo/client";
-import { QUERY_GENRE_ITEMS, QUERY_ITEMS } from "../utils/queries";
+import {Redirect} from 'react-router-dom';
+import HeroCardless from "../components/HeroCardless";
+import { useQuery } from "@apollo/client";
+import { QUERY_GENRE_ITEMS } from "../utils/queries";
 import { Image } from "cloudinary-react";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import ListGroupItem from "react-bootstrap/ListGroupItem";
 import "../style/SingleGenre.css";
+import Auth from '../utils/auth';
 
 function ItemsInSingleGenre(props) {
   console.log(props.genre);
@@ -23,11 +23,17 @@ function ItemsInSingleGenre(props) {
   console.log(items);
 
   if (loading) {
-    console.log("LOADING");
-  }
+    return <div>Loading...</div>;
+  };
+
+  if(!Auth.loggedIn()){
+    return <Redirect to="/SignUp" />;
+  };
+
   if (error) {
     console.log(error);
-  }
+  };
+
   return (
     <div>
       <Hero />

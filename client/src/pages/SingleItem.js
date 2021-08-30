@@ -1,9 +1,6 @@
 import React from "react";
-import Nav from "../components/Nav";
-import Hero from "../components/Hero";
-import Main from "../components/Main";
-import Newsletter from "../components/Newsletter";
-import Footer from "../components/Footer";
+import {Redirect} from 'react-router-dom';
+import HeroCardless from "../components/HeroCardless";
 import { Image } from "cloudinary-react";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
@@ -13,6 +10,7 @@ import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 
 import { QUERY_SINGLE_ITEM } from "../utils/queries";
+import Auth from '../utils/auth';
 import categoryImg from "../assets/images/category.png";
 import "../style/Item.css";
 
@@ -22,11 +20,21 @@ function SingleItem() {
     variables: { itemId: itemId },
   });
 
-  const item = data?.item || {};
+  const item = data?.item || {}; 
+  
+  if (loading) {
+    return <div>Loading...</div>;
+  };
+
+  if(!Auth.loggedIn()){
+    return <Redirect to="/SignUp" />;
+  };
+
+  
 
   return (
     <div>
-      <Hero />
+      <HeroCardless />
       <div className="container p-3">
         <div className="row">
           <div className="col-lg-5 p-3" key={item._id}>
@@ -43,7 +51,7 @@ function SingleItem() {
                 <li className="list-group-item"><h4>Condition:</h4> {item.condition}</li>
                 <li className="list-group-item"><h4>Location: </h4> {item.location}</li>
             </ul>
-            <button type="submit" className="request-btn">Request Item</button>
+            <button type="submit" mailto={item.email} className="request-btn">Request This Item</button>
             </div>
         </div>
       </div>

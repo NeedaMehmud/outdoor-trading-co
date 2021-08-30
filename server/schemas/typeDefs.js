@@ -19,6 +19,7 @@ const typeDefs = gql`
     image_id: String!
     created_at: String
     user: String!
+    email: String!
   }
 
   type Auth {

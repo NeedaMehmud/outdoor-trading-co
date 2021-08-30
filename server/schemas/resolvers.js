@@ -55,6 +55,7 @@ const resolvers = {
         const item = await Item.create({
           name, genre, location, condition, description, image_id,
           user: context.user.username,
+          email: context.user.email
         });
 
         await User.findOneAndUpdate(

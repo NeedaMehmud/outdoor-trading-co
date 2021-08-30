@@ -1,16 +1,16 @@
 import React from 'react';
-import Nav from "../components/Nav";
-import Hero from "../components/Hero";
+import {Redirect} from 'react-router-dom';
+import HeroCardless from "../components/HeroCardless";
 import SubmitItemForm from "../components/SubmitItemForm"
-import Main from "../components/Main"
-import Newsletter from "../components/Newsletter";
-import Footer from "../components/Footer";
-
+import Auth from '../utils/auth';
 
 function SubmitItem() {
+    if(!Auth.loggedIn()){
+        return <Redirect to="/SignUp" />;
+    }
     return (
         <div>
-         <Hero />
+         <HeroCardless />
          <SubmitItemForm />
         </div>
     );
