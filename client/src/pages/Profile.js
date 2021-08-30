@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useQuery } from '@apollo/client';
 import { QUERY_ME } from '../utils/queries'
 import { Image } from 'cloudinary-react';
-import HeroCardless from "../components/HeroCardless";
+import Hero from "../components/Hero";
 import Iconbar from "../components/Iconbar";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
@@ -30,7 +30,7 @@ const Profile = () => {
 
     return (
         <div>
-         <HeroCardless />
+         <Hero />
          <Iconbar />
          <div className="btnContainer">
              <Link to="/SubmitItem">

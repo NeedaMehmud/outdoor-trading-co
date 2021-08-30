@@ -1,5 +1,5 @@
 import React from 'react';
-import HeroCardless from "../components/HeroCardless";
+import Hero from "../components/Hero";
 import SignUpForm from "../components/SignUpForm";
 import "../style/Signup.css";
 
@@ -7,7 +7,7 @@ import "../style/Signup.css";
 function SignUp() {
     return (
         <div>
-            <HeroCardless />
+            <Hero />
             <main>
                 <SignUpForm />
             </main>

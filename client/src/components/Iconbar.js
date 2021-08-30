@@ -1,6 +1,5 @@
 import React from "react";
 import "../style/Iconbar.css";
-import Nav from "react-bootstrap/Nav";
 import campIcon from "../assets/images/camp-icon.png";
 import compassIcon from "../assets/images/compass-icon.png";
 import waterIcon from "../assets/images/water-icon.png";

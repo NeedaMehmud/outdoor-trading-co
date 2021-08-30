@@ -1,7 +1,9 @@
 import React from "react";
 import "../style/Hero.css";
 import SignUp from "../components/Signup";
+import Auth from "../utils/auth";
 class Hero extends React.Component {
+
   constructor() {
     super();
 
@@ -18,7 +20,15 @@ class Hero extends React.Component {
     });
   }
 
+
   render() {
+    if (Auth.loggedIn()) {
+      return (
+        <div className="jumbotron jumbotron-fluid">
+        </div>
+      );
+    }
+    
     return (
       <div className="jumbotron jumbotron-fluid">
         <div className="container hero-text">

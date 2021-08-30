@@ -1,7 +1,7 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
 import { Link } from "react-router-dom";
-import HeroCardless from "../components/HeroCardless";
+import Hero from "../components/Hero";
 import Iconbar from "../components/Iconbar";
 import { useQuery } from "@apollo/client";
 import { QUERY_GENRE_ITEMS } from "../utils/queries";
@@ -39,7 +39,7 @@ function ItemsInSingleGenre(props) {
 {/*Rendering cards with each item*/}
   return (
     <div>
-      <HeroCardless />
+      <Hero />
       <Iconbar />
       <main>
       <div className="container">
