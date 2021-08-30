@@ -6,12 +6,13 @@ function Footer() {
     <footer>
       <div className="container p-5">
         <div className="row">
-          <h3>Contact Us</h3>
-          <div className="col-lg-4 col-sm-1 my-2">
-            <p>1-800-OUT-DOOR</p>
-            <p>1234 Pine Rd</p>
-            <p>Outdoor, GA</p>
-          </div>
+          <p class="about">
+            <h1> About Outdoor Trading Co.</h1>
+            <p>Use our platform to rent/borrow outdoor gear and enjoy the outdoors.
+            You can list your outdoor equipment up for rent/loan during the times you are unable to use it.
+            Keep your equipment from gaining dust in the garage.
+            Keep your outdoor activity list growing without the investments in outdoor equipment. </p>
+          </p>
           <div className="col-lg-4 col-sm-1 my-2">
             <p><a href="#">About</a></p>
             <p><a href="#">Team</a></p>
