@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Redirect } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
@@ -36,7 +37,11 @@ const SignUpForm = () => {
         console.error(e);
       }
     };
-  
+
+    if(Auth.loggedIn()){
+      return <Redirect to="/me" />;
+    };
+    
     return (
       <div className="container p-3">
         {data ? (
