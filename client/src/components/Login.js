@@ -68,7 +68,7 @@ const Login = () => {
                 type="email"
                 className="form-control"
                 id="exampleFormControlInput1"
-                placeholder="name@example.com"
+                placeholder="Enter email"
                 value={formState.email}
                 onChange={handleChange}
               />
@@ -82,26 +82,35 @@ const Login = () => {
                 type="password"
                 className="form-control"
                 id="exampleFormControlInput2"
-                placeholder="Password"
+                placeholder="Enter password"
                 value={formState.password}
                 onChange={handleChange}
               />
             </div>
             <Modal.Footer>
+              <div className="form-group">
+                <div className="custom-control custom-checkbox">
+                  <input type="checkbox" className="custom-control-input" id="customCheck1" />
+                  <label className="custom-control-label" htmlFor="customCheck1">Remember me</label>
+                </div>
+              </div>
               <button
                 onClick={showModal}
                 type="submit"
-                className="text-center rounded signin-button"
+                className="search-btn btn-md"
               >
                 Sign In
             </button>
               <Modal show={isOpen} onHide={hideModal} />
               <button
-                className="text-center rounded signin-button"
+                className="search-btn btn-md"
                 onClick={hideModal}
               >
                 Cancel
             </button>
+              <p className="forgot-password text-right">
+                Forgot <a href="#">password?</a>
+              </p>
             </Modal.Footer>
           </form>
         )}
