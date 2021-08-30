@@ -9,34 +9,19 @@ nav {
 .form {
   background-color: var(--secondary);
 }
-.login-btn:hover,
-.search-btn:hover {
+.login-btn:hover,.search-btn:hover {
   background-color: var(--secondary);
 }
-.profile-btn {
+.profile-btn,.login-btn,.search-btn {
   border-radius: 10px;
   border: none;
   background-color: var(--quartenary);
-  color: #fff;
+  color: var(--links);
   padding: 0.5em;
-  padding: 5px 10px;
-}
-.login-btn {
-  border-radius: 10px;
-  border: none;
-  background-color: var(--quartenary);
-  color: #fff;
-  padding: 0.5em;
-  text-transform: uppercase;
-  font-size: large;
   padding: 10px 20px;
+  font-size: large;
+  text-transform: uppercase;
 }
 .search-btn {
   background-color: var(--tertiary);
-  border-radius: 10px;
-  border: none;
-  color: #fff;
-  padding: 0.5em;
-  font-size: large;
-  padding: 10px 20px;
 }
