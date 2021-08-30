@@ -46,7 +46,7 @@ function ItemsInSingleGenre(props) {
               <ListGroupItem>{item.condition}</ListGroupItem>
             </ListGroup>
             <Card.Body>
-              <Card.Link href="#">More Information</Card.Link>
+              <Card.Link href={item._id}>More Information</Card.Link>
             </Card.Body>
           </Card>
         ))}

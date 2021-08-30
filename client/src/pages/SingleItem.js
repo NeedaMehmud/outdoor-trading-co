@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Nav from "../components/Nav";
 import Hero from "../components/Hero";
 import Main from "../components/Main";
@@ -12,7 +12,7 @@ import ListGroupItem from "react-bootstrap/ListGroupItem";
 import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 
-import { QUERY_SINGLE_ITEM } from "../utils/queries";
+import { QUERY_SINGLE_ITEM, QUERY_USER } from "../utils/queries";
 import categoryImg from "../assets/images/category.png";
 import "../style/Item.css";
 
@@ -22,7 +22,23 @@ function SingleItem() {
     variables: { itemId: itemId },
   });
 
-  const item = data?.item || {};
+  const item = data?.item || {}; 
+
+  console.log(item.user);
+  console.log(typeof item.user)
+  
+
+  
+  const { isIdle, data2 } = useQuery(QUERY_USER, {
+    variables: {username: item.user}, enabled: !!item.user
+  })
+
+  const user = data2?.user || {};
+
+  console.log(user.email);
+  console.log(user);
+
+  
 
   return (
     <div>
@@ -43,7 +59,7 @@ function SingleItem() {
                 <li className="list-group-item"><h4>Condition:</h4> {item.condition}</li>
                 <li className="list-group-item"><h4>Location: </h4> {item.location}</li>
             </ul>
-            <button type="submit" className="request-btn">Request Item</button>
+            <button type="submit" className="request-btn">{user.email}</button>
             </div>
         </div>
       </div>
