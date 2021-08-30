@@ -6,7 +6,9 @@ function Home() {
     return (
         <div>
          <Hero />
-         <Main />
+            <main>
+                <Main />
+            </main>
         </div>
     );
 };
