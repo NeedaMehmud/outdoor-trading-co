@@ -43,7 +43,7 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-
+{/* Rendering app and defining the the pages for the router */}
 function App() {
   return (
     <ApolloProvider client={client}>
