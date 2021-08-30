@@ -1,6 +1,7 @@
 import React from "react";
 import {Redirect} from 'react-router-dom';
 import HeroCardless from "../components/HeroCardless";
+import Iconbar from "../components/Iconbar";
 import { Image } from "cloudinary-react";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
@@ -35,6 +36,7 @@ function SingleItem() {
   return (
     <div>
       <HeroCardless />
+      <Iconbar />
       <div className="container p-3">
         <div className="row">
           <div className="col-lg-5 p-3" key={item._id}>
