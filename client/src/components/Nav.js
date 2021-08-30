@@ -32,31 +32,35 @@ class Nav extends React.Component {
       <Navbar className="navbar sticky-top">
         <div className="container">
           <a className="navbar-brand">
-              <Link to={`/`}>
-            {" "}
-            <img src={logo} alt="Outdoor Trading Co. logo" /></Link>
+            <Link to={`/`}>
+              {" "}
+              <img src={logo} alt="Outdoor Trading Co. logo" /></Link>
           </a>
           <form className="d-flex">
-            <input className="form-control me-3" type="search" placeholder="Search" aria-label="Search"/>
+            <input className="form-control me-3" type="search" placeholder="Search" aria-label="Search" />
             <button className="search-btn" type="submit" disabled="buttonDisabled">Search</button>
           </form>
           <div>
-            {Auth.loggedIn() ? ( 
+            {Auth.loggedIn() ? (
               <>
-              <Link className="btn btn-lg btn-info m-2 d-grid gap-2 d-md-flex justify-content-sm-end" to="/me">
-                {Auth.getProfile().data.username}'s profile
+                <button className="search-btn">
+                  <Link to="/me" className="text-decoration-none text-white">Welcome<div></div>
+                    {Auth.getProfile().data.username}!
               </Link>
-              <button className="login-btn" onClick={logout}>
-                Logout
+                </button>
+                <br></br>
+                <br></br>
+                <button className="login-btn" onClick={logout}>
+                  Logout
               </button>
-            </>
+              </>
             ) : (
               <>
-          <div className="d-grid gap-2 d-md-flex justify-content-sm-end">
-            {this.state.clicked ? <Login /> : <button onClick={this.handleClick} type="submit" className="login-btn">Login</button>}
-          </div>
-            </>
-          )}
+                <div className="d-grid gap-2 d-md-flex justify-content-sm-end">
+                  {this.state.clicked ? <Login /> : <button onClick={this.handleClick} type="submit" className="login-btn">Login</button>}
+                </div>
+              </>
+            )}
           </div>
         </div>
       </Navbar>
