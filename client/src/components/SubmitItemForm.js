@@ -30,7 +30,7 @@ const ItemForm = () => {
 
     console.log(formData);
     const response = await axios.post(
-      `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUD_NAME}/image/upload`,
+      `https://api.cloudinary.com/v1_1/outdoor-trading-co/image/upload`,
       formData
     )
     try {
@@ -63,8 +63,8 @@ const ItemForm = () => {
     <div className="container p-3">
       <form onSubmit={handleFormSubmit}>
         <div className="walter-says">
-          <h2>Preparing for your next adventure?</h2>
-          <p>Create an account with us to get started!</p>
+          <h2>Have you got outdoor items for people to rent or borrow?</h2>
+          <p>Post them here to allow other users to request them!</p>
         </div>
         <img src={bearImg} className="walter" alt="An illustration of a bear named Walter with a backpack."></img>
         <div className="form-control p-3">
