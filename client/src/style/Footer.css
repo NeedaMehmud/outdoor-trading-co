@@ -1,8 +1,5 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 
-h3 {
-    font-weight: 700;
-}
 nav,footer {
   background-color: var(--primary);
   color: var(--links);
@@ -13,6 +10,8 @@ footer {
 footer a {
   color: var(--links);
   text-decoration: none;
+  font-size: large;
+  text-transform: uppercase;
 }
 footer a:hover {
   color: var(--links);

@@ -45,9 +45,9 @@ const SignUpForm = () => {
           ) : (
         <form onSubmit={handleFormSubmit}>
             <div className="form-group p-3 text-center">
-              <h3>Preparing for your next adventure?</h3>
+              <h2>Preparing for your next adventure?</h2>
               <br></br>
-              <h3>Create an account with us to get started!</h3>
+              <h2>Create an account with us to get started!</h2>
             </div>
             <div className="form-group p-3">
                 <label> Username</label>
@@ -66,7 +66,7 @@ const SignUpForm = () => {
               <button type="submit" className="signup-btn">Sign Up</button>
             </div>
             <p className="forgot-password text-right">
-                Already registered? <a href="#">Log In</a>
+                <h5>Already registered? <a href="#">Log In</a></h5>
             </p>
         </form>
           )}
