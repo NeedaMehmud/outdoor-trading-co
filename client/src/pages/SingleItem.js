@@ -3,20 +3,16 @@ import {Redirect} from 'react-router-dom';
 import Hero from "../components/Hero";
 import Iconbar from "../components/Iconbar";
 import { Image } from "cloudinary-react";
-import Card from "react-bootstrap/Card";
-import ListGroup from "react-bootstrap/ListGroup";
-import ListGroupItem from "react-bootstrap/ListGroupItem";
 
 import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 
 import { QUERY_SINGLE_ITEM } from "../utils/queries";
 import Auth from '../utils/auth';
-import categoryImg from "../assets/images/category.png";
 import "../style/Item.css";
 
-{/*Pulling in a single item based on the itemId to display on the single item page */}
 function SingleItem() {
+  // uses useParams to get the correct item_id and queries the single item based on that itemid
   const { itemId } = useParams();
   const { loading, data } = useQuery(QUERY_SINGLE_ITEM, {
     variables: { itemId: itemId },
@@ -28,12 +24,13 @@ function SingleItem() {
     return <div>Loading...</div>;
   };
 
+  // if user is not logged in redirect to signup page
   if(!Auth.loggedIn()){
     return <Redirect to="/SignUp" />;
   };
 
   
-{/*Displaying the item */}
+
   return (
     <div>
       <Hero />
@@ -55,6 +52,7 @@ function SingleItem() {
                   <li className="list-group-item"><h4>Condition:</h4> {item.condition}</li>
                   <li className="list-group-item"><h4>Location: </h4> {item.location}</li>
               </ul>
+              {/* on btn click opens user email and fills to field with email of the user who posted the item */}
               <button type="submit" onClick={() => window.open(`mailto:${item.email}`)} className="request-btn">Request This Item</button>
               </div>
           </div>
