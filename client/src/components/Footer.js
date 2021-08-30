@@ -1,35 +1,56 @@
 import React from "react";
 import "../style/Footer.css";
+import logo from "../assets/images/logo.png";
+import { Link } from 'react-router-dom';
+
+
 
 function Footer() {
   return (
-    <footer>
-      <div className="container p-5">
-        <div className="row">
-          <h3>Contact Us</h3>
-          <div className="col-lg-4 col-sm-1 my-2">
-            <p>1-800-OUT-DOOR</p>
-            <p>1234 Pine Rd</p>
-            <p>Outdoor, GA</p>
-          </div>
-          <div className="col-lg-4 col-sm-1 my-2">
-            <p><a href="#">About</a></p>
-            <p><a href="#">Team</a></p>
-            <p><a href="#">Link</a></p>
-          </div>
-          <div className="col text-center">
-            <ul className="social-icons">
-              <li className="m-2"><a href="https://www.facebook.com/Outdoor-Trading-Co-100466249039342" className="social-icon"> <i className="fa fa-facebook fa-lg"></i></a></li>
-              <li className="m-2"><a href="https://www.linkedin.com/company/outdoor-trading-co/" className="social-icon"> <i className="fa fa-linkedin fa-lg"></i></a></li>
-              <li className="m-2"><a href="https://github.com/NeedaMehmud2017/outdoor-trading-co" className="social-icon"> <i className="fa fa-github fa-lg"></i></a></li>
-            </ul>
-          </div>
+    <footer className="footer">
+      <div className="footer-left col-md-4 col-sm-6">
+        <p className="about">
+          <h1> About Outdoor Trading Co.</h1>
+          <p>Use our platform to rent/borrow outdoor gear and enjoy the outdoors.
+          You can list your outdoor equipment up for rent/loan during the times you are unable to use it.
+          Keep your equipment from gaining dust in the garage.
+            Keep your outdoor activity list growing without the investments in outdoor equipment. </p>
+        </p>
+        <div className="social-icons">
+          <a href="https://www.facebook.com/Outdoor-Trading-Co-100466249039342"><i className="fa fa-facebook"></i></a>
+          <a href="https://www.linkedin.com/company/outdoor-trading-co/"><i className="fa fa-linkedin"></i></a>
+          <a href="https://github.com/NeedaMehmud2017/outdoor-trading-co"><i className="fa fa-github"></i></a>
         </div>
       </div>
-      <div className="text-center p-3 copyright">
-        <p>Copyright 2021 Outdoor Trading Co.</p>
+      <div className="footer-center col-md-4 col-sm-6">
+        <div>
+          <i className="fa fa-map-marker"></i>
+          <p><span> 710 Outdoor Trading Street </span> Atlanta, Georgia</p>
+        </div>
+        <div>
+          <i className="fa fa-phone"></i>
+          <p> (+01) 123 789 9874</p>
+        </div>
+        <div>
+          <i className="fa fa-envelope"></i>
+          <p><a href="#"> outdoortrading@company.com</a></p>
+        </div>
       </div>
-    </footer>
+      <div className="footer-right col-md-4 col-sm-6">
+        <div className="navbar-brand">
+          <img src={logo} alt="Outdoor Trading Co. logo" />
+        </div>
+        <p className="menu">
+          <a href="#"> Home</a> |
+      <a href="#"> About</a> |
+      <a href="#"> Services</a> |
+      <a href="#"> Portfolio</a> |
+      <a href="#"> News</a> |
+      <a href="#"> Contact</a>
+        </p>
+        <p className="name"> Outdoor Trading Co. &copy; 2021</p>
+      </div>
+    </footer >
   );
 }
 
