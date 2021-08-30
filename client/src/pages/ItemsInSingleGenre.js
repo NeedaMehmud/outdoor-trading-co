@@ -36,7 +36,7 @@ function ItemsInSingleGenre(props) {
 
   return (
     <div>
-      <Hero />
+      <HeroCardless />
       <br></br>
       <div className="container">
         {items.map((item) => (
