@@ -7,6 +7,7 @@ import { Image } from "cloudinary-react";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import ListGroupItem from "react-bootstrap/ListGroupItem";
+import "../style/SingleGenre.css";
 import Auth from '../utils/auth';
 
 function ItemsInSingleGenre(props) {
@@ -35,28 +36,41 @@ function ItemsInSingleGenre(props) {
 
   return (
     <div>
-      <HeroCardless />
-      <div style={{ display: "flex" }}>
+      <Hero />
+      <br></br>
+      <div className="container">
         {items.map((item) => (
-          <Card style={{ width: "18rem", height: "40rem" }} key={item._id}>
+          <Card
+            className="card"
+            style={{ width: "25rem", height: "40rem" }}
+            key={item._id}
+          >
             <Image
+              style={{ width: "25rem", height: "25rem" }}
               variant="top"
+              className="img-fluid"
+              alt="Product image."
               cloudName="outdoor-trading-co"
               publicId={item.image_id}
             />
             <Card.Body>
-              <Card.Title>{item.name}</Card.Title>
+              <Card.Title class="card-title text-center title">
+                {item.name}
+              </Card.Title>
             </Card.Body>
             <ListGroup className="list-group-flush">
-              <ListGroupItem>{item.location}</ListGroupItem>
-              <ListGroupItem>{item.condition}</ListGroupItem>
+              <ListGroupItem>Location: {item.location}</ListGroupItem>
+              <ListGroupItem>Condition: {item.condition}</ListGroupItem>
             </ListGroup>
             <Card.Body>
-              <Card.Link href={item._id}>More Information</Card.Link>
+              <button type="submit" className="request-btn" href="#">
+                More Information
+              </button>
             </Card.Body>
           </Card>
         ))}
       </div>
+      <br></br>
     </div>
   );
 }
