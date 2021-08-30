@@ -4,6 +4,7 @@ import { ADD_ITEM } from '../utils/mutations';
 import axios from 'axios'
 import Auth from '../utils/auth';
 import "../style/Signup.css";
+import bearImg from "../assets/images/Walter.png";
 
 const ItemForm = () => {
     const [fileState, setFileState] = useState([]);
@@ -60,7 +61,11 @@ const ItemForm = () => {
     return (
           <div className="container p-3">
             <form onSubmit={handleFormSubmit}>
-              <h1 className="text-center">Submit Your Item</h1>
+              <div className="walter-says">
+                <h2>Preparing for your next adventure?</h2>
+                <p>Create an account with us to get started!</p>
+              </div>
+              <img src={bearImg} className="walter" alt="An illustration of a bear named Walter with a backpack."></img>
               <div className="form-control p-3">
                 <label>Item Name:</label>
                 <input className="form-control my-2" name="name" type="text" onChange={handleChange}></input>
