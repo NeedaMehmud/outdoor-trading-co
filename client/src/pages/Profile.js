@@ -13,9 +13,10 @@ import "../style/Profile.css";
 import Auth from '../utils/auth';
 
 const Profile = () => {
-    
+    // query the current user logged in and return their user info
     const { loading, data } = useQuery(QUERY_ME);
     
+    // if no data return an empty object
     const user = data?.me || {};
 
     console.log(user);
@@ -24,6 +25,7 @@ const Profile = () => {
         return <div>Loading...</div>;
     };
 
+    // redirect to sign up page if user is not logged in 
     if(!Auth.loggedIn()){
         return <Redirect to="/SignUp" />;
     };
@@ -41,6 +43,7 @@ const Profile = () => {
              <h1>MY ITEMS</h1>
          </div>
          <div className="container">
+           {/* dynamic function allowing the items that the user has posted to render on their profile */}
          {user.item.map(item => (
              <Card
              className="card"
