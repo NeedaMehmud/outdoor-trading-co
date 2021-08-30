@@ -6,6 +6,7 @@ import waterIcon from "../assets/images/water-icon.png";
 import snowIcon from "../assets/images/snow-icon.png";
 import climbingIcon from "../assets/images/climbing-icon.png";
 import miscIcon from "../assets/images/misc-icon.png";
+import { Link } from "react-router-dom";
 
 function Iconbar() {
   return (
@@ -13,33 +14,45 @@ function Iconbar() {
       <div className="nav-container">
         <ul className="nav nav-icon">
           <li className="nav-item">
-            <a href="#">
-              <img src={campIcon} className="icon" />
+            <a>
+              <Link to={`/camping`}>
+                <img src={campIcon} className="icon" />
+              </Link>
             </a>
           </li>
           <li className="nav-item">
-            <a href="#">
-              <img src={compassIcon} className="icon" />
+            <a>
+              <Link to={`/hiking`}>
+                <img src={compassIcon} className="icon" />
+              </Link>
             </a>
           </li>
           <li className="nav-item">
-            <a href="#">
-              <img src={waterIcon} className="icon" />
+            <a>
+              <Link to={`/water`}>
+                <img src={waterIcon} className="icon" />
+              </Link>
             </a>
           </li>
           <li className="nav-item">
-            <a href="#">
-              <img src={snowIcon} className="icon" />
+            <a>
+              <Link to={`/snow`}>
+                <img src={snowIcon} className="icon" />
+              </Link>
             </a>
           </li>
           <li className="nav-item">
-            <a href="#">
-              <img src={climbingIcon} className="icon" />
+            <a>
+              <Link to={`/climbing`}>
+                <img src={climbingIcon} className="icon" />
+              </Link>
             </a>
           </li>
           <li className="nav-item">
-            <a href="#">
-              <img src={miscIcon} className="icon" />
+            <a>
+              <Link to={`/misc`}>
+                <img src={miscIcon} className="icon" />
+              </Link>
             </a>
           </li>
         </ul>
