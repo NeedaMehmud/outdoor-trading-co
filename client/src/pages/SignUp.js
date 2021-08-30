@@ -8,7 +8,7 @@ function SignUp() {
     return (
         <div>
             <HeroCardless />
-            <div className="container">
+            <div className="container p-3">
                 <div className="row">
                     <div className="col p-3">
                 <SignUpForm />

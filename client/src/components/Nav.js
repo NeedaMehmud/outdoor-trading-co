@@ -34,7 +34,7 @@ class Nav extends React.Component {
         <div className="container">
           <a className="navbar-brand" href="#">
             {" "}
-            <img src={logo} alt="Logo" />
+            <img src={logo} alt="Outdoor Trading Co. logo" />
           </a>
           <form className="d-flex">
             <input

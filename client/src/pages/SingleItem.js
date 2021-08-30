@@ -13,6 +13,8 @@ import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 
 import { QUERY_SINGLE_ITEM } from "../utils/queries";
+import categoryImg from "../assets/images/category.png";
+import "../style/Item.css";
 
 function SingleItem() {
   const { itemId } = useParams();
@@ -25,26 +27,28 @@ function SingleItem() {
   return (
     <div>
       <Hero />
-      <Card style={{ width: "18rem", height: "40rem" }} key={item._id}>
-        <Image
-          variant="top"
-          cloudName="outdoor-trading-co"
-          publicId={item.image_id}
-        />
-        <Card.Body>
-          <Card.Title>{item.name}</Card.Title>
-          <Card.Text>{item.description}</Card.Text>
-        </Card.Body>
-        <ListGroup className="list-group-flush">
-          <ListGroupItem>{item.location}</ListGroupItem>
-          <ListGroupItem>{item.condition}</ListGroupItem>
-        </ListGroup>
-        <Card.Body>
-          <Card.Link href="#">Contact Seller</Card.Link>
-        </Card.Body>
-      </Card>
+      <div className="container p-3">
+        <div className="row">
+          <div className="col-lg-5 p-3" key={item._id}>
+            <Image variant="top" cloudName="outdoor-trading-co" className="img-fluid" alt="Product image." publicId={item.image_id}/>
+          </div>   
+            <div className="col-lg-7 p-3">
+              <div className="card">
+                <div className="card-body">
+                  <h3 className="card-title text-center">{item.name}</h3>
+                  <p className="card-text">{item.description}</p>
+                </div>
+              </div>
+            <ul className="list-group list-group-flush p-3">
+                <li className="list-group-item"><h4>Condition:</h4> {item.condition}</li>
+                <li className="list-group-item"><h4>Location: </h4> {item.location}</li>
+            </ul>
+            <button type="submit" className="request-btn">Request Item</button>
+            </div>
+        </div>
+      </div>
     </div>
-  );
-}
+    );
+};
 
 export default SingleItem;
