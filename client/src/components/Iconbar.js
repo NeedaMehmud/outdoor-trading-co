@@ -10,7 +10,7 @@ import miscIcon from "../assets/images/misc-icon.png";
 function Iconbar() {
   return (
     <nav className="nav-icon">
-      <div className="container">
+      <div className="nav-container">
         <ul className="nav nav-icon">
           <li className="nav-item">
             <a href="#">

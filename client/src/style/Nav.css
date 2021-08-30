@@ -8,9 +8,7 @@ nav {
 .form {
   background-color: var(--secondary);
 }
-.form-control {
-  max-width: 100%;
-}
+
 nav,
 footer {
   background-color: var(--primary);
@@ -25,7 +23,6 @@ footer {
   border: none;
   background-color: var(--quartenary);
   color: #fff;
-  width: 100%;
   padding: 0.5em;
   text-transform: uppercase;
   font-size: large;
