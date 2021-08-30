@@ -12,15 +12,17 @@ import ListGroupItem from "react-bootstrap/ListGroupItem";
 import "../style/SingleGenre.css";
 import Auth from "../utils/auth";
 
-{/*Pulling in items from database based on their category*/}
 function ItemsInSingleGenre(props) {
   console.log(props.genre);
 
+  // query items based on the genre that the user clicked to view (passed down as prop)
   const { loading, error, data } = useQuery(QUERY_GENRE_ITEMS, {
     variables: {
       genre: props.genre,
     },
   });
+
+  // if no data then return an empty array
   const items = data?.genreItems || [];
 
   console.log(items);
@@ -29,6 +31,7 @@ function ItemsInSingleGenre(props) {
     return <div>Loading...</div>;
   }
 
+// if the user is not logged in then redirect to sign up page
   if (!Auth.loggedIn()) {
     return <Redirect to="/SignUp" />;
   }
@@ -36,13 +39,14 @@ function ItemsInSingleGenre(props) {
   if (error) {
     console.log(error);
   }
-{/*Rendering cards with each item*/}
+
   return (
     <div>
       <HeroCardless />
       <Iconbar />
       <main>
       <div className="container">
+        {/* dynamic function allowing cards to be rendered for each item */}
         {items.map((item) => (
           <Card
             className="card"
