@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown'
-import { useMutation } from '@apollo/client';
+import { Form } from "react-bootstrap"; import { useMutation } from '@apollo/client';
 import { ADD_ITEM } from '../utils/mutations';
 import axios from 'axios'
 import Auth from '../utils/auth';
@@ -61,14 +61,14 @@ const ItemForm = () => {
   };
 
   return (
-    <DropdownButton title="Dropdown">
+    <Form.Select title="Dropdown">
       <div className="container p-3">
         <form onSubmit={handleFormSubmit}>
           <h1 className="text-center">Submit Your Item</h1>
           <div className="form-control p-3">
-            <label>Item Name:</label>
+            <option>Item Name:</option>
             <input className="form-control my-2" name="name" type="text" onChange={handleChange}></input>
-            <label>Item Genre:</label>
+            <option>Item Genre:</option>
             <input className="form-control my-2" name="genre" type="text" onChange={handleChange}></input>
             <label>Location:</label>
             <input className="form-control my-2" name="location" type="text" onChange={handleChange}></input>
@@ -83,7 +83,7 @@ const ItemForm = () => {
           </div>
         </form>
       </div>
-    </DropdownButton>
+    </Form.Select>
   );
 };
 
