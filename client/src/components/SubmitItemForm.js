@@ -73,7 +73,16 @@ const ItemForm = () => {
           <label>Item Name:</label>
           <input className="form-control my-2" name="name" type="text" onChange={handleChange}></input>
           <label>Item Genre:</label>
-          <input className="form-control my-2" name="genre" type="text" onChange={handleChange}></input>
+          <Form.Select aria-label="Default select example">
+            <option>Select a Genre</option>
+            <option value="1">Hiking</option>
+            <option value="2">Climbing</option>
+            <option value="3">Water</option>
+            <option value="3">Misc</option>
+            <option value="5">Snow</option>
+            <option value="6">Camping</option>
+            <input className="form-control my-2" name="genre" type="text" onChange={handleChange}></input>
+          </Form.Select>
           <label>Location:</label>
           <input className="form-control my-2" name="location" type="text" onChange={handleChange}></input>
           <label>Condition:</label>
