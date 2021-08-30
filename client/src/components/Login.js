@@ -6,14 +6,6 @@ import { LOGIN_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
 
 const Login = () => {
-  const [isOpen, setIsOpen] = React.useState(false);
-  const showModal = () => {
-    setIsOpen(true);
-  };
-  const hideModal = () => {
-    setIsOpen(false);
-  };
-
   const [formState, setFormState] = useState({
     email: '',
     password: '',
@@ -51,68 +43,65 @@ const Login = () => {
 
 
   return (
-    <Modal.Body>
+    <form>
       <div className="login">
         <div className="login-triangle"></div>
         {data ? (
-              <p>
-                Success!
-              </p>
-            ) : (
-        <form onSubmit={handleFormSubmit} className="login-container">
-          <div className="m-1">
-            <label for="exampleFormControlInput1" className="form-label">
-              <b className="text-white">Email</b>
-            </label>
-            <input
-              name="email"
-              type="email"
-              className="form-control"
-              id="exampleFormControlInput1"
-              placeholder="name@example.com"
-              value={formState.email}
-              onChange={handleChange}
-            />
-          </div>
-          <div className="m-1">
-            <label for="exampleFormControlInput2" className="form-label">
-              <b className="text-white">Password</b>
-            </label>
-            <input
-              name="password"
-              type="password"
-              className="form-control"
-              id="exampleFormControlInput2"
-              placeholder="Password"
-              value={formState.password}
-              onChange={handleChange}
-            />
-          </div>
-          <Modal.Footer>
+          <p>
+            Success!
+          </p>
+        ) : (
+          <form onSubmit={handleFormSubmit} className="login-container">
+            <div className="m-1">
+              <label for="exampleFormControlInput1" className="form-label">
+                <b className="text-white">Email</b>
+              </label>
+              <input
+                name="email"
+                type="email"
+                className="form-control"
+                id="exampleFormControlInput1"
+                placeholder="Enter email"
+                value={formState.email}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="m-1">
+              <label for="exampleFormControlInput2" className="form-label">
+                <b className="text-white">Password</b>
+              </label>
+              <input
+                name="password"
+                type="password"
+                className="form-control"
+                id="exampleFormControlInput2"
+                placeholder="Enter Password"
+                value={formState.password}
+              />
+            </div>
             <button
-              onClick={showModal}
               type="submit"
-              className="text-center rounded signin-button"
+              className="text-center rounded signin-button search-btn"
             >
               Sign In
             </button>
-            <Modal show={isOpen} onHide={hideModal} />
             <button
-              className="text-center rounded signin-button"
-              onClick={hideModal}
+              className="text-center rounded signin-button search-btn"
             >
               Cancel
             </button>
-          </Modal.Footer>
-        </form>
+            <p className="forgot-password text-right">
+              Forgot <a href="#">password?</a>
+            </p>
+          </form>
         )}
         {error && (
-              <div className="my-3 p-3 bg-danger text-white">
-                {error.message}
-              </div>
-            )}
+          <div className="my-3 p-3 bg-danger text-white">
+            {error.message}
+          </div>
+        )}
       </div>
-    </Modal.Body>
+    </form>
   );
 };
 
