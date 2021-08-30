@@ -40,7 +40,6 @@ function ItemsInSingleGenre(props) {
             />
             <Card.Body>
               <Card.Title>{item.name}</Card.Title>
-              <Card.Text>{item.description}</Card.Text>
             </Card.Body>
             <ListGroup className="list-group-flush">
               <ListGroupItem>{item.location}</ListGroupItem>
