@@ -11,23 +11,25 @@ nav {
 .form-control {
   max-width: 100%;
 }
-nav, footer {
+nav,
+footer {
   background-color: var(--primary);
-  color: var(--links)
+  color: var(--links);
 }
-.login-btn:hover, .search-btn:hover {
+.login-btn:hover,
+.search-btn:hover {
   background-color: var(--secondary);
 }
 .login-btn {
-    border-radius: 10px;
-    border: none;
-    background-color: var(--quartenary);
-    color: #fff;
-    width: 100%;
-    padding: 0.5em;
-    text-transform: uppercase;
-    font-size: large;
-    padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--quartenary);
+  color: #fff;
+  width: 100%;
+  padding: 0.5em;
+  text-transform: uppercase;
+  font-size: large;
+  padding: 10px 20px;
 }
 .search-btn {
   background-color: var(--tertiary);
@@ -38,3 +40,4 @@ nav, footer {
   font-size: large;
   padding: 10px 20px;
 }
+

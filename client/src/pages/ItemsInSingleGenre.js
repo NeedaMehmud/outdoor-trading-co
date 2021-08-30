@@ -12,6 +12,7 @@ import ListGroupItem from "react-bootstrap/ListGroupItem";
 import "../style/SingleGenre.css";
 import Auth from "../utils/auth";
 
+{/*Pulling in items from database based on their category*/}
 function ItemsInSingleGenre(props) {
   console.log(props.genre);
 
@@ -35,7 +36,7 @@ function ItemsInSingleGenre(props) {
   if (error) {
     console.log(error);
   }
-
+{/*Rendering cards with each item*/}
   return (
     <div>
       <HeroCardless />
