@@ -1,10 +1,8 @@
 import Modal from "react-bootstrap/Modal";
 import React, { useState } from "react";
-import { Form } from "react-bootstrap";
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
-import Auth from '../utils/auth'
-import "../style/Login.css";
+import Auth from '../utils/auth';
 
 const Login = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -13,7 +11,8 @@ const Login = () => {
   };
   const hideModal = () => {
     setIsOpen(false);
-  }; 
+  };
+
   const [formState, setFormState] = useState({
     email: '',
     password: '',
@@ -49,8 +48,9 @@ const Login = () => {
     })
   };
 
+
   return (
-    <form>
+    <Modal.Body>
       <div className="login">
         <div className="login-triangle"></div>
         {data ? (
@@ -68,7 +68,7 @@ const Login = () => {
                 type="email"
                 className="form-control"
                 id="exampleFormControlInput1"
-                placeholder="Enter email"
+                placeholder="name@example.com"
                 value={formState.email}
                 onChange={handleChange}
               />
@@ -87,28 +87,22 @@ const Login = () => {
                 onChange={handleChange}
               />
             </div>
-            <div className="form-group">
-              <div className="custom-control custom-checkbox">
-                <input type="checkbox" className="custom-control-input" id="customCheck1" />
-                <label className="custom-control-label" htmlFor="customCheck1">Remember me</label>
-              </div>
-            </div>
-            <button
-              type="submit"
-              className="text-center rounded signin-button search-btn"
-              id="btnSignIn"
-            >
-              Sign In
+            <Modal.Footer>
+              <button
+                onClick={showModal}
+                type="submit"
+                className="text-center rounded signin-button"
+              >
+                Sign In
             </button>
-            <button
-              className="text-center rounded signin-button search-btn"
-              id="btnCancel"
-            >
-              Cancel
+              <Modal show={isOpen} onHide={hideModal} />
+              <button
+                className="text-center rounded signin-button"
+                onClick={hideModal}
+              >
+                Cancel
             </button>
-            <p className="forgot-password text-right">
-              Forgot <a href="#">password?</a>
-            </p>
+            </Modal.Footer>
           </form>
         )}
         {error && (
@@ -117,7 +111,7 @@ const Login = () => {
           </div>
         )}
       </div>
-    </form>
+    </Modal.Body>
   );
 };
 
