@@ -31,9 +31,10 @@ class Nav extends React.Component {
     return (
       <Navbar className="navbar sticky-top">
         <div className="container">
-          <a className="navbar-brand" href="#">
+          <a className="navbar-brand">
+              <Link to={`/`}>
             {" "}
-            <img src={logo} alt="Outdoor Trading Co. logo" />
+            <img src={logo} alt="Outdoor Trading Co. logo" /></Link>
           </a>
           <form className="d-flex">
             <input className="form-control me-3" type="search" placeholder="Search" aria-label="Search"/>
