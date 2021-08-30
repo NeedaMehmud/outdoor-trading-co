@@ -58,6 +58,7 @@ export const QUERY_SINGLE_ITEM = gql`
       image_id
       created_at
       user
+      email
     }
   }
 `;

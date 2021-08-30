@@ -3,7 +3,7 @@ import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
 import "../style/Signup.css";
-import bearImg from "../assets/images/bear-blink.gif";
+import bearImg from "../assets/images/Walter.png";
 
 const SignUpForm = () => {
     const [formState, setFormState] = useState({

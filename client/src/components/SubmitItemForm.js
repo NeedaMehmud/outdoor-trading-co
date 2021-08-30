@@ -4,7 +4,7 @@ import { ADD_ITEM } from '../utils/mutations';
 import axios from 'axios'
 import Auth from '../utils/auth';
 import "../style/Signup.css";
-import bearImg from "../assets/images/bear-blink.gif";
+import bearImg from "../assets/images/Walter.png";
 
 
 const ItemForm = () => {
