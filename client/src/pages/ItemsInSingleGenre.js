@@ -57,7 +57,7 @@ function ItemsInSingleGenre(props) {
               <ListGroupItem>Condition: {item.condition}</ListGroupItem>
             </ListGroup>
             <Card.Body>
-              <button type="submit" className="request-btn">
+              <button type="submit" className="request-btn" href="#">
                 More Information
               </button>
             </Card.Body>
