@@ -44,22 +44,16 @@ const SignUpForm = () => {
             </p>
           ) : (
         <form onSubmit={handleFormSubmit}>
-            <div className="form-group p-3 text-center">
-              <h2>Preparing for your next adventure?</h2>
+            <div className="form-control my-2 p-3">
+              <h2 className="text-center">Preparing for your next adventure?</h2>
               <br></br>
-              <h2>Create an account with us to get started!</h2>
-            </div>
-            <div className="form-group p-3">
+              <h2 className="text-center">Create an account with us to get started!</h2>
                 <label> Username</label>
-                <input type="text" className="form-control" placeholder="Username" name="username" value={formState.name} onChange={handleChange} />
-            </div>
-            <div className="form-group p-3">
+                <input type="text" className="form-control my-2" placeholder="Username" name="username" value={formState.name} onChange={handleChange} />
                 <label>Email address</label>
-                <input type="email" className="form-control" placeholder="Enter email" name="email" value={formState.email} onChange={handleChange}/>
-            </div>
-            <div className="form-group p-3">
+                <input type="email" className="form-control my-2" placeholder="Enter email" name="email" value={formState.email} onChange={handleChange}/>
               <label>Password</label>
-              <input type="password" className="form-control" placeholder="Enter password" name="password" value={formState.password} onChange={handleChange}/>
+              <input type="password" className="form-control my-2" placeholder="Enter password" name="password" value={formState.password} onChange={handleChange}/>
             </div>
             <br></br>
             <div className="form-group p-3">
