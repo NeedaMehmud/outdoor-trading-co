@@ -71,20 +71,25 @@ const ItemForm = () => {
           <label>Item Name:</label>
           <input className="form-control my-2" name="name" type="text" onChange={handleChange}></input>
           <label>Item Genre:</label>
-          <Form.Select aria-label="Default select example">
-            <option>Select a Genre</option>
-            <option value="1">Hiking</option>
-            <option value="2">Climbing</option>
-            <option value="3">Water</option>
-            <option value="3">Misc</option>
-            <option value="5">Snow</option>
-            <option value="6">Camping</option>
-            <input className="form-control my-2" name="genre" type="text" onChange={handleChange}></input>
+          <Form.Select aria-label="Default select example" name="genre" type="text" onChange={handleChange}>
+            <option>Select Item Genre</option>
+            <option value="Hiking">Hiking</option>
+            <option value="Climbing">Climbing</option>
+            <option value="Water">Water</option>
+            <option value="Misc">Misc</option>
+            <option value="Snow">Snow</option>
+            <option value="Camping">Camping</option>
           </Form.Select>
           <label>Location:</label>
           <input className="form-control my-2" name="location" type="text" onChange={handleChange}></input>
           <label>Condition:</label>
-          <input className="form-control my-2" name="condition" type="text" onChange={handleChange}></input>
+          <Form.Select aria-label="Default select example" name="condition" type="text" onChange={handleChange}>
+            <option>Select Item Condition</option>
+            <option value="Like New">Like New</option>
+            <option value="Good">Good</option>
+            <option value="Ok">Ok</option>
+            <option value="Poor">Poor</option>
+          </Form.Select>
           <label>Enter description:</label>
           <input className="form-control my-2" name="description" type="text" onChange={handleChange}></input>
           <label>Add Photo:</label>
