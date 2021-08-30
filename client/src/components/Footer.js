@@ -5,7 +5,7 @@ function Footer() {
   return (
     <footer>
       <div className="container p-5">
-        <div className="row">
+        <div class="footer-left col-md-4 col-sm-6">
           <p class="about">
             <h1> About Outdoor Trading Co.</h1>
             <p>Use our platform to rent/borrow outdoor gear and enjoy the outdoors.
@@ -15,10 +15,8 @@ function Footer() {
           </p>
           <div class="icons">
             <a href="https://www.facebook.com/Outdoor-Trading-Co-100466249039342"><i class="fa fa-facebook"></i></a>
-            <a href="https:twitter.com/"><i class="fa fa-twitter"></i></a>
             <a href="https://www.linkedin.com/company/outdoor-trading-co/"><i class="fa fa-linkedin"></i></a>
             <a href="https://github.com/NeedaMehmud2017/outdoor-trading-co"><i class="fa fa-github"></i></a>
-            <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
           </div>
         </div>
       </div>
