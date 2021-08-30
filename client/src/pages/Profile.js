@@ -35,16 +35,16 @@ const Profile = () => {
       <Hero />
       <Iconbar />
       <main>
-      <div className="btnContainer">
-        <Link to="/SubmitItem">
-          <button className="submit-btn">POST AN ITEM</button>
-        </Link>
-      </div>
-      <div class="container">
-        <div className="titleContainer">
-          <h1>MY ITEMS</h1>
+        <div className="btnContainer">
+          <Link to="/SubmitItem">
+            <button className="submit-btn">POST AN ITEM</button>
+          </Link>
         </div>
-        <div className="container">
+        <div class="container">
+          <div className="titleContainer">
+            <h1>MY ITEMS</h1>
+          </div>
+          <div className="container">
           {/* dynamic function allowing the items that the user has posted to render on their profile */}
           {user.item.map((item) => (
             <Card
@@ -71,8 +71,8 @@ const Profile = () => {
               </ListGroup>
             </Card>
           ))}
+          </div>
         </div>
-      </div>
       </main>
     </div>
   );
