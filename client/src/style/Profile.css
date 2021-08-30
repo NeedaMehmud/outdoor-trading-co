@@ -1,0 +1,52 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  margin-bottom: 15px;
+  color: var (--primary);
+}
+
+.title {
+  font-weight: 700;
+  text-align: center;
+  font-family: "Mukta", sans-serif;
+  font-size: 1.5rem;
+}
+
+.img-fluid {
+  object-fit: cover;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.titleContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.submit-btn {
+  border-radius: 10px;
+  border: none;
+  background-color: var(--quartenary);
+  color: #fff;
+  padding: 0.5em;
+  text-transform: uppercase;
+  font-size: large;
+  padding: 10px 20px;
+  width: 100%;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.submit-btn:hover {
+  background-color: var(--tertiary);
+}
