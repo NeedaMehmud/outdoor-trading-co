@@ -48,7 +48,7 @@ const SignUp = () => {
             <h3>Sign Up</h3>
 
             <div className="form-group">
-                <label> Username</label>
+                <label>Username</label>
                 <input type="text" className="form-control" placeholder="Username" name="username" value={formState.name} onChange={handleChange} />
             </div>
 
@@ -62,7 +62,7 @@ const SignUp = () => {
                 <input type="password" className="form-control" placeholder="Enter password" name="password" value={formState.password} onChange={handleChange}/>
             </div>
             <br></br>
-            <button type="submit" className="signup">Sign Up</button>
+            <button type="submit" className="login-btn">Sign Up</button>
             <p className="forgot-password text-right">
                 Already registered <a href="#">log in?</a>
             </p>

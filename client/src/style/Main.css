@@ -1,0 +1,12 @@
+/* Make the image to responsive */
+.cat-image {
+  width: 100%;
+  height: auto;
+}
+
+/* When you mouse over the container, fade in the overlay icon*/
+.cat-image:hover {
+  transition: all 0.5s ease;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}

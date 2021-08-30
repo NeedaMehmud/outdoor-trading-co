@@ -1,13 +1,23 @@
 [
     {
       "username": "BrianRox",
-      "email": "bkernighan@techfriends.dev",
+      "email": "brian@brian.com",
       "password": "password01"
     },
     {
+      "username": "TestGuy",
+      "email": "testuser@test.com",
+      "password": "password123"
+    },
+    {
       "username": "Maximum",
-      "email": "mkanatalexander@techfriends.dev",
+      "email": "max@max.com",
       "password": "password02"
+    },
+    {
+      "username": "Jane",
+      "email": "jane@jane.com",
+      "password": "password456"
     }
 ]
   

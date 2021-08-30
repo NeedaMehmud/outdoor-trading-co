@@ -24,7 +24,7 @@
         "condition": "Like New",
         "description": "pot works like the day I got it, barely used",
         "image_id": "camp-cookware_sa89bq",
-        "user": "BrianRox"
+        "user": "TestGuy"
     },
     {
         "genre": "Camping",
@@ -33,7 +33,7 @@
         "condition": "Ok",
         "description": "Some wear and tear but still works well",
         "image_id": "camp-kettle_tei5ne",
-        "user": "Maximum"
+        "user": "Jane"
     },
     {
         "genre": "Camping",
@@ -60,7 +60,7 @@
         "condition": "Like New",
         "description": "Barely used and needs a chance to see the outdoors!",
         "image_id": "camp-tent2_r8vds4",
-        "user": "Maximum"
+        "user": "TestGuy"
     },
     {
         "genre": "Hiking",
@@ -69,7 +69,7 @@
         "condition": "Good",
         "description": "Scuffed and a little dirty, but sturdy.",
         "image_id": "hik_-_poles_wkr7qo",
-        "user": "BrianRox"
+        "user": "Jane"
     },
     {
         "genre": "Hiking",
@@ -78,7 +78,7 @@
         "condition": "Ok",
         "description": "This pack has seen a lot of use, and I've had no issues so far! It's a good pack.",
         "image_id": "hik-backpack_crztlc",
-        "user": "Maximum"
+        "user": "BrianRox"
     },
     {
         "genre": "Hiking",
@@ -105,7 +105,7 @@
         "condition": "Ok",
         "description": "Two well loved hiking packs available! They'll get you wherever you need to go!",
         "image_id": "hike-backpack_pair_e66tfo",
-        "user": "BrianRox"
+        "user": "TestGuy"
     },
     {       
         "genre": "Hiking",
@@ -114,7 +114,7 @@
         "condition": "Good",
         "description": "Kit with everything from a bedroll to a stick to cooking equipment and boots. Everything you need for a journey.",
         "image_id": "hik-equipment_kit_jjsmlc",
-        "user": "Maximum"
+        "user": "Jane"
     },
     {       
         "genre": "Hiking",
@@ -122,7 +122,7 @@
         "location": "Athens, GA",
         "condition": "Like New",
         "description": "My kids grew out of this before we got to use it but maybe it'll work for yours! Pack for carrying your kids on your hike",
-        "image_id": "chik-kid_carry_pack_qxwgff",
+        "image_id": "hik-kid_carry_pack_qxwgff",
         "user": "Maximum"
     },
     {
@@ -141,7 +141,7 @@
         "condition": "Ok",
         "description": "Waist support for climbing gear. Dirty but strong and safe.",
         "image_id": "climb-holster_qm2fxe",
-        "user": "Maximum"
+        "user": "TestGuy"
     },
     {
         "genre": "Climbing",
@@ -150,7 +150,7 @@
         "condition": "Like New",
         "description": "Helmet, Packs, Shoes, Rope, and Carabiners for climbing barely used.",
         "image_id": "climb-kit_pjrh9g",
-        "user": "BrianRox"
+        "user": "Jane"
     },
     {
         "genre": "Climbing",
@@ -177,7 +177,7 @@
         "condition": "Good",
         "description": "Dirty and a little stained, but rope is strong and not frayed or torn. Sturdy and ready for climbing.",
         "image_id": "climb-rope_hyjk4p",
-        "user": "Maximum"
+        "user": "TestGuy"
     },
     {       
         "genre": "Misc",
@@ -186,7 +186,7 @@
         "condition": "Like New",
         "description": "bag barely used with some gear good for climbing, camping, hiking, etc",
         "image_id": "misc-bag_and_gear_co4hyy",
-        "user": "Maximum"
+        "user": "Jane"
     },
     {
         "genre": "Misc",
@@ -213,7 +213,7 @@
         "condition": "Like New",
         "description": "Never used trail bag for travel.",
         "image_id": "misc-hikebag_usyfax",
-        "user": "BrianRox"
+        "user": "TestGuy"
     },
     {
         "genre": "Misc",
@@ -222,7 +222,7 @@
         "condition": "Ok",
         "description": "Rain boots and umbrella. Scuffed but ok condition.",
         "image_id": "misc-rain_gear_pndxqo",
-        "user": "Maximum"
+        "user": "Jane"
     },
     {
         "genre": "Misc",
@@ -230,7 +230,7 @@
         "location": "Woodberry, GA",
         "condition": "Ok",
         "description": "Two clean water bottles - good for hiking or running or whatever! Please clean before returning.",
-        "image_id": "cmisc-water_bottles_hderao",
+        "image_id": "misc-water_bottles_hderao",
         "user": "BrianRox"
     },
     {       
@@ -249,7 +249,7 @@
         "condition": "Like New",
         "description": "Women's size small pink waterproof gloves.",
         "image_id": "snow-gloves_jwn8bh",
-        "user": "Maximum"
+        "user": "TestGuy"
     },
     {       
         "genre": "Snow",
@@ -258,7 +258,7 @@
         "condition": "Like New",
         "description": "Mens snow skis with poles, shoes, and helmet. Shoes are men's size 10.",
         "image_id": "snow-mens_ski_agvrvb",
-        "user": "Maximum"
+        "user": "Jane"
     },
     {
         "genre": "Snow",
@@ -285,7 +285,7 @@
         "condition": "Like New",
         "description": "Show shoes barely used - you won't sink with these babies.",
         "image_id": "snow-skis_ba5nbt",
-        "user": "BrianRox"
+        "user": "TestGuy"
     },
     {
         "genre": "Water",
@@ -294,7 +294,7 @@
         "condition": "Ok",
         "description": "Boat set up on the dock. We can meet you at the dock and show you how to tie it off and work the motor. Please refill the tank after use and be careful with our trusty baby.",
         "image_id": "water-boat_xmaqsp",
-        "user": "Maximum"
+        "user": "Jane"
     },
     {
         "genre": "Water",
@@ -321,7 +321,7 @@
         "condition": "Good",
         "description": "Two person kayak - scuffed but no leaks",
         "image_id": "water-paddleboat_v7pdfm",
-        "user": "BrianRox"
+        "user": "TestGuy"
     },
     {
         "genre": "Water",
@@ -330,7 +330,7 @@
         "condition": "Ok",
         "description": "Well loved water ski ready for the waves",
         "image_id": "water-skis_czn7sv",
-        "user": "Maximum"
+        "user": "Jane"
     },
     {
         "genre": "Water",

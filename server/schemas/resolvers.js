@@ -7,8 +7,8 @@ const resolvers = {
     users: async () => {
       return User.find();
     },
-    user: async (parent, { userId }) => {
-      return User.findOne({ _id: userId }).populate('items');
+    user: async (parent, { username }) => {
+      return User.findOne({ username: username }).populate('item');
     },
     item: async(parent, { itemId }) => {
       return Item.findOne({ _id: itemId })
@@ -22,7 +22,7 @@ const resolvers = {
     },
     me: async (parent, args, context) => {
       if (context.user) {
-        return User.findOne({ _id: context.user._id }).populate('items');
+        return User.findOne({ _id: context.user._id }).populate('item');
       }
       throw new AuthenticationError('You need to be logged in!');
     },

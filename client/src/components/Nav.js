@@ -5,7 +5,6 @@ import logo from "../assets/images/logo.png";
 import Login from "../components/Login";
 import DropdownMenu from "../components/DropdownMenu"
 import { Link } from 'react-router-dom';
-
 import Auth from '../utils/auth';
 
 class Nav extends React.Component {
@@ -35,10 +34,11 @@ class Nav extends React.Component {
         <div class="container">
           <a class="navbar-brand" href="#">
             {" "}
-            <img src={logo} alt="Logo" />
+            <img src={logo} alt="Outdoor Trading Co. logo" />
           </a>
-          <form class="d-flex">
-            {<DropdownMenu />}
+          <form className="d-flex">
+            <input className="form-control me-3" type="search" placeholder="Search" aria-label="Search"/>
+            <button className="search-btn" type="submit" disabled="buttonDisabled">Search</button>
           </form>
           <div>
             {Auth.loggedIn() ? (

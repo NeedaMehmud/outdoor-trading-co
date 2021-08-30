@@ -22,7 +22,7 @@ class Hero extends React.Component {
     return (
       <div className="jumbotron jumbotron-fluid">
         <div className="container hero-text">
-          <div className="card col-lg-4">
+          <div className="card col-lg-5">
             <div className="card-body m-3">
               <h2>Outside. Together.</h2>
               <br></br>

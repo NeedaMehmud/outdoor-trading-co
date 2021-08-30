@@ -1,136 +1,84 @@
 import React, { useState } from 'react';
-// import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
-
 import { ADD_ITEM } from '../utils/mutations';
-import { QUERY_ME } from '../utils/queries';
-
+import axios from 'axios'
 import Auth from '../utils/auth';
+import "../style/Signup.css";
 
 const ItemForm = () => {
-    // genre will be drop down with given options
-    // const [item, setItem] = useState({ 
-    //     genre: "",
-    //     name: "",
-    //     location: "",
-    //     description: "",
-    //     condition: "",
-    //     image_id: "",
-    //     user: "",   
-    // }); 
-
-    // const [itemGenre, setItemGenre] = useState('');
-    // const [itemName, setItemName] = useState('');
-    // const [itemLocation, setItemLocation] = useState('');
-    // // condition will be drop down with given options
-    // const [itemCondition, setItemCondition] = useState(''); 
-    // const [itemDescription, setItemDescription] = useState(''); 
-    // const [itemImageId, setItemImageId] = useState(''); 
-
-
-
-    // const [addItem, { error }] = useMutation(ADD_ITEM, {
-    //     update(cache, { data: { addThought } }) {
-    //       try {
-    //         const { thoughts } = cache.readQuery({ query: QUERY_THOUGHTS });
-    
-    //         cache.writeQuery({
-    //           query: QUERY_THOUGHTS,
-    //           data: { thoughts: [addThought, ...thoughts] },
-    //         });
-    //       } catch (e) {
-    //         console.error(e);
-    //       }
-    
-    //       // update me object's cache
-    //       const { me } = cache.readQuery({ query: QUERY_ME });
-    //       cache.writeQuery({
-    //         query: QUERY_ME,
-    //         data: { me: { ...me, thoughts: [...me.thoughts, addThought] } },
-    //       });
-    //     },
-    //   });
-
-
-    // const handleFormSubmit = async (event) => {
-    //     event.preventDefault();
-    
-    //     try {
-    //       const { data } = await addItem({
-    //         variables: {
-    //           item,
-    //           user: Auth.getProfile().data.username,
-    //         },
-    //       });
-    
-    //       setItem({ 
-    //         genre: "",
-    //         name: "",
-    //         location: "",
-    //         description: "",
-    //         condition: "",
-    //         image_id: "",
-    //         user: "",   
-    //     });
-    //     } catch (err) {
-    //       console.error(err);
-    //     }
-    //   };
-
-    //   const handleChange = (event) => {
-    //     const { name, value } = event.target;
-
-    //     setItem({...item, [name]: value})
-    //   }
+    const [fileState, setFileState] = useState([]);
 
     const [formState, setFormState] = useState({
-        name: '',
-        genre: '',
-        location: '',
-        description: '',
-        image_id:'',
-        condition:'',
-      });
-    
-      // Set up our mutation with an option to handle errors
-      const [addItem, { error }] = useMutation(ADD_ITEM);
+      name: '',
+      genre: '',
+      location: '',
+      description: '',
+      condition:'',
+    });
 
-      const handleFormSubmit = async (event) => {
-        event.preventDefault();
-    
-        // On form submit, perform mutation and pass in form data object as arguments
-        // It is important that the object fields are match the defined parameters in `ADD_THOUGHT` mutation
-        try {
-          const { data } = addItem({
-            variables: { 
-             ...formState,
-             user: Auth.getProfile().data.username,
-            },
-          });
-          console.log(formState);
-        //   window.location.reload();
-        } catch (err) {
-          console.error(err);
-        }
-      };
-    
-      const handleChange = (event) => {
-        const { name, value } = event.target;
-          setFormState({ ...formState, [name]: value });
-      };
-    
-    
+    const [addItem, { error }] = useMutation(ADD_ITEM);
+
+    const handleFormSubmit = async (event) => {
+      event.preventDefault();
+
+
+      const formData = new FormData();
+      formData.append('file', fileState);
+      formData.append('upload_preset', 'ml_default');
+
+      console.log(formData);
+      const response = await axios.post(
+      `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUD_NAME}/image/upload`,
+      formData
+    )
+    try {
+      console.log(response);
+      const { data } = addItem({
+        variables: { 
+         ...formState,
+         image_id: response.data.public_id,
+         user: Auth.getProfile().data.username,
+        },
+      });
+      console.log(formState);
+      window.location.reload();
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+    const handleFileChange = (event) => {
+      setFileState(event.target.files[0]);
+      console.log(fileState);
+    };
+
+    const handleChange = (event) => {
+      const { name, value } = event.target;
+        setFormState({ ...formState, [name]: value });
+    };
 
     return (
-        <form onSubmit={handleFormSubmit}>
-            <input name="name" type="text" onChange={handleChange}></input>
-            <input name="genre" type="text" onChange={handleChange}></input>
-            <input name="location" type="text" onChange={handleChange}></input>
-            <input name="condition" type="text" onChange={handleChange}></input>
-            <input name="description" type="text" onChange={handleChange}></input>
-            <input name="image_id" type="text" onChange={handleChange}></input>
-            <button type="submit">Submit</button>
-        </form>
+          <div className="container p-3">
+            <form onSubmit={handleFormSubmit}>
+              <h1 className="text-center">Submit Your Item</h1>
+              <div className="form-control p-3">
+                <label>Item Name:</label>
+                <input className="form-control my-2" name="name" type="text" onChange={handleChange}></input>
+                <label>Item Genre:</label>
+                <input className="form-control my-2" name="genre" type="text" onChange={handleChange}></input>
+                <label>Location:</label>
+                <input className="form-control my-2" name="location" type="text" onChange={handleChange}></input>
+                <label>Condition:</label>
+                <input className="form-control my-2" name="condition" type="text" onChange={handleChange}></input>
+                <label>Enter description:</label>
+                <input className="form-control my-2" name="description" type="text" onChange={handleChange}></input>
+                <label>Add Photo:</label>
+                <input className="form-control my-2" name="file" type="file" accept="image/png, image/jpg, image/jpeg" onChange={handleFileChange}></input>
+                <br></br>
+                <button type="submit" className="signup-btn">Submit</button>
+              </div>
+            </form>
+          </div>
     );
 };   
     

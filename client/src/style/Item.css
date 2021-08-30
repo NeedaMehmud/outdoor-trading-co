@@ -1,6 +1,17 @@
 .card-title {
     font-weight: 700;
 }
-.btn-rm {
-    background-color: --color-primary;
+.request-btn {
+        border-radius: 10px;
+        border: none;
+        background-color: var(--quartenary);
+        color: #fff;
+        padding: 0.5em;
+        text-transform: uppercase;
+        font-size: large;
+        padding: 10px 20px;
+        width: 100%;
 }
+.request-btn:hover {
+    background-color: var(--tertiary);
+  }
