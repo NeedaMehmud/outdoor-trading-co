@@ -3,8 +3,8 @@ import "../style/Nav.css";
 import Navbar from "react-bootstrap/Navbar";
 import logo from "../assets/images/logo.png";
 import Login from "../components/Login";
-import { Link } from 'react-router-dom';
-import Auth from '../utils/auth';
+import { Link } from "react-router-dom";
+import Auth from "../utils/auth";
 
 class Nav extends React.Component {
   constructor() {
@@ -34,30 +34,53 @@ class Nav extends React.Component {
           <a className="navbar-brand">
             <Link to={`/`}>
               {" "}
-              <img src={logo} alt="Outdoor Trading Co. logo" /></Link>
+              <img src={logo} alt="Outdoor Trading Co. logo" />
+            </Link>
           </a>
           <form className="d-flex">
-            <input className="form-control me-3" type="search" placeholder="Search" aria-label="Search" />
-            <button className="search-btn" type="submit" disabled="buttonDisabled">Search</button>
+            <input
+              className="form-control me-3"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button
+              className="search-btn"
+              type="submit"
+              disabled="buttonDisabled"
+            >
+              Search
+            </button>
           </form>
           <div>
             {Auth.loggedIn() ? (
               <>
-                <button className="search-btn">
-                  <Link to="/me" className="text-decoration-none text-white">Welcome<div></div>
+                <button className="profile-btn">
+                  <Link to="/me" className="text-decoration-none text-white">
+                    Welcome<div></div>
                     {Auth.getProfile().data.username}!
-              </Link>
+                  </Link>
                 </button>
                 <br></br>
                 <br></br>
                 <button className="login-btn" onClick={logout}>
                   Logout
-              </button>
+                </button>
               </>
             ) : (
               <>
                 <div className="d-grid gap-2 d-md-flex justify-content-sm-end">
-                  {this.state.clicked ? <Login /> : <button onClick={this.handleClick} type="submit" className="login-btn">Login</button>}
+                  {this.state.clicked ? (
+                    <Login />
+                  ) : (
+                    <button
+                      onClick={this.handleClick}
+                      type="submit"
+                      className="login-btn"
+                    >
+                      Login
+                    </button>
+                  )}
                 </div>
               </>
             )}
@@ -69,4 +92,3 @@ class Nav extends React.Component {
 }
 
 export default Nav;
-

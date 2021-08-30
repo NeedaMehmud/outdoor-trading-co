@@ -9,15 +9,24 @@ nav {
   background-color: var(--secondary);
 }
 
-nav,
-footer {
-  background-color: var(--primary);
-  color: var(--links);
+.d-flex {
+  width: 30%;
 }
+
 .login-btn:hover,
 .search-btn:hover {
   background-color: var(--secondary);
 }
+
+.profile-btn {
+  border-radius: 10px;
+  border: none;
+  background-color: var(--quartenary);
+  color: #fff;
+  padding: 0.5em;
+  padding: 5px 10px;
+}
+
 .login-btn {
   border-radius: 10px;
   border: none;
@@ -37,4 +46,3 @@ footer {
   font-size: large;
   padding: 10px 20px;
 }
-
