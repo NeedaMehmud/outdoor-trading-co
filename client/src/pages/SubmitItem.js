@@ -9,19 +9,12 @@ function SubmitItem() {
         return <Redirect to="/SignUp" />;
     }
     return (
-<<<<<<< HEAD
-            <div>
-                <Hero />
-                <main>
-                    <SubmitItemForm />
-                </main>
-            </div>
-=======
         <div>
          <HeroCardless />
-         <SubmitItemForm />
+            <main>
+            <SubmitItemForm />
+            </main>
         </div>
->>>>>>> 6f9722eb18b27333e8b9ab424b7bbc751afcd14e
     );
 };
 

@@ -35,34 +35,6 @@ function ItemsInSingleGenre(props) {
   };
 
   return (
-<<<<<<< HEAD
-      <div>
-        <Hero />
-        <main>
-          <div style={{ display: "flex" }}>
-            {items.map((item) => (
-              <Card style={{ width: "18rem", height: "40rem" }} key={item._id}>
-                <Image
-                  variant="top"
-                  cloudName="outdoor-trading-co"
-                  publicId={item.image_id}
-                />
-                <Card.Body>
-                  <Card.Title>{item.name}</Card.Title>
-                </Card.Body>
-                <ListGroup className="list-group-flush">
-                  <ListGroupItem>{item.location}</ListGroupItem>
-                  <ListGroupItem>{item.condition}</ListGroupItem>
-                </ListGroup>
-                <Card.Body>
-                  <Card.Link href={item._id}>More Information</Card.Link>
-                </Card.Body>
-              </Card>
-            ))}
-          </div>
-        </main>
-      </div>
-=======
     <div>
       <HeroCardless />
       <br></br>
@@ -100,7 +72,6 @@ function ItemsInSingleGenre(props) {
       </div>
       <br></br>
     </div>
->>>>>>> 6f9722eb18b27333e8b9ab424b7bbc751afcd14e
   );
 }
 

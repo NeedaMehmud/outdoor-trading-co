@@ -62,7 +62,7 @@ const ItemForm = () => {
     return (
           <div className="container p-3">
             <form onSubmit={handleFormSubmit}>
-              <div className="form-control p-3">
+              <div className="form-group my-2 p-3">
                 <div className="walter-says"><h2 className="text-center">Submit Your Item</h2></div>
                 <img src={bearImg} className="walter" alt="An illustration of a bear named Walter with a backpack."></img>
                 <label>Item Name:</label>
