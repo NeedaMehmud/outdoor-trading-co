@@ -1,5 +1,5 @@
 const { gql } = require('apollo-server-express');
-
+// import graphql, include all fields for item and user models as well as auth token, and queries and mutations according to what information they are taking in and responding with
 const typeDefs = gql`
   type User {
     _id: ID!
@@ -43,5 +43,5 @@ const typeDefs = gql`
     removeItem (itemId: ID!): Item
   }
 `;
-
+// export typedefs
 module.exports = typeDefs;

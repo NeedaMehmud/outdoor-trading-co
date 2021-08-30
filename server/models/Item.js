@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose');
 
-
+// item model including username and user email for related front-end calls
 const itemSchema = new Schema({
     genre: {
         type: String,
