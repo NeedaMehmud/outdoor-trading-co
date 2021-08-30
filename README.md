@@ -10,6 +10,7 @@ A site for users to rent/borrow outdoor gear and enjoy the outdoors. A site for 
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
+- [Links](#links)
 
 ## Installation
 
@@ -30,3 +31,7 @@ Upon loading, the user is presented with a homepage that gives options to login 
 ## License
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+## Links
+* [Github](https://github.com/NeedaMehmud2017/outdoor-trading-co)
+* [Application](https://gentle-bastion-45496.herokuapp.com/)
