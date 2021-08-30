@@ -8,7 +8,9 @@ function SignUp() {
     return (
         <div>
             <HeroCardless />
-            <SignUpForm />
+            <main>
+                <SignUpForm />
+            </main>
         </div>
     );
 };

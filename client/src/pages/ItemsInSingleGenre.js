@@ -39,7 +39,7 @@ function ItemsInSingleGenre(props) {
     <div>
       <HeroCardless />
       <Iconbar />
-      <br></br>
+      <main>
       <div className="container">
         {items.map((item) => (
           <Card
@@ -73,6 +73,7 @@ function ItemsInSingleGenre(props) {
         ))}
       </div>
       <br></br>
+      </main>
     </div>
   );
 }

@@ -13,7 +13,9 @@ function SubmitItem() {
         <div>
          <HeroCardless />
          <Iconbar />
-         <SubmitItemForm />
+         <main>
+            <SubmitItemForm />
+         </main>
         </div>
     );
 };

@@ -7,6 +7,7 @@ import { ADD_ITEM } from '../utils/mutations';
 import axios from 'axios'
 import Auth from '../utils/auth';
 import "../style/Signup.css";
+import bearImg from "../assets/images/Walter.png";
 
 const ItemForm = () => {
   const [fileState, setFileState] = useState([]);
@@ -61,29 +62,31 @@ const ItemForm = () => {
   };
 
   return (
-    <Form.Select title="Dropdown">
-      <div className="container p-3">
-        <form onSubmit={handleFormSubmit}>
-          <h1 className="text-center">Submit Your Item</h1>
-          <div className="form-control p-3">
-            <option>Item Name:</option>
-            <input className="form-control my-2" name="name" type="text" onChange={handleChange}></input>
-            <option>Item Genre:</option>
-            <input className="form-control my-2" name="genre" type="text" onChange={handleChange}></input>
-            <label>Location:</label>
-            <input className="form-control my-2" name="location" type="text" onChange={handleChange}></input>
-            <label>Condition:</label>
-            <input className="form-control my-2" name="condition" type="text" onChange={handleChange}></input>
-            <label>Enter description:</label>
-            <input className="form-control my-2" name="description" type="text" onChange={handleChange}></input>
-            <label>Add Photo:</label>
-            <input className="form-control my-2" name="file" type="file" accept="image/png, image/jpg, image/jpeg" onChange={handleFileChange}></input>
-            <br></br>
-            <button type="submit" className="signup-btn">Submit</button>
-          </div>
-        </form>
-      </div>
-    </Form.Select>
+    <div className="container p-3">
+      <form onSubmit={handleFormSubmit}>
+        <div className="walter-says">
+          <h2>Preparing for your next adventure?</h2>
+          <p>Create an account with us to get started!</p>
+        </div>
+        <img src={bearImg} className="walter" alt="An illustration of a bear named Walter with a backpack."></img>
+        <div className="form-control p-3">
+          <label>Item Name:</label>
+          <input className="form-control my-2" name="name" type="text" onChange={handleChange}></input>
+          <label>Item Genre:</label>
+          <input className="form-control my-2" name="genre" type="text" onChange={handleChange}></input>
+          <label>Location:</label>
+          <input className="form-control my-2" name="location" type="text" onChange={handleChange}></input>
+          <label>Condition:</label>
+          <input className="form-control my-2" name="condition" type="text" onChange={handleChange}></input>
+          <label>Enter description:</label>
+          <input className="form-control my-2" name="description" type="text" onChange={handleChange}></input>
+          <label>Add Photo:</label>
+          <input className="form-control my-2" name="file" type="file" accept="image/png, image/jpg, image/jpeg" onChange={handleFileChange}></input>
+          <br></br>
+          <button type="submit" className="signup-btn">Submit</button>
+        </div>
+      </form>
+    </div>
   );
 };
 
