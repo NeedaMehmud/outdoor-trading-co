@@ -19,9 +19,9 @@ function Footer() {
           </div>
           <div className="col text-center">
             <ul className="social-icons">
-              <li className="mx-2"><a href="https://www.facebook.com/Outdoor-Trading-Co-100466249039342" className="social-icon"> <i className="fa fa-facebook"></i></a></li>
-              <li className="mx-2"><a href="https://www.linkedin.com/company/outdoor-trading-co/" className="social-icon"> <i className="fa fa-linkedin"></i></a></li>
-              <li className="mx-2"><a href="https://github.com/NeedaMehmud2017/outdoor-trading-co" className="social-icon"> <i className="fa fa-github"></i></a></li>
+              <li className="m-2"><a href="https://www.facebook.com/Outdoor-Trading-Co-100466249039342" className="social-icon"> <i className="fa fa-facebook fa-lg"></i></a></li>
+              <li className="m-2"><a href="https://www.linkedin.com/company/outdoor-trading-co/" className="social-icon"> <i className="fa fa-linkedin fa-lg"></i></a></li>
+              <li className="m-2"><a href="https://github.com/NeedaMehmud2017/outdoor-trading-co" className="social-icon"> <i className="fa fa-github fa-lg"></i></a></li>
             </ul>
           </div>
         </div>

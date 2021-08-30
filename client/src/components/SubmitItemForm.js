@@ -61,7 +61,7 @@ const ItemForm = () => {
           <div className="container p-3">
             <form onSubmit={handleFormSubmit}>
               <h1 className="text-center">Submit Your Item</h1>
-              <div className="form-control">
+              <div className="form-control p-3">
                 <label>Item Name:</label>
                 <input className="form-control my-2" name="name" type="text" onChange={handleChange}></input>
                 <label>Item Genre:</label>

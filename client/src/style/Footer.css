@@ -1,8 +1,5 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 
-h3 {
-    font-weight: 700;
-}
 nav,footer {
   background-color: var(--primary);
   color: var(--links);
@@ -13,11 +10,19 @@ footer {
 footer a {
   color: var(--links);
   text-decoration: none;
+  font-size: large;
+  text-transform: uppercase;
 }
 footer a:hover {
   color: var(--links);
 }
 /* Social media icon styling. */
+.fa {
+    border-radius: 10px;
+}
+.social-icons {
+    padding: 0;
+}
 .social-icons li {
     display: inline;
 }
@@ -26,7 +31,7 @@ footer a:hover {
     text-decoration: none;
 }
 .fa-facebook {
-    padding:10px 14px;
+    padding:1em;
     -o-transition:.5s;
     -ms-transition:.5s;
     -moz-transition:.5s;
@@ -50,7 +55,7 @@ footer a:hover {
     background-color: #00aced;
 }
 .fa-rss {
-    padding:10px 14px;
+    padding:1em;
     -o-transition:.5s;
     -ms-transition:.5s;
     -moz-transition:.5s;
@@ -62,7 +67,7 @@ footer a:hover {
     background-color: #eb8231;
 }
 .fa-youtube {
-    padding:10px 14px;
+    padding:1em;
     -o-transition:.5s;
     -ms-transition:.5s;
     -moz-transition:.5s;
@@ -74,7 +79,7 @@ footer a:hover {
     background-color: #e64a41;
 }
 .fa-linkedin {
-    padding:10px 14px;
+    padding:1em;
     -o-transition:.5s;
     -ms-transition:.5s;
     -moz-transition:.5s;
@@ -86,7 +91,7 @@ footer a:hover {
     background-color: #0073a4;
 }
 .fa-github {
-    padding:10px 14px;
+    padding:1em;
     -o-transition:.5s;
     -ms-transition:.5s;
     -moz-transition:.5s;

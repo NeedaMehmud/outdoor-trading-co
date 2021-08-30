@@ -8,13 +8,7 @@ function SignUp() {
     return (
         <div>
             <HeroCardless />
-            <div className="container">
-                <div className="row">
-                    <div className="col p-3">
-                <SignUpForm />
-                    </div>
-                </div>
-            </div>
+            <SignUpForm />
         </div>
     );
 };

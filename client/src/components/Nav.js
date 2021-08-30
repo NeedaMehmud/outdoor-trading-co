@@ -4,7 +4,6 @@ import Navbar from "react-bootstrap/Navbar";
 import logo from "../assets/images/logo.png";
 import Login from "../components/Login";
 import { Link } from 'react-router-dom';
-
 import Auth from '../utils/auth';
 
 class Nav extends React.Component {
@@ -34,18 +33,11 @@ class Nav extends React.Component {
         <div className="container">
           <a className="navbar-brand" href="#">
             {" "}
-            <img src={logo} alt="Logo" />
+            <img src={logo} alt="Outdoor Trading Co. logo" />
           </a>
           <form className="d-flex">
-            <input
-              className="form-control me-3"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button className="search-btn" type="submit" disabled="buttonDisabled">
-              Search
-          </button>
+            <input className="form-control me-3" type="search" placeholder="Search" aria-label="Search"/>
+            <button className="search-btn" type="submit" disabled="buttonDisabled">Search</button>
           </form>
           <div>
             {Auth.loggedIn() ? ( 

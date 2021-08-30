@@ -48,7 +48,7 @@ const SignUp = () => {
             <h3>Sign Up</h3>
 
             <div className="form-group">
-                <label> Username</label>
+                <label>Username</label>
                 <input type="text" className="form-control" placeholder="Username" name="username" value={formState.name} onChange={handleChange} />
             </div>
 
