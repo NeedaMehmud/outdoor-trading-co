@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React from "react";
+import {Redirect} from 'react-router-dom';
 import HeroCardless from "../components/HeroCardless";
 import { Image } from "cloudinary-react";
 import Card from "react-bootstrap/Card";
@@ -8,7 +9,8 @@ import ListGroupItem from "react-bootstrap/ListGroupItem";
 import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 
-import { QUERY_SINGLE_ITEM, QUERY_USER } from "../utils/queries";
+import { QUERY_SINGLE_ITEM } from "../utils/queries";
+import Auth from '../utils/auth';
 import categoryImg from "../assets/images/category.png";
 import "../style/Item.css";
 
@@ -19,20 +21,14 @@ function SingleItem() {
   });
 
   const item = data?.item || {}; 
-
-  console.log(item.user);
-  console.log(typeof item.user)
   
+  if (loading) {
+    return <div>Loading...</div>;
+  };
 
-  
-  const { isIdle, data2 } = useQuery(QUERY_USER, {
-    variables: {username: item.user}, enabled: !!item.user
-  })
-
-  const user = data2?.user || {};
-
-  console.log(user.email);
-  console.log(user);
+  if(!Auth.loggedIn()){
+    return <Redirect to="/SignUp" />;
+  };
 
   
 
@@ -55,7 +51,7 @@ function SingleItem() {
                 <li className="list-group-item"><h4>Condition:</h4> {item.condition}</li>
                 <li className="list-group-item"><h4>Location: </h4> {item.location}</li>
             </ul>
-            <button type="submit" className="request-btn">{item.email}</button>
+            <button type="submit" mailto={item.email} className="request-btn">Request This Item</button>
             </div>
         </div>
       </div>
