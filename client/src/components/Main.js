@@ -8,7 +8,6 @@ import "../style/Main.css";
 
 function Main() {
   return (
-    <main>
       <section className="container p-3">
         {/*<!-- Row 1. -->*/}
         <div className="row">
@@ -47,7 +46,6 @@ function Main() {
           </div>
         </div>
       </section>
-    </main>
   );
 }
 

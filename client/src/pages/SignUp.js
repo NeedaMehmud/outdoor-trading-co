@@ -6,10 +6,12 @@ import "../style/Signup.css";
 
 function SignUp() {
     return (
-        <div>
-            <HeroCardless />
-            <SignUpForm />
-        </div>
+        <main>
+            <div>
+                <HeroCardless />
+                <SignUpForm />
+            </div>
+        </main>
     );
 };
 

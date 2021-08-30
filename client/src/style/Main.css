@@ -1,3 +1,7 @@
+main {
+  background-image: url("../assets/images/topography-bg.png");
+}
+
 /* Make the image to responsive */
 .cat-image {
   width: 100%;

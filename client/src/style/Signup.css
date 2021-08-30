@@ -1,3 +1,6 @@
+main {
+  background-image: url("../assets/images/topography-bg.png");
+}
 .signup-btn {
   border-radius: 10px;
   border: none;

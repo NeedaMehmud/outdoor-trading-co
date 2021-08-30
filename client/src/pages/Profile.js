@@ -19,6 +19,7 @@ const Profile = () => {
     }
 
     return (
+        <main>
         <div>
          <Hero />
          {user.item.map(item => (
@@ -29,6 +30,7 @@ const Profile = () => {
              </div>
          ))}
         </div>
+        </main>
     );
 };
 
