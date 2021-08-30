@@ -9,12 +9,14 @@
   color: var (--primary);
 }
 
-.title {
+.card-title {
   font-weight: 700;
   text-align: center;
   font-family: "Mukta", sans-serif;
   font-size: 1.5rem;
 }
+
+
 
 .img-fluid {
   object-fit: cover;
