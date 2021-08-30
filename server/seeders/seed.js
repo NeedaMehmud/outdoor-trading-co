@@ -2,17 +2,6 @@ const db = require('../config/connection');
 const { User, Item } = require('../models');
 const userSeeds = require('./userSeeds.json');
 const itemSeeds = require('./itemSeeds.json');
-const mongoose = require('mongoose');
-
-mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://localhost/outdoor-trading',
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
-  }
-);
 
 db.once('open', async () => {
   try {
@@ -37,4 +26,5 @@ db.once('open', async () => {
     console.error(err);
     process.exit(1);
   }
+  process.exit(0)
 });
