@@ -56,7 +56,7 @@ body, html, .App, #root, .outer {
 }
 
 .outer .form-control:focus {
-  border-color: #167bff;
+  border-color: yellow;
   box-shadow: none;
 }
 
@@ -81,5 +81,5 @@ body, html, .App, #root, .outer {
 }
 
 .forgot-password a {
-  color: #167bff;
+  color: yellow;
 }
