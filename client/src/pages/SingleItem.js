@@ -1,9 +1,5 @@
 import React, { useEffect } from "react";
-import Nav from "../components/Nav";
-import Hero from "../components/Hero";
-import Main from "../components/Main";
-import Newsletter from "../components/Newsletter";
-import Footer from "../components/Footer";
+import HeroCardless from "../components/HeroCardless";
 import { Image } from "cloudinary-react";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
@@ -42,7 +38,7 @@ function SingleItem() {
 
   return (
     <div>
-      <Hero />
+      <HeroCardless />
       <div className="container p-3">
         <div className="row">
           <div className="col-lg-5 p-3" key={item._id}>
