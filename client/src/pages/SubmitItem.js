@@ -1,6 +1,6 @@
 import React from 'react';
 import {Redirect} from 'react-router-dom';
-import HeroCardless from "../components/HeroCardless";
+import Hero from "../components/Hero";
 import Iconbar from "../components/Iconbar";
 import SubmitItemForm from "../components/SubmitItemForm"
 import Auth from '../utils/auth';
@@ -12,7 +12,7 @@ function SubmitItem() {
     }
     return (
         <div>
-         <HeroCardless />
+         <Hero />
          <Iconbar />
          <main>
             <SubmitItemForm />

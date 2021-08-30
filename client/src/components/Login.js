@@ -99,13 +99,6 @@ const Login = () => {
               >
                 Sign In
             </button>
-              <Modal show={isOpen} onHide={hideModal} />
-              <button
-                className="search-btn btn-md"
-                onClick={hideModal}
-              >
-                Cancel
-            </button>
               <p className="forgot-password text-right">
                 Forgot <a href="#">password?</a>
               </p>
