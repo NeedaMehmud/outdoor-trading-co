@@ -45,7 +45,7 @@ function ItemsInSingleGenre(props) {
       <Hero />
       <Iconbar />
       <main>
-        <div className="genre-container">
+        <div className="container genre">
           {/* dynamic function allowing cards to be rendered for each item */}
           {items.map((item) => (
             <Card
