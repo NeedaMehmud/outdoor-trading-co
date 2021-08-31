@@ -1,10 +1,11 @@
 import decode from 'jwt-decode';
 
 class AuthService {
+  // get profile info from token
   getProfile() {
     return decode(this.getToken());
   }
-
+  // check logged in status via token
   loggedIn() {
     const token = this.getToken();
     // If there is a token and it's not expired, return `true`
@@ -22,7 +23,7 @@ class AuthService {
     // If token hasn't passed its expiration time, return `false`
     return false;
   }
-
+  // get token info from local storage
   getToken() {
     return localStorage.getItem('id_token');
   }

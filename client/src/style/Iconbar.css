@@ -1,11 +1,12 @@
+
 .nav-icon {
-  display: flex;
   background-color: var(--secondary);
   justify-content: space-around;
 }
 
 .nav-item {
   margin: 0em 2em;
+  justify-content:space-between !important;
 }
 .icon {
   width: 90px;

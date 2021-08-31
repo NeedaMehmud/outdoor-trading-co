@@ -38,7 +38,7 @@ const Profile = () => {
         <div className="btnContainer">
           <h1 className="itemTitle">MY ITEMS</h1>
           <Link to="/SubmitItem">
-            <button className="submit-btn"> + POST AN ITEM</button>
+            <button className="submit-btn"> + Add Item</button>
           </Link>
         </div>
         <div class="container">

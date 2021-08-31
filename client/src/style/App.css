@@ -1,18 +1,19 @@
+/* center text */
 .App {
   text-align: center;
 }
-
+/* logo sizing */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-
+/* logo animation */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+/* header color set with item alignment and font */
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -23,11 +24,11 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+/* link color */
 .App-link {
   color: #61dafb;
 }
-
+/* logo rotation */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
