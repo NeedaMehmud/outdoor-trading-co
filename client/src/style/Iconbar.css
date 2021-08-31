@@ -1,8 +1,9 @@
 .nav-icon {
   display: flex;
   background-color: var(--secondary);
-  margin: auto;
+  justify-content: space-around;
 }
+
 .nav-item {
   margin: 0em 2em;
 }

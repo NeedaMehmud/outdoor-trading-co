@@ -2,12 +2,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 25px;
 }
 
 .card {
   margin-bottom: 15px;
   color: var (--primary);
+  margin-top: 20px;
 }
 
 .title {
