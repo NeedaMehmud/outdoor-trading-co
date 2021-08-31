@@ -1,10 +1,10 @@
-.nav-item {
-  margin: 0.5em;
-}
 .nav-icon {
   display: flex;
   background-color: var(--secondary);
-  justify-content: space-evenly;
+  margin: auto;
+}
+.nav-item {
+  margin: 0em 2em;
 }
 .icon {
   width: 90px;

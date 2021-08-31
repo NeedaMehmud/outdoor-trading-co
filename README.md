@@ -21,6 +21,7 @@ npm run install
 ## Usage
 
 Upon loading, the user is presented with a homepage that gives options to login or sign up, a category directory, and a newsletter sign-up. Clicking the category image takes the user to a page that lists all the available items in that category. Clicking on an item opens a page with further information and a larger picture of the item and offers the ability to email the user to workout a deal to borrow/rent the item. Users have a submit item button on their profile page to submit new items as well as a list of their currently listed items.
+
 ![Web application screenshot](/screenshot.png)
 
 ## Credits

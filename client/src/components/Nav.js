@@ -37,7 +37,7 @@ class Nav extends React.Component {
               <img src={logo} alt="Outdoor Trading Co. logo" />
             </Link>
           </a>
-          <form className="d-flex">
+          {/* <form className="d-flex">
             <input
               className="form-control me-3"
               type="search"
@@ -51,7 +51,7 @@ class Nav extends React.Component {
             >
               Search
             </button>
-          </form>
+          </form> */}
           <div>
             {Auth.loggedIn() ? (
               <>
