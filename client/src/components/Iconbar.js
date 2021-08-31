@@ -7,7 +7,7 @@ import snowIcon from "../assets/images/snow-icon.png";
 import climbingIcon from "../assets/images/climbing-icon.png";
 import miscIcon from "../assets/images/misc-icon.png";
 import { Link } from "react-router-dom";
-
+// import appropriate images and routing and display icon bar with links to genres
 function Iconbar() {
   return (
     <nav className="nav-icon">

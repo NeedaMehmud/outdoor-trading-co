@@ -6,7 +6,9 @@ import waterImg from "../assets/images/water.png";
 import miscImg from "../assets/images/tent-and-equipment.png";
 import "../style/Main.css";
 import { Link } from "react-router-dom";
+// import necessary images and css and link from router dom
 
+// images displayed with styling and links
 function Main() {
   return (
     <main>

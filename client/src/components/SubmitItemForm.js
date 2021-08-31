@@ -6,12 +6,14 @@ import axios from 'axios'
 import Auth from '../utils/auth';
 import "../style/Signup.css";
 import bearImg from "../assets/images/Walter.png";
+// import necessary items, files, libraries, etc
+
 
 const ItemForm = () => {
 
-  // uses state to take in the file that the user is uploading 
+  // set state to empty array
   const [fileState, setFileState] = useState([]);
-
+  // set state to empty strings
   const [formState, setFormState] = useState({
     name: '',
     genre: '',
@@ -20,13 +22,13 @@ const ItemForm = () => {
     condition: '',
   });
 
-  // takes in add item query
+  // takes in add item mutation
   const [addItem, { error }] = useMutation(ADD_ITEM);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
-    // creates an form document and adds the necessary things for cloudinary upload 
+    // creates new Form Data using updated file state and cloudinary preferences
     const formData = new FormData();
     formData.append('file', fileState);
     formData.append('upload_preset', 'ml_default');
@@ -37,7 +39,7 @@ const ItemForm = () => {
       formData
     )
     try {
-      console.log(response);
+      // utilize response from cloudinary upload as well as updated form state to assign variables to document
       const { data } = addItem({
         variables: {
           ...formState,
@@ -45,23 +47,22 @@ const ItemForm = () => {
           user: Auth.getProfile().data.username,
         },
       });
-      console.log(formState);
       window.location.reload();
     } catch (err) {
       console.error(err);
     }
   };
-
+  // on change, update file state to match input
   const handleFileChange = (event) => {
     setFileState(event.target.files[0]);
     console.log(fileState);
   };
-
+  // on change update form state to match input
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormState({ ...formState, [name]: value });
   };
-
+  // display form
   return (
     <div className="container p-3">
       <form onSubmit={handleFormSubmit}>

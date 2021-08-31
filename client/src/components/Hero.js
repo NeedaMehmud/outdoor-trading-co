@@ -4,6 +4,7 @@ import SignUp from "../components/Signup";
 import Auth from "../utils/auth";
 class Hero extends React.Component {
 
+  // toggle sign up form display
   constructor() {
     super();
 
@@ -20,7 +21,7 @@ class Hero extends React.Component {
     });
   }
 
-
+  // render jumbotron without sign up card if logged in
   render() {
     if (Auth.loggedIn()) {
       return (
@@ -28,7 +29,7 @@ class Hero extends React.Component {
         </div>
       );
     }
-    
+    // otherwise return sign up card
     return (
       <div className="jumbotron jumbotron-fluid">
         <div className="container hero-text">

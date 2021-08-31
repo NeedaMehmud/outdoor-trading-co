@@ -1,6 +1,6 @@
 import React from "react";
 import "../style/Newsletter.css";
-
+// newsletter static element for professional look
 function Newsletter() {
   return (
     <section className="container-fluid">

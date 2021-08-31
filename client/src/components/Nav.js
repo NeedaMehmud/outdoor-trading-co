@@ -6,6 +6,7 @@ import Login from "../components/Login";
 import { Link } from "react-router-dom";
 import Auth from "../utils/auth";
 
+// toggle login component
 class Nav extends React.Component {
   constructor() {
     super();
@@ -22,7 +23,7 @@ class Nav extends React.Component {
       clicked: true,
     });
   }
-
+  // remove auth for logout
   render() {
     const logout = (event) => {
       event.preventDefault();
@@ -53,6 +54,7 @@ class Nav extends React.Component {
             </button>
           </form>
           <div>
+            {/* if logged in, display profile info and logout button*/}
             {Auth.loggedIn() ? (
               <>
                 <button className="profile-btn">
@@ -69,6 +71,7 @@ class Nav extends React.Component {
               </>
             ) : (
               <>
+              {/* else display login */}
                 <div className="d-grid gap-2 d-md-flex justify-content-sm-end">
                   {this.state.clicked ? (
                     <Login />
