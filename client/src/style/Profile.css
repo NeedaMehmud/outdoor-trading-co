@@ -16,8 +16,6 @@
   font-size: 1.5rem;
 }
 
-
-
 .img-fluid {
   object-fit: cover;
 }
@@ -25,12 +23,8 @@
 .btnContainer {
   display: flex;
   justify-content: center;
-}
-
-.titleContainer {
+  align-items: center;
   width: 100%;
-  display: flex;
-  justify-content: center;
   margin-top: 2em;
   margin-bottom: 2em;
 }
@@ -51,4 +45,10 @@
 
 .submit-btn:hover {
   background-color: var(--tertiary);
+}
+
+.itemTitle {
+  font-family: "Mukta", sans-serif;
+  font-size: 45px;
+  padding-right: 20px;
 }
