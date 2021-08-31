@@ -59,8 +59,7 @@ class Nav extends React.Component {
               <>
                 <button className="profile-btn">
                   <Link to="/me" className="text-decoration-none text-white">
-                    Welcome<div></div>
-                    {Auth.getProfile().data.username}!
+                    {Auth.getProfile().data.username}'s <br></br> Profile
                   </Link>
                 </button>
                 <br></br>
