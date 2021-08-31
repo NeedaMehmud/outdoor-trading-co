@@ -36,41 +36,39 @@ const Profile = () => {
       <Iconbar />
       <main>
         <div className="btnContainer">
+          <h1 className="itemTitle">MY ITEMS</h1>
           <Link to="/SubmitItem">
-            <button className="submit-btn">POST AN ITEM</button>
+            <button className="submit-btn"> + POST AN ITEM</button>
           </Link>
         </div>
         <div class="container">
-          <div className="titleContainer">
-            <h1>MY ITEMS</h1>
-          </div>
           <div className="container">
-          {/* dynamic function allowing the items that the user has posted to render on their profile */}
-          {user.item.map((item) => (
-            <Card
-              className="card"
-              style={{ width: "25rem", height: "30rem" }}
-              key={item._id}
-            >
-              <Image
-                style={{ width: "25rem", height: "25rem" }}
-                variant="top"
-                className="img-fluid"
-                alt="Product image."
-                cloudName="outdoor-trading-co"
-                publicId={item.image_id}
-              />
-              <Card.Body class="title-body">
-                <Card.Title class="card-title text-center title">
-                  {item.name}
-                </Card.Title>
-              </Card.Body>
-              <ListGroup className="list-group-flush">
-                <ListGroupItem>Location: {item.location}</ListGroupItem>
-                <ListGroupItem>Condition: {item.condition}</ListGroupItem>
-              </ListGroup>
-            </Card>
-          ))}
+            {/* dynamic function allowing the items that the user has posted to render on their profile */}
+            {user.item.map((item) => (
+              <Card
+                className="card"
+                style={{ width: "25rem", height: "30rem" }}
+                key={item._id}
+              >
+                <Image
+                  style={{ width: "25rem", height: "25rem" }}
+                  variant="top"
+                  className="img-fluid"
+                  alt="Product image."
+                  cloudName="outdoor-trading-co"
+                  publicId={item.image_id}
+                />
+                <Card.Body class="title-body">
+                  <Card.Title class="card-title text-center title">
+                    {item.name}
+                  </Card.Title>
+                </Card.Body>
+                <ListGroup className="list-group-flush">
+                  <ListGroupItem>Location: {item.location}</ListGroupItem>
+                  <ListGroupItem>Condition: {item.condition}</ListGroupItem>
+                </ListGroup>
+              </Card>
+            ))}
           </div>
         </div>
       </main>
