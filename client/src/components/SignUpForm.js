@@ -5,15 +5,19 @@ import { ADD_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
 import "../style/Signup.css";
 import bearImg from "../assets/images/Walter.png";
+// import necessary files and library
 
+// set state to empty strings
 const SignUpForm = () => {
     const [formState, setFormState] = useState({
       username: '',
       email: '',
       password: '',
     });
+    // addUser mutation
     const [addUser, { error, data }] = useMutation(ADD_USER);
   
+    // update form state according to input field updates
     const handleChange = (event) => {
       const { name, value } = event.target;
   
@@ -22,26 +26,26 @@ const SignUpForm = () => {
         [name]: value,
       });
     };
-  
+    // on submit, prevent default
     const handleFormSubmit = async (event) => {
       event.preventDefault();
-      console.log(formState);
   
       try {
+        // add user with updated formstate
         const { data } = await addUser({
           variables: { ...formState },
         });
-  
+        // assign auth token
         Auth.login(data.addUser.token);
       } catch (e) {
         console.error(e);
       }
     };
-
+    // redirect to profile once logged in
     if(Auth.loggedIn()){
       return <Redirect to="/me" />;
     };
-    
+    // if data, success, else render form
     return (
       <div className="container p-3">
         {data ? (

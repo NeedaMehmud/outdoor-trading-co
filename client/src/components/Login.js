@@ -3,7 +3,9 @@ import React, { useState } from "react";
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
+// import necessary resources
 
+// toggle modal
 const Login = () => {
   const [isOpen, setIsOpen] = React.useState(false);
   const showModal = () => {
@@ -12,13 +14,14 @@ const Login = () => {
   const hideModal = () => {
     setIsOpen(false);
   };
-
+// set beginning form state to empty strings
   const [formState, setFormState] = useState({
     email: '',
     password: '',
   });
+  // login user mutation
   const [login, { error, data }] = useMutation(LOGIN_USER);
-
+// update state according to entered values in input
   const handleChange = (event) => {
     const { name, value } = event.target;
 
@@ -27,10 +30,9 @@ const Login = () => {
       [name]: value,
     });
   };
-
+// use login mutation with updated state and assign token or throw error, then revert form state to empty strings again
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    console.log(formState);
 
     try {
       const { data } = await login({
@@ -48,7 +50,7 @@ const Login = () => {
     })
   };
 
-
+// return login form if there is no data, or success if there is data
   return (
     <Modal.Body>
       <div className="login">
@@ -105,6 +107,7 @@ const Login = () => {
             </Modal.Footer>
           </form>
         )}
+        {/* display error when appropriate */}
         {error && (
           <div className="my-3 p-3 bg-danger text-white">
             {error.message}
